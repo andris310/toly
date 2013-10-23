@@ -7,8 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
-
-<%= yield %>
-
+  <div id='banner'>
+    <%= image_tag('logo.png') %>
+    <%= @page_title || 'Spine Care' %>
+  </div>
+  <div id='columns'>
+    <div id='side'>
+      <ul>
+        <li><a href=''></a>Home</li>
+        <li><a href=''></a>Store</li>
+        <li><a href=''></a>About</li>
+        <li><a href=''></a>Contact</li>
+      </ul>
+    </div>
+    <div id='main'>
+      <%= yield %>
+    </div>
+  </div>
 </body>
 </html>
