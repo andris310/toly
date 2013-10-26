@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Toly Store</title>
+  <title>TOLY</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,600,500,300' rel='stylesheet' type='text/css'>
 </head>
 <body class='<%= controller.controller_name %>'>
   <div id='banner'>
-    <%= image_tag('logo.png') %>
-    <%= @page_title || 'Spine Care' %>
+    <%= image_tag('toly_logo.png') %>
   </div>
   <div id='columns'>
     <div id='side'>
       <ul>
-        <li><a href=''></a>Home</li>
-        <li><a href=''></a>Store</li>
-        <li><a href=''></a>About</li>
-        <li><a href=''></a>Contact</li>
+        <li><a href=''>HOME</a></li>
+        <li><a href=''>STORE</a></li>
+        <li><a href=''>ABOUT</a></li>
+        <li><a href=''>CONTACT</a></li>
       </ul>
     </div>
     <div id='main'>
+      <span><%= @page_title || 'TOLY' %></span>
       <%= yield %>
     </div>
   </div>
