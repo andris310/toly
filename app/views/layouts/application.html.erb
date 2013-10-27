@@ -23,6 +23,9 @@
     <div id='main'>
       <span><%= @page_title || 'TOLY' %></span>
       <%= yield %>
+      <div id='cart'>
+        <%= render @cart %>
+      </div>
     </div>
   </div>
 </body>
