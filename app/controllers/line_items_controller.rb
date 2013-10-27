@@ -60,7 +60,7 @@ class LineItemsController < ApplicationController
     @line_item = LineItem.find(params[:id])
     @line_item.destroy
     respond_to do |format|
-      format.html { redirect_to :back }
+      format.html { redirect_to @line_item.cart(session[:cart_id]) }
       format.json { head :no_content }
     end
   end

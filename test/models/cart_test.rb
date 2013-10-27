@@ -23,4 +23,6 @@ class CartTest < ActiveSupport::TestCase
     assert_equal 1, cart.line_items.count
   end
 
+
+
 end
