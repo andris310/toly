@@ -1,1 +1,5 @@
 $('#cart').html('<%= escape_javascript render(@cart) %>');
+
+$('#current_item').css({'color':'#FF8F00'}).animate({
+    'color':'black'
+  }, 1000);
