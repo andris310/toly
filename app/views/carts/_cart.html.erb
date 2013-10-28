@@ -8,5 +8,5 @@
     </tr>
 </table>
 
-<%= button_to 'Empty Cart', cart, method: :delete,
+<%= button_to 'Empty Cart', cart, method: :delete, remote: true,
       data: { confirm: 'Are you sure?' } %>
