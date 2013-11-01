@@ -1,5 +1,11 @@
 Toly2Store::Application.routes.draw do
-  get "admin/index"
+  get 'admin/index'
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+
   get "sessions/new"
   get "sessions/create"
   get "sessions/destroy"
