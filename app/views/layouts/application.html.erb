@@ -35,8 +35,9 @@
         <%= link_to "Sign up", new_user_registration_path %> <span id='or'>|</span> <%= link_to "Sign in", new_user_session_path %>
         </span>
       <% end %>
-
-      <%= yield %>
+      <div id='container'>
+        <%= yield %>
+      </div>
 
         <% if @cart %>
         <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
