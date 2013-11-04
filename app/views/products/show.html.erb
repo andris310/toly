@@ -1,19 +1,19 @@
+<div id='product'>
 
-<div>
-  <%= @product.title %>
+  <div id='product-image'>
+    <%= image_tag(@product.image_url, class: 'product-image') %>
+  </div>
+
+  <div id='product-title'>
+    <h2><%= @product.title %></h2>
+  </div>
+
+  <div id='product-description'>
+    <%= @product.description %>
+
+    <div id='product-price'>
+      <strong>Price:</strong>
+      <%= @product.price %>
+    </div>
+  </div>
 </div>
-
-<div>
-  <%= image_tag(@product.image_url, class: 'product-image') %>
-</div>
-
-<div id='product-desciption'>
-  <%= @product.description %>
-</div>
-
-<div id='product-price'>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</div>
-
-<%= link_to 'Back', products_path %>

@@ -48,3 +48,29 @@
     background:   #F7F7F7;
   }
 }
+
+#product {
+  margin: auto;
+  width: 1000px;
+
+  #product-title {
+    padding-left: 1em;
+    width: 35%;
+    float: left;
+  }
+
+  img {
+    float: left;
+    padding: 1em;
+  }
+
+  #product-description {
+    width: 30%;
+    float: left;
+    padding: 1em;
+  }
+
+  #product-price {
+    margin-top: 2em;
+  }
+}
