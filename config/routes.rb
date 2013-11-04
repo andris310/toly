@@ -4,6 +4,7 @@ Toly2Store::Application.routes.draw do
   resources :orders
   resources :line_items
   resources :carts
+  resources :pages
 
   get "store/index"
   resources :products do
@@ -14,7 +15,10 @@ Toly2Store::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'store#index', as: 'store'
+   root 'pages#home', as: 'home'
+   get '/store' => 'store#index'
+   get '/about' => 'pages#about'
+   get '/contact' => 'pages#contact'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
