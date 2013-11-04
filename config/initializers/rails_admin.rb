@@ -5,14 +5,28 @@ RailsAdmin.config do |config|
 
 
   ################  Global configuration  ################
-
+  config.authorize_with :cancan
   # Set the admin name here (optional second array element will appear in red). For example:
-  config.main_app_name = ['Toly2 Store', 'Admin']
+
+
+
+  # config.main_app_name = ['Toly2 Store', 'Admin']
+
+
+
+
   # or for a more dynamic name:
   # config.main_app_name = Proc.new { |controller| [Rails.application.engine_name.titleize, controller.params['action'].titleize] }
 
   # RailsAdmin may need a way to know who the current user is]
-  config.current_user_method { current_user } # auto-generated
+
+
+
+  # config.current_user_method { current_user } # auto-generated
+
+
+
+
 
   # If you want to track changes on your models:
   # config.audit_with :history, 'User'
@@ -60,13 +74,13 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :line_items, :has_many_association 
+  #     configure :line_items, :has_many_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -102,20 +116,20 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :product, :belongs_to_association 
-  #     configure :cart, :belongs_to_association 
-  #     configure :order, :belongs_to_association 
+  #     configure :product, :belongs_to_association
+  #     configure :cart, :belongs_to_association
+  #     configure :order, :belongs_to_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :product_id, :integer         # Hidden 
-  #     configure :cart_id, :integer         # Hidden 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
-  #     configure :quantity, :integer 
-  #     configure :price, :decimal 
-  #     configure :order_id, :integer         # Hidden 
+  #     configure :id, :integer
+  #     configure :product_id, :integer         # Hidden
+  #     configure :cart_id, :integer         # Hidden
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
+  #     configure :quantity, :integer
+  #     configure :price, :decimal
+  #     configure :order_id, :integer         # Hidden
 
   #   # Cross-section configuration:
 
@@ -151,18 +165,18 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :line_items, :has_many_association 
+  #     configure :line_items, :has_many_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :name, :string 
-  #     configure :address, :text 
-  #     configure :email, :string 
-  #     configure :pay_type, :string 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
-  #     configure :ship_date, :datetime 
+  #     configure :id, :integer
+  #     configure :name, :string
+  #     configure :address, :text
+  #     configure :email, :string
+  #     configure :pay_type, :string
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
+  #     configure :ship_date, :datetime
 
   #   # Cross-section configuration:
 
@@ -198,18 +212,18 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :line_items, :has_many_association 
-  #     configure :orders, :has_many_association 
+  #     configure :line_items, :has_many_association
+  #     configure :orders, :has_many_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :title, :string 
-  #     configure :description, :text 
-  #     configure :image_url, :string 
-  #     configure :price, :decimal 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :title, :string
+  #     configure :description, :text
+  #     configure :image_url, :string
+  #     configure :price, :decimal
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -249,20 +263,20 @@ RailsAdmin.config do |config|
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :email, :string 
-  #     configure :password, :password         # Hidden 
-  #     configure :password_confirmation, :password         # Hidden 
-  #     configure :reset_password_token, :string         # Hidden 
-  #     configure :reset_password_sent_at, :datetime 
-  #     configure :remember_created_at, :datetime 
-  #     configure :sign_in_count, :integer 
-  #     configure :current_sign_in_at, :datetime 
-  #     configure :last_sign_in_at, :datetime 
-  #     configure :current_sign_in_ip, :string 
-  #     configure :last_sign_in_ip, :string 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :email, :string
+  #     configure :password, :password         # Hidden
+  #     configure :password_confirmation, :password         # Hidden
+  #     configure :reset_password_token, :string         # Hidden
+  #     configure :reset_password_sent_at, :datetime
+  #     configure :remember_created_at, :datetime
+  #     configure :sign_in_count, :integer
+  #     configure :current_sign_in_at, :datetime
+  #     configure :last_sign_in_at, :datetime
+  #     configure :current_sign_in_ip, :string
+  #     configure :last_sign_in_ip, :string
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
