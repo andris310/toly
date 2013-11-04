@@ -1,24 +1,19 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
+<div>
   <%= @product.title %>
-</p>
+</div>
 
-<p>
-  <strong>Description:</strong>
+<div>
+  <%= image_tag(@product.image_url, class: 'product-image') %>
+</div>
+
+<div id='product-desciption'>
   <%= @product.description %>
-</p>
+</div>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
-
-<p>
+<div id='product-price'>
   <strong>Price:</strong>
   <%= @product.price %>
-</p>
+</div>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
