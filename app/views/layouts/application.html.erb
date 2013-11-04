@@ -15,7 +15,7 @@
     <div id='side'>
       <ul>
         <li><a href='/'>HOME</a></li>
-        <li><a href=''>STORE</a></li>
+        <li><a href='/store'>STORE</a></li>
         <li><a href=''>ABOUT</a></li>
         <li><a href=''>CONTACT</a></li>
       </ul>
@@ -33,10 +33,11 @@
       <% else %>
         <span id='sign'>
         <%= link_to "Sign up", new_user_registration_path %> <span id='or'>|</span> <%= link_to "Sign in", new_user_session_path %>
-      </span>
+        </span>
       <% end %>
 
       <%= yield %>
+
         <% if @cart %>
         <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
           <%= render @cart %>
