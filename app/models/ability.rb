@@ -2,9 +2,13 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    if user && user.admin?
+    user ||= User.new
+    if user.role == 'admin'
         can :access, :rails_admin   # grant access to rails_admin
-        can :dashboard              # grant access to the dashboard
+        can :manage, :all
+        can :dashboard # grant access to the dashboard
+    else
+        can :read, :all
     end
     # Define abilities for the passed in user here. For example:
     #
