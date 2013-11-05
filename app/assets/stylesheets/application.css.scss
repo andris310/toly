@@ -27,11 +27,16 @@ $orange: #FF8F00;
 
   }
   #sign-in-out {
-    font-size: 12px;
+    font-size: 0.4em;
+    font-family: 'Advent Pro', sans-serif;
+    color: gray;
     width: 300px;
     position: absolute;
     right: 0px;
     top: 0px;
+    a {
+      color: $orange;
+    }
   }
 }
 
