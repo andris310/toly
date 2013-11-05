@@ -10,6 +10,17 @@
 <body class='<%= controller.controller_name %>'>
   <div id='banner'>
     <%= image_tag('toly_logo.png') %>
+
+    <% if user_signed_in? %>
+      <span class='signed-in-as'><%= current_user.email %> | Not you?</span>
+      <span id='sign'>
+        <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+      </span>
+    <% else %>
+      <span id='sign'>
+      <%= link_to "Sign up", new_user_registration_path %> <span id='or'>|</span> <%= link_to "Sign in", new_user_session_path %>
+      </span>
+    <% end %>
   </div>
   <div id='columns'>
     <div id='side'>
@@ -25,16 +36,6 @@
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
 
-      <% if user_signed_in? %>
-        <span class='signed-in-as'><%= current_user.email %> | Not you?</span>
-        <span id='sign'>
-          <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-        </span>
-      <% else %>
-        <span id='sign'>
-        <%= link_to "Sign up", new_user_registration_path %> <span id='or'>|</span> <%= link_to "Sign in", new_user_session_path %>
-        </span>
-      <% end %>
       <div id='container'>
         <%= yield %>
       </div>
