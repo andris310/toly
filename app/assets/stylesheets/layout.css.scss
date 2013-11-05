@@ -1,0 +1,112 @@
+#banner {
+  background: #FFF;
+  padding: 10px 0px 0px 0px;
+  border-bottom: 3px solid $green;
+  font: small-caps 40px/40px "Times New Roman", serif;
+  color: $orange;
+  text-align: center;
+
+  img {
+
+  }
+  #sign-in-out {
+    font-size: 0.4em;
+    font-family: 'Advent Pro', sans-serif;
+    color: gray;
+    width: 300px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    a {
+      color: $orange;
+    }
+  }
+}
+
+#notice {
+  color: #000 !important;
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0;
+  font: bold smaller sans-serif;
+}
+
+#columns {
+
+  #main {
+    margin: 1em 2em;
+    padding: 1em;
+    background: white;
+  }
+
+  #side {
+    padding: 1em 0em;
+    width: 100%;
+
+    ul {
+      padding: 0;
+      width: 70%;
+      margin: auto;
+      text-align: center;
+      li {
+        margin: 8%;
+        list-style: none;
+        display: inline;
+        a {
+          transition: color 0.5s ease;
+          color: $orange;
+          font-size: 1.4em;
+          font-family: 'Advent Pro', sans-serif;
+          font-weight: 500;
+          &:hover {
+            color: $green;
+          }
+        }
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    background-color: none;
+  }
+}
+
+.toly_form {
+  fieldset {
+    background: #efe;
+
+    legend {
+      color: #dfd;
+      font-family: sans-serif;
+      padding: 0.2em 1em;
+    }
+  }
+
+  form{
+    label {
+      width: 5em;
+      float: left;
+      text-align: right;
+      padding-top: 0.2em;
+      margin-right: 0.1em;
+      display: block;
+    }
+
+    select, textarea, input {
+      margin-left: 4em;
+    }
+
+    .submit {
+      margin-left: 4em;
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+}
