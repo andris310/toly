@@ -38,6 +38,7 @@ gem 'devise'
 gem 'rails_admin'
 gem 'cancan'
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

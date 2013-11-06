@@ -40,4 +40,5 @@ config.action_mailer.smtp_settings = {
   # number of complex assets.
   config.assets.debug = true
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
 end
