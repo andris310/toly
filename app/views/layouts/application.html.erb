@@ -2,8 +2,7 @@
 <html>
 <head>
   <title>TOLY</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,600,500,300' rel='stylesheet' type='text/css'>
 </head>
@@ -12,14 +11,15 @@
 
     <%= image_tag('toly_logo.png') %>
       <% if @cart %>
-        <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+        <div id='cart' class='hidden'>
           <%= render @cart %>
-        <% end %>
+        </div>
       <% end %>
     <div id='right-corner-bar'>
       <% if @cart %>
         <%= hidden_div_if(@cart.line_items.empty?, id: 'display-cart') do %>
           <%= image_tag('cart.svg', id: 'cart-icon') %>
+          <%= @cart.items_in_cart %>
         <% end %>
       <% end %>
 
@@ -59,4 +59,6 @@
     </div>
   </div>
 </body>
+<%= javascript_include_tag "application"%>
+
 </html>
