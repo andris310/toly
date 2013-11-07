@@ -6,7 +6,7 @@
   <% @products.each do |product| %>
     <% cache ['entry', product] do %>
       <div class='entry'>
-        <%= image_tag(product.image_url) %>
+        <a href='/products/<%= product.id %>'><%= image_tag(product.image_url) %></a>
         <h3><%= product.title %></h3>
         <%= sanitize(product.description) %>
         <div class='price-line'>
