@@ -11,9 +11,7 @@
  *= require_self
  */
 
-$green: #008000;
-$orange: #FF8F00;
-
+@import 'global_variables.css.scss';
 @import 'layout.css.scss';
 @import 'store.css.scss';
 @import 'carts.css.scss';
