@@ -5,8 +5,8 @@
 
 #cart {
   position: absolute;
-  top: 15px;
-  right: 100px;
+  top: 25px;
+  right: 155px;
   width: 300px;
   margin: auto;
   padding: 15px;
@@ -22,17 +22,31 @@
     color: $orange;
   }
 
+  table {
+    border-collapse: collapse
+  }
+
   td.item-name {
     width: 200px;
   }
-}
 
-.carts {
-  .item-price, .total-line {
+  .total_line {
+    tr {
+      border-top: 1px solid black;
+    }
+
+    td {
+      text-align: right;
+    }
+  }
+
+  .item-price, .total_line {
     text-align: right;
   }
-  .total-line .total-cell {
+  .total_line .total_cell {
+    width: 65px;
     font-weight: bold;
     border-top: 1px solid #595
   }
 }
+

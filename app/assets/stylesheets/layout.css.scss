@@ -19,6 +19,8 @@
     }
 
     #sign-in-out {
+      float: right;
+      margin-right: 25px;
       font-size: 0.4em;
       font-family: 'Advent Pro', sans-serif;
       color: gray;
@@ -88,10 +90,10 @@ a {
 
 .toly_form {
   fieldset {
-    background: #efe;
+    background: #fff;
 
     legend {
-      color: #dfd;
+      color: $gray;
       font-family: sans-serif;
       padding: 0.2em 1em;
     }
