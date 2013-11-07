@@ -1,3 +1,9 @@
-$('#cart tr').not('.total_line').remove();
-$('#cart').fadeOut(200);
-$('#display-cart').fadeOut(500);
+function ready() {
+  $('#cart tr').not('.total_line').remove();
+  $('#cart').fadeOut(200);
+  $('#display-cart').fadeOut(500);
+}
+
+
+$(document).ready(ready)
+$(document).on('page:load', ready)

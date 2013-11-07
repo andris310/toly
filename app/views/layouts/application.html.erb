@@ -15,6 +15,7 @@
           <%= render @cart %>
         </div>
       <% end %>
+
     <div id='right-corner-bar'>
       <% if @cart %>
         <%= hidden_div_if(@cart.line_items.empty?, id: 'display-cart') do %>
@@ -49,7 +50,6 @@
     </div>
     <div id='main'>
 
-      <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
 
       <div id='container'>
@@ -59,6 +59,6 @@
     </div>
   </div>
 </body>
-<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "application" %>
 
 </html>
