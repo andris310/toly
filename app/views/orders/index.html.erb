@@ -16,7 +16,7 @@
   <tbody>
     <% @orders.each do |order| %>
       <tr>
-        <td><%= order.name %></td>
+        <td><%= order.first_name + order.last_name%></td>
         <td><%= order.address %></td>
         <td><%= order.email %></td>
         <td><%= order.pay_type %></td>
