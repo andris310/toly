@@ -87,39 +87,3 @@ a {
     background-color: none;
   }
 }
-
-.toly_form {
-  fieldset {
-    background: #fff;
-
-    legend {
-      color: $gray;
-      font-family: sans-serif;
-      padding: 0.2em 1em;
-    }
-  }
-
-  form{
-    label {
-      width: 5em;
-      float: left;
-      text-align: right;
-      padding-top: 0.2em;
-      margin-right: 0.1em;
-      display: block;
-    }
-
-    select, textarea, input {
-      margin-left: 4em;
-    }
-
-    .submit {
-      margin-left: 4em;
-    }
-
-    br {
-      display: none;
-    }
-  }
-
-}
