@@ -20,26 +20,28 @@
       <%= f.label :last_name %><br>
       <%= f.text_field :last_name, size: 40 %>
     </div>
-    <% binding.pry %>
+
     <% if @cart.is_downloadable? %>
-      <p>'Downloadable'</p>
+      <p>'Downloadable Files don't need shipping!</p>
+    <% else %>
+      <div class="field">
+        <%= f.label :address %><br>
+        <%= f.text_field :address, size: 40 %>
+      </div>
+      <div class="field">
+        <%= f.label :city %><br>
+        <%= f.text_field :city, size: 40 %>
+      </div>
+       <div class="field">
+        <%= f.label :state %><br>
+        <%= f.select :state, Order::STATES, prompt: 'State' %>
+      </div>
+       <div class="field">
+        <%= f.label :zipcode %><br>
+        <%= f.text_field :zipcode, size: 5 %>
+      </div>
     <% end %>
-    <div class="field">
-      <%= f.label :address %><br>
-      <%= f.text_field :address, size: 40 %>
-    </div>
-    <div class="field">
-      <%= f.label :city %><br>
-      <%= f.text_field :city, size: 40 %>
-    </div>
-     <div class="field">
-      <%= f.label :state %><br>
-      <%= f.select :state, Order::STATES, prompt: 'State' %>
-    </div>
-     <div class="field">
-      <%= f.label :zipcode %><br>
-      <%= f.text_field :zipcode, size: 5 %>
-    </div>
+
     <div class="field">
       <%= f.label :email %><br>
       <%= f.email_field :email, size: 40 %>
@@ -49,7 +51,6 @@
       <%= f.select :pay_type, Order::PAYMENT_TYPES,
                         prompt: 'Select a payment method' %>
     </div>
-    <% binding.pry %>
     <div class="submit-button actions">
       <%= f.submit 'Place Order' %>
     </div>
