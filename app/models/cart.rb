@@ -24,15 +24,9 @@ class Cart < ActiveRecord::Base
     items.all? { |i| i.is_downloadable }
   end
 
-  def check_for_download
-    check = false
+  def has_downloadable?
     items = line_items.map { |i| Product.find_by(id: i.product_id)}
-    items.map do |i|
-      if i.is_downloadable
-       check = true
-      end
-    end
-    return check
+    items.any? { |i| i.is_downloadable }
   end
 
 end
