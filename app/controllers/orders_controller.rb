@@ -21,6 +21,11 @@ class OrdersController < ApplicationController
       return
     end
 
+    if @cart.check_for_download and !user_signed_in?
+      redirect_to new_user_session_url, notice: 'You must be logged in to purchase downloadable products'
+      return
+    end
+
     @order = Order.new
   end
 
