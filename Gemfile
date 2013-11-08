@@ -38,6 +38,7 @@ gem 'figaro'
 gem 'devise'
 gem 'rails_admin'
 gem 'cancan'
+gem 'pry-debugger'
 
 
 # Use ActiveModel has_secure_password

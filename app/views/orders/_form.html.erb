@@ -20,6 +20,10 @@
       <%= f.label :last_name %><br>
       <%= f.text_field :last_name, size: 40 %>
     </div>
+    <% binding.pry %>
+    <% if @cart.is_downloadable? %>
+      <p>'Downloadable'</p>
+    <% end %>
     <div class="field">
       <%= f.label :address %><br>
       <%= f.text_field :address, size: 40 %>
@@ -45,6 +49,7 @@
       <%= f.select :pay_type, Order::PAYMENT_TYPES,
                         prompt: 'Select a payment method' %>
     </div>
+    <% binding.pry %>
     <div class="submit-button actions">
       <%= f.submit 'Place Order' %>
     </div>

@@ -19,4 +19,9 @@ class Cart < ActiveRecord::Base
 
   end
 
+  def is_downloadable?
+    items = line_items.map { |i| Product.where(id: i['product_id'])}
+    items.all? { |i| i[0].is_downloadable }
+  end
+
 end
