@@ -24,6 +24,10 @@
     <%= f.text_field :image_url %>
   </div>
   <div class="field">
+    <%= f.label :is_downloadable %>
+    <%= f.select(:is_downloadable, options_for_select([['Not Downloadable', false], ['Downloadable', true]]), prompt: 'Select...') %>
+  </div>
+  <div class="field">
     <%= f.label :price %><br>
     <%= f.text_field :price %>
   </div>
