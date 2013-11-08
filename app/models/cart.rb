@@ -20,7 +20,6 @@ class Cart < ActiveRecord::Base
   end
 
   def is_downloadable?
-    binding.pry
     items = line_items.map { |i| Product.find_by(id: i.product_id)}
     items.all? { |i| i.is_downloadable }
   end

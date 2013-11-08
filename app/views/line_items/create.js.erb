@@ -1,14 +1,10 @@
+
 if ($('#cart tr').length === 1) {
   // $('#cart').show('blind', 1000);
   $('#display-cart').fadeIn(500);
 }
 
 $('#cart').html('<%= escape_javascript render(@cart) %>');
-
-// $('#cart-icon').on('click', function() {
-//   console.log('click on cart');
-//   $('#cart').toggleClass('hidden');
-// });
 
 $('#current_item').css({'color':'#FF8F00'}).animate({
     'color':'black'
