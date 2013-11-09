@@ -5,28 +5,28 @@
 
 #cart {
   position: absolute;
-  top: 30px;
+  top: 40px;
   right: 155px;
   width: 300px;
   margin: auto;
   padding: 15px;
-  color: $gray;
+  color: #fff;
   font-family: $roboto;
   font-weight: 300;
   font-size: 1em;
-  background: #FFF;
-  -webkit-box-shadow: 0px 2px 5px #F1F1F1;
-  -moz-box-shadow: 0px 2px 5px #F1F1F1;
-  box-shadow: 0px 2px 5px #F1F1F1;
+  background: $green;
+  border-radius: 4px;
 
   h2 {
     font-size: 1em;
-    color: $orange;
+    color: #fff;
     margin-top: 0;
+    border-bottom: 2px solid #fff;
   }
 
   table {
-    border-collapse: collapse
+    border-collapse: collapse;
+    margin: 10px 5px 15px 5px;
   }
 
   td {
@@ -39,7 +39,7 @@
 
   .total_line {
     tr {
-      border-top: 1px solid black;
+      border-top: 1px solid #FFF;
     }
 
     td {
@@ -53,13 +53,23 @@
   .total_line .total_cell {
     width: 65px;
     font-weight: bold;
-    border-top: 1px solid #595
+    border-top: 1px solid #fff;
   }
 
   .empty-cart {
     float: right;
     font-size: 0.8em;
-    color: $gray;
+    color: #fff;
+  }
+
+  input#checkout-btn {
+    color: #fff;
+    font-size: 1em;
+    background-color: $green;
+    height: 35px;
+    width: 150px;
+    border: 3px solid #fff;
+    border-radius: 4px;
   }
 }
 
