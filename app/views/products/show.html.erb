@@ -9,7 +9,7 @@
   </div>
 
   <div id='product-description'>
-    <%= @product.description %>
+    <%= sanitize(@product.description) %>
 
     <div id='product-price'>
       <strong>Price:</strong>
