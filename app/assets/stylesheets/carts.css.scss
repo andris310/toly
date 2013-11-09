@@ -5,13 +5,15 @@
 
 #cart {
   position: absolute;
-  top: 25px;
+  top: 30px;
   right: 155px;
   width: 300px;
   margin: auto;
   padding: 15px;
-  color: gray;
-  font-size: 0.4em;
+  color: $gray;
+  font-family: $roboto;
+  font-weight: 300;
+  font-size: 1em;
   background: #FFF;
   -webkit-box-shadow: 0px 2px 5px #F1F1F1;
   -moz-box-shadow: 0px 2px 5px #F1F1F1;
@@ -20,10 +22,15 @@
   h2 {
     font-size: 1em;
     color: $orange;
+    margin-top: 0;
   }
 
   table {
     border-collapse: collapse
+  }
+
+  td {
+    height: 30px;
   }
 
   td.item-name {
@@ -47,6 +54,12 @@
     width: 65px;
     font-weight: bold;
     border-top: 1px solid #595
+  }
+
+  .empty-cart {
+    float: right;
+    font-size: 0.8em;
+    color: $gray;
   }
 }
 
