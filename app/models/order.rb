@@ -11,9 +11,17 @@ class Order < ActiveRecord::Base
       'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA',
       'WV', 'WI', 'WY'
     ]
-  validates :first_name, :last_name, :address, :city, :state, :zipcode, :email, presence: true
+  validates :first_name, :last_name, :email, presence: true
   validates :pay_type, inclusion: PAYMENT_TYPES
-  validates :state, inclusion: STATES
+
+  validates_presence_of :address, :city, :state,
+            :zipcode, :state, inclusion: STATES,
+            :if => :downloadable_order?
+
+  def downloadable_order?
+    items = line_items.map { |i| Product.find_by(id: i.product_id)}
+    !(items.all? { |i| i.is_downloadable })
+  end
 
   def add_line_items_from_cart(cart)
     cart.line_items.each do |item|
