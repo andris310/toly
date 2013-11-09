@@ -17,6 +17,8 @@
     padding: 1em;
     border-bottom: 1px solid #ddd;
     min-height: 100px;
+    font-family: $roboto;
+    font-weight: 300;
 
     img {
       width: 80px;
@@ -28,7 +30,7 @@
 
     h3 {
       font-size: 120%;
-      font-family: sans-serif;
+      font-family: $roboto;
       margin-left: 100px;
       margin-top: 0;
       margin-bottom: 2px;
