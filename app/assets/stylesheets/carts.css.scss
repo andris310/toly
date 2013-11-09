@@ -18,9 +18,10 @@
   border-radius: 4px;
 
   h2 {
-    font-size: 1em;
     color: #fff;
     margin-top: 0;
+    font-size: 1.1em;
+    padding-bottom: 10px;
     border-bottom: 2px solid #fff;
   }
 
@@ -64,12 +65,13 @@
 
   input#checkout-btn {
     color: #fff;
-    font-size: 1em;
-    background-color: $green;
     height: 35px;
     width: 150px;
-    border: 3px solid #fff;
+    font-size: 1em;
+    cursor: pointer;
     border-radius: 4px;
+    border: 3px solid #fff;
+    background-color: $green;
   }
 }
 

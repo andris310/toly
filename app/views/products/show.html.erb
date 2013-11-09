@@ -15,6 +15,6 @@
       <strong>Price:</strong>
       <span class='price'><%= number_to_currency(@product.price) %></span>
     </div>
-    <%= button_to 'Add to Cart', line_items_path(product_id: @product), remote: true %>
+    <%= button_to 'Add to Cart', line_items_path(product_id: @product), remote: true, :class => 'add-to-cart-btn' %>
   </div>
 </div>
