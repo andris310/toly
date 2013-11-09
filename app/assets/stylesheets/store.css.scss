@@ -28,34 +28,42 @@
 
     img {
       width: 350px;
+      height: 320px;
       margin: auto;
       display: block;
-      margin-bottom: 5px;
     }
 
-    h3 {
-      font-size: 120%;
-      font-family: $roboto;
-      margin-left: 100px;
-      margin-top: 0;
-      margin-bottom: 2px;
-      color: #227;
-    }
-
-    p, div.price_line {
-      margin-left: 100px;
-      margin-top: 0.5em;
-      margin-bottom: 0.8em;
+    .title-price{
+      width: 350px;
+      height: 70px;
+      background-color: #197031;
+      margin: auto;
+      display: block;
     }
 
     form, div {
       display: inline;
     }
 
+    .title {
+      float: left;
+      width: 200px;
+      height: 50px;
+    }
+
     .price {
-      color: #44a;
-      font-weight: bold;
-      margin-right: 3em;
+      float: right;
+      width: 65px;
+    }
+
+    .title, .price {
+      color: #FFF;
+      font-size: 1.3em;
+      font-weight: 100;
+      margin: 1em;
+      a {
+        color: #FFF;
+      }
     }
   }
 }
