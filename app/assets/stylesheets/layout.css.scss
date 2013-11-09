@@ -39,12 +39,15 @@
 
 #notice {
   color: #FFF !important;
-  border: 2px solid #DD5407;
-  border-radius: 3px;
-  padding: 1em;
+  border-radius: 2px;
+  padding: 10px 10px 10px 50px;
   margin-bottom: 2em;
-  background-color: rgba(247, 105, 25, 0.86);
-  font: bold smaller sans-serif;
+  background-color: $orange;
+  p {
+    font-size: 1.2em;
+    font-weight: 100;
+    font-family: "Roboto", sans-serif;
+  }
 }
 
 #columns {

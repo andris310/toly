@@ -23,6 +23,10 @@ class Order < ActiveRecord::Base
     !(items.all? { |i| i.is_downloadable })
   end
 
+  def name
+    first_name + ' ' + last_name
+  end
+
   def add_line_items_from_cart(cart)
     cart.line_items.each do |item|
       item.cart_id = nil
