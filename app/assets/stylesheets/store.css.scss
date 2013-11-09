@@ -10,22 +10,27 @@
     border-bottom: 3px solid #ddd;
   }
 
+  #products-container {
+    max-width: 1300px;
+    margin: auto;
+  }
+
   .entry {
-    width: 700px;
-    overflow: auto;
+    width: 400px;
+    height: 400px;
     margin-top: 1em;
     padding: 1em;
     border-bottom: 1px solid #ddd;
     min-height: 100px;
     font-family: $roboto;
     font-weight: 300;
+    float: left;
 
     img {
-      width: 80px;
-      margin-right: 5px;
+      width: 350px;
+      margin: auto;
+      display: block;
       margin-bottom: 5px;
-      position: relative;
-      float: left;
     }
 
     h3 {
