@@ -1,0 +1,29 @@
+<%= @user.email %>
+<ul>
+  <% @user.orders.each do |o| %>
+    <li>Date of the Order: <%= o.created_at.strftime("%d-%m-%Y %H:%M") %></li>
+      <table>
+        <thead>
+          <th></th>
+          <th>Items purchased:</th>
+          <th></th>
+          <th></th>
+        </thead>
+        <tbody>
+          <% o.products.each do |p| %>
+          <tr>
+            <td></td>
+            <td><%= p.title %></td>
+            <td><%= number_to_currency(p.price) %></td>
+            <td>
+              <% if p.is_downloadable %>
+                <a href="#{}">Download</a>
+              <% end %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </li>
+  <% end %>
+</ul>
