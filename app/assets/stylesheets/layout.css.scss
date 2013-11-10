@@ -40,14 +40,12 @@
 #notice {
   color: #FFF !important;
   border-radius: 2px;
-  padding: 10px 10px 10px 50px;
   margin-bottom: 2em;
+  font-weight: 100;
+  font-size: 1.2em;
   background-color: $orange;
-  p {
-    font-size: 1.2em;
-    font-weight: 100;
-    font-family: "Roboto", sans-serif;
-  }
+  padding: 10px 10px 10px 50px;
+  font-family: "Roboto", sans-serif;
 }
 
 #columns {

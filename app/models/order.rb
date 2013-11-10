@@ -1,5 +1,6 @@
 class Order < ActiveRecord::Base
   has_many :line_items, dependent: :destroy
+  belongs_to :user
   PAYMENT_TYPES = ["Credit card"]
   STATES = [
       'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT',
