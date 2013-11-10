@@ -1,7 +1,8 @@
 <%= @user.email %>
-<ul>
+<ul class='user-orders'>
   <% @user.orders.each do |o| %>
-    <li>Date of the Order: <%= o.created_at.strftime("%d-%m-%Y %H:%M") %></li>
+    <li><spna>Date of the Order: <%= o.created_at.strftime("%d-%m-%Y %H:%M") %></span>
+      <hr/>
       <table>
         <thead>
           <th></th>
