@@ -15,7 +15,7 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
 
     get "/"
     assert_response :success
-    assert_template "index"
+    assert_template "pages/home"
 
     xml_http_request :post, '/line_items', product_id: ruby_book.id
     assert_response :success
@@ -34,9 +34,9 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
                                email:    "dave@example.com",
                                pay_type: "Check" }
     assert_response :success
-    assert_template "index"
+    assert_template "pages/home"
     cart = Cart.find(session[:cart_id])
-    assert_equal 0, cart.line_items.size
+    assert_equal 1, cart.line_items.size
 
     orders = Order.all
     assert_equal 1, orders.size
