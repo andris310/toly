@@ -7,7 +7,7 @@
     width: 560px;
 
     fieldset {
-      background: #fff;
+      background: $green;
 
       legend {
         color: $gray;
@@ -16,11 +16,12 @@
       }
     }
 
-    form{
+    form {
 
       label {
         width: 5em;
         float: left;
+        color: #fff;
         text-align: right;
         padding-top: 1em;
         margin-right: 0.1em;
@@ -30,13 +31,14 @@
       input {
         font-size: 1.3em;
         line-height: 1.3em;
-        color: $green;
+        color: #fff;
         border: none;
-        border-bottom: 2px solid #808080;
+        border-bottom: 2px solid #fff;
         outline: none;
         margin-left: 10px;
         margin-bottom: 10px;
         padding-left: 5px;
+        background-color: $green;
       }
 
       select {
