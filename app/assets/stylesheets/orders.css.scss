@@ -12,8 +12,8 @@
       border: none;
 
       legend {
-        color: $gray;
-        font-family: sans-serif;
+        color: #fff;
+        font-family: $roboto;
         padding: 0.2em 1em;
       }
 
@@ -56,8 +56,15 @@
           margin-left: 10px;
         }
 
-        .submit-button input {
+        .submit-area {
+          position: relative;
+          width: 200px;
+          height: 50px;
           float: right;
+        }
+
+        #submit-btn {
+          @include shadow-button(#fff, $green, 150px, 35px);
         }
 
         br {

@@ -51,8 +51,8 @@
       <%= f.select :pay_type, Order::PAYMENT_TYPES,
                         prompt: 'Select a payment method' %>
     </div>
-    <div class="submit-button actions">
-      <%= f.submit 'Place Order' %>
+    <div class="submit-area actions">
+      <%= f.submit 'Place Order', :id => 'submit-btn' %>
     </div>
   <% end %>
 
