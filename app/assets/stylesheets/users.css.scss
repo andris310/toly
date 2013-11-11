@@ -1,33 +1,35 @@
-.user-orders {
-  list-style: none;
+.users-controller {
+  .user-orders {
+    list-style: none;
 
-  li {
-    width: 400px;
-    color: #FFF;
-    margin: 20px 10px;
-    padding: 20px 25px;
-    font-size: 1em;
-    font-weight: 300;
-    font-family: $roboto;
-    border-radius: 3px;
-    background-color: $green;
-
-    table {
+    li {
       width: 400px;
+      color: #FFF;
+      margin: 20px 10px;
+      padding: 20px 25px;
+      font-size: 1em;
+      font-weight: 300;
+      font-family: $roboto;
+      border-radius: 3px;
+      background-color: $green;
 
-      th {
-        font-weight: 300;
-      }
+      table {
+        width: 400px;
 
-      td.download-link {
-          text-align: right;
+        th {
+          font-weight: 300;
         }
 
-      a.download-btn {
-        @include simple-button(#fff, $green, 150px);
-        padding: 1px 7px;
-        font-size: 0.7em;
-        border: 2px solid #fff;
+        td.download-link {
+            text-align: right;
+          }
+
+        a.download-btn {
+          @include simple-button(#fff, $green, 150px);
+          padding: 1px 7px;
+          font-size: 0.7em;
+          border: 2px solid #fff;
+        }
       }
     }
   }

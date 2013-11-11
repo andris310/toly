@@ -2,42 +2,44 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#product {
-  font-family: $roboto;
-  margin: auto;
-  width: 1000px;
+.products-controller {
+  #product {
+    font-family: $roboto;
+    margin: auto;
+    width: 1000px;
 
-  #product-title {
-    padding-left: 1em;
-    width: 35%;
-    float: left;
-    h2 {
-      font-weight: 400;
-      margin-bottom: 0;
+    #product-title {
+      padding-left: 1em;
+      width: 35%;
+      float: left;
+      h2 {
+        font-weight: 400;
+        margin-bottom: 0;
+      }
     }
-  }
 
-  img {
-    float: left;
-    padding: 1em;
-  }
-
-  #product-description {
-    width: 30%;
-    float: left;
-    padding: 1em;
-    font-weight: 300;
-  }
-
-  #product-price {
-    margin-top: 2em;
-    margin-bottom: 15px;
-    .price {
-      font-size: 1.3em;
+    img {
+      float: left;
+      padding: 1em;
     }
-  }
 
-  .add-to-cart-btn {
-    @include simple-button($orange, #fff, 150px);
+    #product-description {
+      width: 30%;
+      float: left;
+      padding: 1em;
+      font-weight: 300;
+    }
+
+    #product-price {
+      margin-top: 2em;
+      margin-bottom: 15px;
+      .price {
+        font-size: 1.3em;
+      }
+    }
+
+    .add-to-cart-btn {
+      @include simple-button($orange, #fff, 150px);
+    }
   }
 }

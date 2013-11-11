@@ -2,54 +2,55 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.toly_form {
-  width: 560px;
+.orders-controller {
+  .toly_form {
+    width: 560px;
 
-  fieldset {
-    background: #fff;
+    fieldset {
+      background: #fff;
 
-    legend {
-      color: $gray;
-      font-family: sans-serif;
-      padding: 0.2em 1em;
+      legend {
+        color: $gray;
+        font-family: sans-serif;
+        padding: 0.2em 1em;
+      }
+    }
+
+    form{
+
+      label {
+        width: 5em;
+        float: left;
+        text-align: right;
+        padding-top: 1em;
+        margin-right: 0.1em;
+        display: block;
+      }
+
+      input {
+        font-size: 1.3em;
+        line-height: 1.3em;
+        color: $green;
+        border: none;
+        border-bottom: 2px solid #808080;
+        outline: none;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        padding-left: 5px;
+      }
+
+      select {
+        margin-top: 15px;
+        margin-left: 10px;
+      }
+
+      .submit-button input {
+        float: right;
+      }
+
+      br {
+        display: none;
+      }
     }
   }
-
-  form{
-
-    label {
-      width: 5em;
-      float: left;
-      text-align: right;
-      padding-top: 1em;
-      margin-right: 0.1em;
-      display: block;
-    }
-
-    input {
-      font-size: 1.3em;
-      line-height: 1.3em;
-      color: $green;
-      border: none;
-      border-bottom: 2px solid #808080;
-      outline: none;
-      margin-left: 10px;
-      margin-bottom: 10px;
-      padding-left: 5px;
-    }
-
-    select {
-      margin-top: 15px;
-      margin-left: 10px;
-    }
-
-    .submit-button input {
-      float: right;
-    }
-
-    br {
-      display: none;
-    }
-  }
-
 }
