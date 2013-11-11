@@ -1,9 +1,9 @@
 $gray: #707070;
-$green: #008000;
+$green: #17692e;
 $orange: #FF8F00;
 $roboto: 'Roboto', sans-serif;
 
-@mixin simple-button($color, $backround, $width) {
+@mixin simple-button($color, $background, $width) {
     color: $color;
     height: 35px;
     width: $width;
