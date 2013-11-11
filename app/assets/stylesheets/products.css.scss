@@ -39,7 +39,7 @@
     }
 
     .add-to-cart-btn {
-      @include simple-button($orange, #fff, 150px);
+      @include simple-button($orange, #fff, 200px, 40px);
     }
   }
 }

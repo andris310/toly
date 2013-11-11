@@ -64,7 +64,7 @@
   }
 
   input#checkout-btn {
-    @include simple-button(#fff, $green, 150px);
+    @include simple-button(#fff, $green, 150px, 35px);
   }
 }
 

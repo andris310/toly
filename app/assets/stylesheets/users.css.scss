@@ -25,7 +25,7 @@
           }
 
         a.download-btn {
-          @include simple-button(#fff, $green, 150px);
+          @include simple-button(#fff, $green, 150px, 30px);
           padding: 1px 7px;
           font-size: 0.7em;
           border: 2px solid #fff;
