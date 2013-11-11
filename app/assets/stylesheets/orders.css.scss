@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .orders-controller {
-  .customer-info {
+  .customer-info, .billing-info {
     width: 560px;
     background: $green;
     border-radius: 4px;
