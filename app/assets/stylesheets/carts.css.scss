@@ -63,8 +63,13 @@
     color: #fff;
   }
 
+  .checkout {
+    margin-top: 30px;
+    position: relative;
+  }
+
   input#checkout-btn {
-    @include simple-button(#fff, $green, 150px, 35px);
+    @include shadow-button(#fff, $green, 150px, 35px);
   }
 }
 
