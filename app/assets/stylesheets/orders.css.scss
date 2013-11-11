@@ -3,55 +3,66 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .orders-controller {
-  .toly_form {
+  .customer-info {
     width: 560px;
+    background: $green;
+    border-radius: 4px;
 
     fieldset {
-      background: $green;
+      border: none;
 
       legend {
         color: $gray;
         font-family: sans-serif;
         padding: 0.2em 1em;
       }
-    }
 
-    form {
+      form {
+        #error_explanation {
+          h2, li {
+            color: #fff;
+            font-weight: 100;
+            font-family: $roboto;
+          }
+        }
 
-      label {
-        width: 5em;
-        float: left;
-        color: #fff;
-        text-align: right;
-        padding-top: 1em;
-        margin-right: 0.1em;
-        display: block;
-      }
+        label {
+          width: 5em;
+          float: left;
+          color: #fff;
+          text-align: right;
+          padding-top: 1em;
+          margin-right: 0.1em;
+          display: block;
+          font-weight: 100;
+          font-family: $roboto;
+        }
 
-      input {
-        font-size: 1.3em;
-        line-height: 1.3em;
-        color: #fff;
-        border: none;
-        border-bottom: 2px solid #fff;
-        outline: none;
-        margin-left: 10px;
-        margin-bottom: 10px;
-        padding-left: 5px;
-        background-color: $green;
-      }
+        input {
+          font-size: 1.3em;
+          line-height: 1.3em;
+          color: #fff;
+          border: none;
+          border-bottom: 2px solid #fff;
+          outline: none;
+          margin-left: 10px;
+          margin-bottom: 10px;
+          padding-left: 5px;
+          background-color: $green;
+        }
 
-      select {
-        margin-top: 15px;
-        margin-left: 10px;
-      }
+        select {
+          margin-top: 15px;
+          margin-left: 10px;
+        }
 
-      .submit-button input {
-        float: right;
-      }
+        .submit-button input {
+          float: right;
+        }
 
-      br {
-        display: none;
+        br {
+          display: none;
+        }
       }
     }
   }
