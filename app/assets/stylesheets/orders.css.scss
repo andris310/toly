@@ -4,7 +4,7 @@
 
 .orders-controller {
   #order-checkout {
-    width: 1100px;
+    width: 1110px;
     margin: auto;
 
     .customer-info {
@@ -16,7 +16,7 @@
     }
     .customer-info, .billing-info {
       width: 545px;
-      background: $green;
+      background: #fff;
       border-radius: 4px;
       margin-bottom: 50px;
 
@@ -24,7 +24,7 @@
         border: none;
 
         legend {
-          color: #fff;
+          color: $green;
           font-family: $roboto;
           padding: 0.2em 1em;
         }
@@ -32,7 +32,7 @@
         form {
           #error_explanation {
             h2, li {
-              color: #fff;
+              color: $green;
               font-weight: 100;
               font-family: $roboto;
             }
@@ -41,7 +41,7 @@
           label {
             width: 5em;
             float: left;
-            color: #fff;
+            color: $green;
             text-align: right;
             padding-top: 1em;
             margin-right: 0.1em;
@@ -53,14 +53,14 @@
           input {
             font-size: 1.3em;
             line-height: 1.3em;
-            color: #fff;
+            color: $green;
             border: none;
-            border-bottom: 2px solid #fff;
+            border-bottom: 2px solid $green;
             outline: none;
             margin-left: 10px;
             margin-bottom: 10px;
             padding-left: 5px;
-            background-color: $green;
+            background-color: #fff;
           }
 
           select {
@@ -76,7 +76,7 @@
           }
 
           #submit-btn {
-            @include shadow-button(#fff, $green, 150px, 35px);
+            @include shadow-button($green, #fff, 150px, 35px);
           }
 
           br {
