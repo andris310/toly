@@ -3,72 +3,85 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .orders-controller {
-  .customer-info, .billing-info {
-    width: 560px;
-    background: $green;
-    border-radius: 4px;
+  #order-checkout {
+    width: 1100px;
+    margin: auto;
 
-    fieldset {
-      border: none;
+    .customer-info {
+      float: left;
+    }
+    .billing-info {
+      height: 420px;
+      float: right;
+    }
+    .customer-info, .billing-info {
+      width: 545px;
+      background: $green;
+      border-radius: 4px;
+      margin-bottom: 50px;
 
-      legend {
-        color: #fff;
-        font-family: $roboto;
-        padding: 0.2em 1em;
-      }
+      fieldset {
+        border: none;
 
-      form {
-        #error_explanation {
-          h2, li {
+        legend {
+          color: #fff;
+          font-family: $roboto;
+          padding: 0.2em 1em;
+        }
+
+        form {
+          #error_explanation {
+            h2, li {
+              color: #fff;
+              font-weight: 100;
+              font-family: $roboto;
+            }
+          }
+
+          label {
+            width: 5em;
+            float: left;
             color: #fff;
+            text-align: right;
+            padding-top: 1em;
+            margin-right: 0.1em;
+            display: block;
             font-weight: 100;
             font-family: $roboto;
           }
-        }
 
-        label {
-          width: 5em;
-          float: left;
-          color: #fff;
-          text-align: right;
-          padding-top: 1em;
-          margin-right: 0.1em;
-          display: block;
-          font-weight: 100;
-          font-family: $roboto;
-        }
+          input {
+            font-size: 1.3em;
+            line-height: 1.3em;
+            color: #fff;
+            border: none;
+            border-bottom: 2px solid #fff;
+            outline: none;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            padding-left: 5px;
+            background-color: $green;
+          }
 
-        input {
-          font-size: 1.3em;
-          line-height: 1.3em;
-          color: #fff;
-          border: none;
-          border-bottom: 2px solid #fff;
-          outline: none;
-          margin-left: 10px;
-          margin-bottom: 10px;
-          padding-left: 5px;
-          background-color: $green;
-        }
+          select {
+            margin-top: 15px;
+            margin-left: 10px;
+          }
 
-        select {
-          margin-top: 15px;
-          margin-left: 10px;
-        }
+          .submit-area {
+            position: relative;
+            width: 200px;
+            height: 50px;
+            float: right;
+          }
 
-        .submit-area {
-          position: relative;
-          width: 200px;
-          height: 50px;
-          float: right;
-        }
+          #submit-btn {
+            @include shadow-button(#fff, $green, 150px, 35px);
+          }
 
-        #submit-btn {
-          @include shadow-button(#fff, $green, 150px, 35px);
-        }
-
-        br {
-          display: none;
+          br {
+            display: none;
+          }
         }
       }
     }
