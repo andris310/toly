@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class LineItemsControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
   setup do
     @line_item = line_items(:one)
   end
@@ -54,7 +55,7 @@ class LineItemsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_select_jquery :html, '#cart' do
-      assert_select 'tr#current_item td', /ebook of Stretches/
+      assert_select 'tr#current_item td:nth-child(2)', /ebook of Stretches/
     end
   end
 

@@ -1,3 +1,4 @@
+
 #banner {
   background: #FFF;
   padding: 10px 0px 0px 0px;
@@ -39,12 +40,13 @@
 
 #notice {
   color: #FFF !important;
-  border: 2px solid #DD5407;
-  border-radius: 3px;
-  padding: 1em;
+  border-radius: 2px;
   margin-bottom: 2em;
-  background-color: rgba(247, 105, 25, 0.86);
-  font: bold smaller sans-serif;
+  font-weight: 100;
+  font-size: 1.2em;
+  background-color: $orange;
+  padding: 10px 10px 10px 50px;
+  font-family: "Roboto", sans-serif;
 }
 
 #columns {
