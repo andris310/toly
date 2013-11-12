@@ -39,7 +39,6 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.add_line_items_from_cart(@cart)
     @order.user_id = current_user.id
-    binding.pry
     @order.total_price = @cart.total_price
 
     respond_to do |format|
