@@ -3,17 +3,54 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .orders-controller {
+
   #order-checkout {
     width: 1110px;
     margin: auto;
 
+    .order-summary {
+      font-family: $roboto;
+
+      table {
+        margin: auto;
+        background: #F8F8F8;
+        margin-bottom: 25px;
+        padding: 10px 30px;
+
+        td.item-quantity {
+          width: 35px;
+        }
+
+        td.item-name {
+          width: 200px;
+          text-align: center;
+        }
+
+        td.item-price {
+          width: 80px;
+          text-align: right;
+        }
+
+        td.total_cell {
+          text-align: right;
+          font-weight: bold;
+        }
+
+        .total_line {
+          text-align: right;
+        }
+      }
+    }
+
     .customer-info {
       float: left;
     }
+
     .billing-info {
       height: 420px;
       float: right;
     }
+
     .customer-info, .billing-info {
       width: 545px;
       background: #fff;
