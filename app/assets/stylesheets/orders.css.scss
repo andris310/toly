@@ -10,10 +10,12 @@
 
     .order-summary {
       font-family: $roboto;
+      width: 550px;
+      margin: auto;
 
       table {
         color: $gray;
-        margin: auto;
+        float: left;
         background: #F8F8F8;
         margin-bottom: 25px;
         padding: 10px 30px;
@@ -40,6 +42,10 @@
         .total_line {
           text-align: right;
         }
+      }
+
+      .coupon-code {
+        float: right;
       }
 
       a.empty-cart {
