@@ -1,12 +1,13 @@
 class ProductsController < ApplicationController
   include CurrentCart
+  load_and_authorize_resource :except => [:show]
   before_action :set_cart
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    # @products = Product.all
   end
 
   # GET /products/1

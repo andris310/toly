@@ -9,6 +9,7 @@ class Ability
         can :dashboard # grant access to the dashboard
     else
         can :read, :all
+        cannot :read, Product
     end
   end
 end
