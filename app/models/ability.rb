@@ -10,6 +10,7 @@ class Ability
     else
         can :read, :all
         cannot :read, Product
+        cannot :read, Order
     end
   end
 end

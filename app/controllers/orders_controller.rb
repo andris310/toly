@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   include CurrentCart
+  load_and_authorize_resource :except => [:new, :create]
   before_action :set_cart, only: [:new, :create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
@@ -38,7 +39,9 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     @order.add_line_items_from_cart(@cart)
-    @order.user_id = current_user.id
+    if user_signed_in?
+      @order.user_id = current_user.id
+    end
     @order.total_price = @cart.total_price
 
     respond_to do |format|
