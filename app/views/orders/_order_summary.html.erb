@@ -8,4 +8,6 @@
         <td class='total_cell'><%= number_to_currency(@cart.total_price) %></td>
       </tr>
   </table>
+  <%= link_to 'Empty Cart', @cart, method: :delete, remote: true,
+      data: { confirm: 'Are you sure?' }, :class => 'empty-cart' %>
 </div>
