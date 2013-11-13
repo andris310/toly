@@ -39,6 +39,7 @@ gem 'devise'
 gem 'rails_admin'
 gem 'cancan'
 gem 'pry-debugger'
+gem 'carrierwave_direct'
 
 
 # Use ActiveModel has_secure_password
