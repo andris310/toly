@@ -11,6 +11,8 @@ class Product < ActiveRecord::Base
     message: 'must be a URL for GIF, JPG or PNG image.'
   }
 
+  mount_uploader :picture, PictureUploader
+
   def self.latest
     Product.order(:updated_at).last
   end
