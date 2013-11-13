@@ -209,6 +209,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.1)
   devise
   figaro
+  fog
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks

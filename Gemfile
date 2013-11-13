@@ -41,6 +41,7 @@ gem 'cancan'
 gem 'pry-debugger'
 gem 'carrierwave_direct'
 gem 'mini_magick'
+gem 'fog'
 
 
 # Use ActiveModel has_secure_password

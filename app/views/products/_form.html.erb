@@ -20,6 +20,7 @@
     <%= f.text_area :description, rows: 6 %>
   </div>
   <div class="field">
+    <%= image_tag(@product.image_url.thumb.url) if @product.image_url? %>
     <%= f.label :image_url %><br>
     <%= f.file_field :image_url %>
   </div>
