@@ -11,6 +11,7 @@ class Ability
         can :read, :all
         cannot :read, Product
         cannot :read, Order
+        cannot :read, Coupon
     end
   end
 end
