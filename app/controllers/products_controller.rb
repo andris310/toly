@@ -2,8 +2,7 @@ class ProductsController < ApplicationController
   include CurrentCart
   load_and_authorize_resource :except => [:show]
   before_action :set_cart
-  # before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_action :load_product, only: [:create]
+  before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
   # GET /products.json
@@ -77,12 +76,8 @@ class ProductsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    # def set_product
-    #   @product = Product.find(params[:id])
-    # end
-
-    def load_product
-      @product = Product.new(product_params)
+    def set_product
+      @product = Product.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

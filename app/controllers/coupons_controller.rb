@@ -1,6 +1,5 @@
 class CouponsController < ApplicationController
   before_action :set_coupon, only: [:show, :edit, :update, :destroy]
-  # before_action :load_coupon, only: [:create]
   load_and_authorize_resource
 
   # GET /coupons
@@ -68,9 +67,6 @@ class CouponsController < ApplicationController
     def set_coupon
       @coupon = Coupon.find(params[:id])
     end
-    # def load_coupon
-    #   @coupon = Coupon.new(coupon_params)
-    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def coupon_params
