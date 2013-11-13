@@ -40,7 +40,7 @@ gem 'rails_admin'
 gem 'cancan'
 gem 'pry-debugger'
 gem 'carrierwave_direct'
-gem 'rmagick'
+gem 'mini_magick'
 
 
 # Use ActiveModel has_secure_password
