@@ -12,12 +12,24 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
     <%= f.label :coupon_code %><br>
     <%= f.text_field :coupon_code %>
   </div>
   <div class="field">
-    <%= f.label :times_used %><br>
-    <%= f.number_field :times_used %>
+    <%= f.label :coupon_type %><br>
+    <%= f.select :coupon_type, Coupon::COUPON_TYPES, prompt: 'Coupon Type' %>
+  </div>
+  <div class="field">
+    <%= f.label :usage %><br>
+    <%= f.text_field :usage %>
+  </div>
+  <div class="field">
+    <%= f.label :discount_value %><br>
+    <%= f.number_field :discount_value %>
   </div>
   <div class="actions">
     <%= f.submit %>
