@@ -20,5 +20,8 @@
 </table>
 
 <br>
+<%= direct_upload_form_for @uploader do |f| %>
+  <%= f.file_field :image_url %>
+  <%= f.submit %>
+<% end %>
 
-<%= link_to 'New Product', new_product_path %>
