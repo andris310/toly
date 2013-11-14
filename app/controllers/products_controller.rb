@@ -8,6 +8,8 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     # @products = Product.all
+    @uploader = Product.new.image_url
+    @uploader.success_action_redirect = new_product_url
   end
 
   # GET /products/1
@@ -17,7 +19,7 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   def new
-    @product = Product.new
+    @product = Product.new(key: params[:key])
   end
 
   # GET /products/1/edit
@@ -28,7 +30,6 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
