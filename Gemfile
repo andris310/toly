@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.1'
 
@@ -34,14 +31,30 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development, :test do
+  gem 'sqlite3'
+  gem 'pry-debugger'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
+group :production do
+  gem 'pg'
+end
+
 gem 'figaro'
 gem 'devise'
 gem 'rails_admin'
 gem 'cancan'
-gem 'pry-debugger'
-gem 'carrierwave_direct'
-gem 'mini_magick'
+
+gem 'carrierwave'
+gem 'rmagick'
 gem 'fog'
+gem 'carrierwave_direct'
+gem 'sidekiq'
+
+
+gem 'unf'
 
 
 # Use ActiveModel has_secure_password
