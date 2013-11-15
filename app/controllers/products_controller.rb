@@ -23,6 +23,20 @@ class ProductsController < ApplicationController
   def edit
   end
 
+  # def download_product
+  #   @product = Product.find(1)
+  #   redirect_to @product.image.url
+  # end
+
+  def download
+    @product = Product.find(params[:id])
+    data = open(@product.image.url)
+    send_data data.read, :type => data.content_type,
+                         :disposition => 'attachment',
+                         :filename => @product.title,
+                         :x_sendfile => true
+  end
+
   # POST /products
   # POST /products.json
   def create
