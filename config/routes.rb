@@ -23,6 +23,9 @@ Toly2Store::Application.routes.draw do
    get '/about' => 'pages#about'
    get '/contact' => 'pages#contact'
 
+  # require 'sidekiq/web'
+  # mount Sidekiq::Web => '/sidekiq'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
