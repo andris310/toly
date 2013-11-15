@@ -14,6 +14,10 @@ Toly2Store::Application.routes.draw do
     get :who_bought, on: :member
   end
 
+resources :products do
+  member { get :download }
+end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -22,6 +26,7 @@ Toly2Store::Application.routes.draw do
    get '/store' => 'store#index'
    get '/about' => 'pages#about'
    get '/contact' => 'pages#contact'
+   # get '/download' => 'products#download_product'
 
   # require 'sidekiq/web'
   # mount Sidekiq::Web => '/sidekiq'
