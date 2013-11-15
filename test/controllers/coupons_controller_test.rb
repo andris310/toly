@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class CouponsControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
   setup do
     @coupon = coupons(:one)
   end
@@ -18,7 +19,12 @@ class CouponsControllerTest < ActionController::TestCase
 
   test "should create coupon" do
     assert_difference('Coupon.count') do
-      post :create, coupon: { coupon_code: @coupon.coupon_code, times_used: @coupon.times_used }
+      post :create, coupon: { coupon_code: @coupon.coupon_code,
+                              times_used: @coupon.times_used,
+                              name: @coupon.name,
+                              coupon_type: @coupon.coupon_type,
+                              usage: @coupon.usage,
+                              discount_value: @coupon.discount_value }
     end
 
     assert_redirected_to coupon_path(assigns(:coupon))
@@ -35,7 +41,12 @@ class CouponsControllerTest < ActionController::TestCase
   end
 
   test "should update coupon" do
-    patch :update, id: @coupon, coupon: { coupon_code: @coupon.coupon_code, times_used: @coupon.times_used }
+    patch :update, id: @coupon, coupon: { coupon_code: @coupon.coupon_code,
+                                          name: @coupon.name,
+                                          coupon_type: @coupon.coupon_type,
+                                          usage: @coupon.usage,
+                                          discount_value: @coupon.discount_value }
+
     assert_redirected_to coupon_path(assigns(:coupon))
   end
 
