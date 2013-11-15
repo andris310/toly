@@ -18,7 +18,7 @@
             <td><%= number_to_currency(p.price) %></td>
             <td class='download-link'>
               <% if p.is_downloadable %>
-                <a class='download-btn' href="#{}">Download</a>
+                <%= link_to 'Download', download_product_path(p), class: "download-btn" %>
               <% end %>
             </td>
           </tr>
