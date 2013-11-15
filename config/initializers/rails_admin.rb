@@ -220,7 +220,7 @@ RailsAdmin.config do |config|
   #     configure :id, :integer
   #     configure :title, :string
   #     configure :description, :text
-  #     configure :image_url, :string
+  #     configure :image, :string
   #     configure :price, :decimal
   #     configure :created_at, :datetime
   #     configure :updated_at, :datetime

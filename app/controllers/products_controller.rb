@@ -4,25 +4,22 @@ class ProductsController < ApplicationController
   before_action :set_cart
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
-  # GET /products
-  # GET /products.json
+
   def index
     # @products = Product.all
-    @uploader = Product.new.image_url
-    @uploader.success_action_redirect = new_product_url
+    # @uploader = Product.new.image
+    # @uploader.success_action_redirect = new_product_url
   end
 
-  # GET /products/1
-  # GET /products/1.json
   def show
   end
 
-  # GET /products/new
+
   def new
-    @product = Product.new(key: params[:key])
+    @product = Product.new
+    # @product = Product.new(key: params[:key])
   end
 
-  # GET /products/1/edit
   def edit
   end
 
@@ -83,6 +80,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:title, :description, :image_url, :price, :is_downloadable)
+      params.require(:product).permit(:title, :description, :image, :price, :is_downloadable)
     end
 end

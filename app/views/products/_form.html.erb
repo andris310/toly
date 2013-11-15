@@ -10,11 +10,11 @@
       </ul>
     </div>
   <% end %>
-  <%= f.hidden_field :key %>
+
   <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
 
   <div class="field">
-    <%= image_tag(@product.image_url.thumb.url) if @product.image_url? %>
+    <%= image_tag(@product.image.thumb.url) if @product.image? %>
   </div>
 
   <div class="field">
@@ -24,6 +24,11 @@
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_area :description, rows: 6 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
   </div>
 
   <div class="field">
