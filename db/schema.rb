@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131114060248) do
+ActiveRecord::Schema.define(version: 20131117034723) do
 
   create_table "carts", force: true do |t|
     t.datetime "created_at"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20131114060248) do
     t.string   "state"
     t.integer  "user_id"
     t.decimal  "total_price"
+    t.string   "stripe_customer_token"
   end
 
   create_table "products", force: true do |t|
