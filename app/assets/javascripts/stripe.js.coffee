@@ -23,6 +23,7 @@ subscription =
   handleStripeResponse: (status, response) ->
     if status == 200
       $('#order_stripe_card_token').val(response.id)
+      debugger;
       $('#new_order')[0].submit()
     else
       $('#stripe_error').text(response.error.message)
