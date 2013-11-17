@@ -43,7 +43,7 @@ class Order < ActiveRecord::Base
     if valid?
       charge = Stripe::Charge.create(
         :description => email,
-        :amount => '400',
+        :amount => (self.total_price*100).to_i.to_s,
         :currency => "usd",
         :card => stripe_card_token)
 
