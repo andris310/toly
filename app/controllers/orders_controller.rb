@@ -68,7 +68,7 @@ class OrdersController < ApplicationController
     ship_date_changed = @order.ship_date_changed?
 
     respond_to do |format|
-      if @order.save
+      if @order.save_with_payment
       OrderNotifier.shipped(@order).deliver if ship_date_changed
         format.html { redirect_to @order, notice: 'Order was successfully updated.' }
         format.json { head :no_content }
@@ -98,6 +98,7 @@ class OrdersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
       params.require(:order).permit(:first_name, :last_name, :address,
-                                    :city, :state, :zipcode, :email, :pay_type, :user_id, :total_price)
+                                    :city, :state, :zipcode, :email,
+                                    :pay_type, :user_id, :total_price, :stripe_car_token)
     end
 end

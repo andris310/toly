@@ -36,4 +36,13 @@ class Order < ActiveRecord::Base
       line_items << item
     end
   end
+
+  def save_with_payment
+    if valid?
+      charge = Stripe::Charge.create(description: email, amount: '400', card: stripe_card_token)
+      # self.stripe_customer_token = customer.id
+      save!
+    end
+  end
+
 end

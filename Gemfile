@@ -53,7 +53,7 @@ gem 'fog'
 # gem 'carrierwave_direct'
 # gem 'sidekiq'
 # gem 'sinatra', '>= 1.3.0', :require => nil
-
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 gem 'unf'
 
