@@ -45,7 +45,7 @@ class OrdersController < ApplicationController
     @order.total_price = @cart.total_price
 
     respond_to do |format|
-      if @order.save
+      if @order.save_with_payment
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         OrderNotifier.received(@order).deliver
@@ -99,6 +99,6 @@ class OrdersController < ApplicationController
     def order_params
       params.require(:order).permit(:first_name, :last_name, :address,
                                     :city, :state, :zipcode, :email,
-                                    :pay_type, :user_id, :total_price, :stripe_car_token)
+                                    :pay_type, :user_id, :total_price, :stripe_card_token)
     end
 end
