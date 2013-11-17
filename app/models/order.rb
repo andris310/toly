@@ -41,11 +41,16 @@ class Order < ActiveRecord::Base
 
   def save_with_payment
     if valid?
+      customer = Stripe::Customer.create(
+        :email => email,
+        :card  => stripe_card_token,
+        :description => self.name
+      )
       charge = Stripe::Charge.create(
-        :description => email,
+        :customer    => customer.id,
         :amount => (self.total_price*100).to_i.to_s,
-        :currency => "usd",
-        :card => stripe_card_token)
+        :description => self.name,
+        :currency => "usd")
 
       self.stripe_customer_token = charge.id
       save!
