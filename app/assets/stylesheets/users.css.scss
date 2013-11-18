@@ -21,8 +21,8 @@
         }
 
         td.download-link {
-            text-align: right;
-          }
+          text-align: right;
+        }
 
         a.download-btn {
           @include simple-button(#fff, $green, 50px, 17px);

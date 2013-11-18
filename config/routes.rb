@@ -26,6 +26,7 @@ end
    get '/store' => 'store#index'
    get '/about' => 'pages#about'
    get '/contact' => 'pages#contact'
+   get '/order-finished' => 'orders#order_finished'
    # get '/download' => 'products#download_product'
 
   # require 'sidekiq/web'

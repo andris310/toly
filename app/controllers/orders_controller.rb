@@ -15,6 +15,10 @@ class OrdersController < ApplicationController
   def show
   end
 
+  def order_finished
+    @order = current_user.orders.last
+  end
+
   # GET /orders/new
   def new
     if @cart.line_items.empty?
@@ -46,12 +50,11 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save_with_payment
-        binding.pry
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         OrderNotifier.received(@order).deliver
 
-        format.html { redirect_to store_url, notice: "Thank You for your order of #{@order.list_products}" }
+        format.html { redirect_to '/order-finished', notice: "Thank You for your order of #{@order.list_products}", order: @order }
         format.json { render action: 'show', status: :created, location: @order }
       else
         format.html { render action: 'new' }

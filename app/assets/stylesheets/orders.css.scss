@@ -63,97 +63,120 @@
       }
     }
 
-      fieldset {
-        border: none;
+    fieldset {
+      border: none;
 
-        legend {
-          color: $green;
-          font-family: $roboto;
-          padding: 0.2em 1em;
+      legend {
+        color: $green;
+        font-family: $roboto;
+        padding: 0.2em 1em;
+      }
+
+      form {
+
+        .customer-info, .billing-info {
+          width: 520px;
+          background: #fff;
+          border-radius: 4px;
+          margin-bottom: 50px;
         }
 
-        form {
-
-          .customer-info, .billing-info {
-            width: 520px;
-            background: #fff;
-            border-radius: 4px;
-            margin-bottom: 50px;
-          }
-
-          #error_explanation {
-            h2, li {
-              color: $green;
-              font-weight: 100;
-              font-family: $roboto;
-            }
-          }
-
-          label {
-            width: 5em;
-            float: left;
+        #error_explanation {
+          h2, li {
             color: $green;
-            text-align: right;
-            padding-top: 1em;
-            margin-right: 0.1em;
-            display: block;
             font-weight: 100;
             font-family: $roboto;
           }
+        }
 
-          input {
-            font-size: 1.3em;
-            line-height: 1.3em;
-            color: $green;
-            border: none;
-            border-bottom: 2px solid $green;
-            outline: none;
-            margin-left: 10px;
-            margin-bottom: 10px;
-            padding-left: 5px;
-            background-color: #fff;
-          }
+        label {
+          width: 5em;
+          float: left;
+          color: $green;
+          text-align: right;
+          padding-top: 1em;
+          margin-right: 0.1em;
+          display: block;
+          font-weight: 100;
+          font-family: $roboto;
+        }
 
-          select {
-            margin-top: 15px;
-            margin-left: 10px;
-          }
+        input {
+          font-size: 1.3em;
+          line-height: 1.3em;
+          color: $green;
+          border: none;
+          border-bottom: 2px solid $green;
+          outline: none;
+          margin-left: 10px;
+          margin-bottom: 10px;
+          padding-left: 5px;
+          background-color: #fff;
+        }
 
-          .submit-area {
-            position: relative;
+        select {
+          margin-top: 15px;
+          margin-left: 10px;
+        }
+
+        .submit-area {
+          position: relative;
+          width: 200px;
+          height: 50px;
+          float: right;
+        }
+
+        #submit-btn {
+          @include shadow-button($green, #fff, 150px, 35px);
+        }
+
+        br {
+          display: none;
+        }
+
+        .customer-info {
+          float: left;
+        }
+
+        .billing-info {
+          width: 490px;
+          min-height: 220px;
+          float: right;
+          label {
             width: 200px;
-            height: 50px;
-            float: right;
-          }
-
-          #submit-btn {
-            @include shadow-button($green, #fff, 150px, 35px);
-          }
-
-          br {
-            display: none;
-          }
-
-          .customer-info {
-            float: left;
-          }
-
-          .billing-info {
-            width: 490px;
-            min-height: 220px;
-            float: right;
-            label {
-              width: 200px;
-            }
           }
         }
       }
-      #stripe_error {
-        font-family: $roboto;
-        margin-top: 20px;
-        display: block;
-        min-height: 30px;
-        color: #F00;
+    }
+
+    #stripe_error {
+      font-family: $roboto;
+      margin-top: 20px;
+      display: block;
+      min-height: 30px;
+      color: #F00;
+    }
+  }
+
+  .order-finished {
+
+    table {
+      width: 400px;
+
+      th {
+        font-weight: 300;
       }
+
+      td.download-link {
+        text-align: right;
+      }
+
+      a.download-btn {
+        @include simple-button($green, #fff, 50px, 17px);
+        padding: 1px 7px;
+        font-size: 0.7em;
+        border: 2px solid #fff;
+      }
+    }
   }
 }

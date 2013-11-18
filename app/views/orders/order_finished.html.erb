@@ -1,2 +1,25 @@
 <h2>Thank You for your order!</h2>
-<%= render 'order_summary' %>
+<div class='order-finished'>
+  <table class='order-finished'>
+    <thead>
+      <th></th>
+      <th>Items purchased:</th>
+      <th></th>
+      <th></th>
+    </thead>
+    <tbody>
+      <% @order.products.each do |p| %>
+      <tr>
+        <td></td>
+        <td><%= p.title %></td>
+        <td><%= number_to_currency(p.price) %></td>
+        <td class='download-link'>
+          <% if p.is_downloadable %>
+            <%= link_to 'Download', download_product_path(p), class: "download-btn" %>
+          <% end %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
