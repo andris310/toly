@@ -159,6 +159,10 @@
   }
 
   .order-finished {
+    width: 400px;
+    margin: auto;
+    color: $gray;
+    font-family: $roboto;
 
     table {
       width: 400px;
@@ -175,7 +179,7 @@
         @include simple-button($green, #fff, 50px, 17px);
         padding: 1px 7px;
         font-size: 0.7em;
-        border: 2px solid #fff;
+        border: 2px solid $green;
       }
     }
   }
