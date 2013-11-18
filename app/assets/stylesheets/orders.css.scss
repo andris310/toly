@@ -63,21 +63,6 @@
       }
     }
 
-    .customer-info {
-      float: left;
-    }
-
-    .billing-info {
-      height: 420px;
-      float: right;
-    }
-
-    .customer-info, .billing-info {
-      width: 545px;
-      background: #fff;
-      border-radius: 4px;
-      margin-bottom: 50px;
-
       fieldset {
         border: none;
 
@@ -88,6 +73,22 @@
         }
 
         form {
+          .customer-info {
+            float: left;
+          }
+
+          .billing-info {
+            height: 420px;
+            float: right;
+          }
+
+          .customer-info, .billing-info {
+            width: 520px;
+            background: #fff;
+            border-radius: 4px;
+            margin-bottom: 50px;
+          }
+
           #error_explanation {
             h2, li {
               color: $green;
@@ -143,11 +144,11 @@
         }
       }
       #stripe_error {
+        font-family: $roboto;
         margin-top: 20px;
         display: block;
         min-height: 30px;
         color: #F00;
       }
-    }
   }
 }
