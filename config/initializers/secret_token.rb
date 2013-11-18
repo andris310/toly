@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Toly2Store::Application.config.secret_key_base = 'cb8761c75e7aeccc4ae1dbf149beb07524602e67f3d6a3727891b6bde563dbb474a791fc7fe3c1d5290dfc3a3fe7dc78bfd1fd8f4d4c4af60ad24416034324c2'
+Toly2Store::Application.config.secret_key_base = ENV['SECRET_KEY_BASE']
