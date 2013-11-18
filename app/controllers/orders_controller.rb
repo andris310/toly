@@ -46,11 +46,12 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save_with_payment
+        binding.pry
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         OrderNotifier.received(@order).deliver
 
-        format.html { redirect_to store_url, notice: 'Thank You for your order.' }
+        format.html { redirect_to store_url, notice: "Thank You for your order of #{@order.list_products}" }
         format.json { render action: 'show', status: :created, location: @order }
       else
         format.html { render action: 'new' }
@@ -69,7 +70,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save_with_payment
-      OrderNotifier.shipped(@order).deliver if ship_date_changed
+        OrderNotifier.shipped(@order).deliver if ship_date_changed
         format.html { redirect_to @order, notice: 'Order was successfully updated.' }
         format.json { head :no_content }
       else

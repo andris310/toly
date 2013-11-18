@@ -39,8 +39,14 @@ class Order < ActiveRecord::Base
     end
   end
 
+  def list_products
+    items = self.line_items.map do |i|
+      i.quantity.to_s + ' x ' + Product.find_by(id: i.product_id).title
+    end
+    items * ', '
+  end
+
   def save_with_payment
-    binding.pry
     if valid?
       customer = Stripe::Customer.create(
         :email => email,
@@ -50,7 +56,7 @@ class Order < ActiveRecord::Base
       charge = Stripe::Charge.create(
         :customer    => customer.id,
         :amount => (self.total_price*100).to_i.to_s,
-        :description => self.name,
+        :description => self.list_products,
         :currency => "usd")
 
       self.stripe_customer_token = charge.id
