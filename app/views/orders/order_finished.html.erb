@@ -23,4 +23,9 @@
       <% end %>
     </tbody>
   </table>
+
+  <% if @order.has_downloadable? %>
+    <div id='download-info'>All downloadable products can be accessed in your Users Account page for later download.</div>
+  <% end %>
+
 </div>

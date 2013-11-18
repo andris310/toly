@@ -28,6 +28,11 @@ class Order < ActiveRecord::Base
     !(items.all? { |i| i.is_downloadable })
   end
 
+  def has_downloadable?
+    items = line_items.map { |i| Product.find_by(id: i.product_id)}
+    items.any? { |i| i.is_downloadable }
+  end
+
   def name
     first_name + ' ' + last_name
   end
