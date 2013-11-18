@@ -60,7 +60,7 @@
         </div>
         <div class="field">
           <%= label_tag :card_code, "Security Code on Card (CVV)" %>
-          <%= text_field_tag :card_code, nil, name: nil %>
+          <%= text_field_tag :card_code, nil, name: nil, size: 2, maxlength: 3 %>
         </div>
         <div class="field">
           <%= label_tag :card_month, "Card Expiration" %>
@@ -72,11 +72,12 @@
         <div id="stripe_error">
           <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
         </div>
+
+        <div class="submit-area actions">
+          <%= f.submit 'Place Order', :id => 'submit-btn' %>
+        </div>
       </div>
 
-    <div class="submit-area actions">
-      <%= f.submit 'Place Order', :id => 'submit-btn' %>
-    </div>
   <% end %>
 
 
