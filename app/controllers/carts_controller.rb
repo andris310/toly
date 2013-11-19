@@ -30,6 +30,14 @@ class CartsController < ApplicationController
     @cart = Cart.new
   end
 
+  def count_items
+    @cart = Cart.find(params[:id])
+
+    respond_to do |format|
+      format.json { render :json => @cart.items_in_cart}
+    end
+  end
+
   # GET /carts/1/edit
   def edit
   end

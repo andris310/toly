@@ -14,7 +14,7 @@
 
     <%= image_tag('toly_logo.png') %>
       <% if @cart %>
-        <div id='cart' class='hidden'>
+        <div id='cart' class='hidden' data-id='<%= @cart.id %>'>
           <%= render @cart %>
         </div>
       <% end %>
@@ -23,7 +23,9 @@
       <% if @cart %>
         <%= hidden_div_if(@cart.line_items.empty?, id: 'display-cart') do %>
           <%= image_tag('cart.svg', id: 'cart-icon') %>
-          <%= @cart.items_in_cart %>
+          <div id='cart-item-count'>
+            <%= @cart.items_in_cart %>
+          </div>
         <% end %>
       <% end %>
 
