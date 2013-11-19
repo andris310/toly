@@ -1,31 +1,32 @@
 
 <div class='order-finished'>
   <h2>Thank You for your order!</h2>
-  <table>
-    <thead>
-      <th></th>
-      <th>Items purchased:</th>
-      <th></th>
-      <th></th>
-    </thead>
-    <tbody>
-      <% @order.products.each do |p| %>
-      <tr>
-        <td></td>
-        <td><%= p.title %></td>
-        <td><%= number_to_currency(p.price) %></td>
-        <td class='download-link'>
-          <% if p.is_downloadable %>
-            <%= link_to 'Download', download_product_path(p), class: "download-btn" %>
-          <% end %>
-        </td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <% if user_signed_in? %>
+    <table>
+      <thead>
+        <th></th>
+        <th>Items purchased:</th>
+        <th></th>
+        <th></th>
+      </thead>
+      <tbody>
+        <% @order.products.each do |p| %>
+        <tr>
+          <td></td>
+          <td><%= p.title %></td>
+          <td><%= number_to_currency(p.price) %></td>
+          <td class='download-link'>
+            <% if p.is_downloadable %>
+              <%= link_to 'Download', download_product_path(p), class: "download-btn" %>
+            <% end %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-  <% if @order.has_downloadable? %>
-    <div id='download-info'>All downloadable products can be accessed in your Users Account page for later download.</div>
+    <% if @order.has_downloadable? %>
+      <div id='download-info'>All downloadable products can be accessed in your Users Account page for later download.</div>
+    <% end %>
   <% end %>
-
 </div>

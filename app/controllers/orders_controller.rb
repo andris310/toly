@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   include CurrentCart
-  load_and_authorize_resource :except => [:new, :create]
+  load_and_authorize_resource :except => [:new, :create, :order_finished]
   before_action :set_cart, only: [:new, :create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
@@ -16,7 +16,9 @@ class OrdersController < ApplicationController
   end
 
   def order_finished
-    @order = current_user.orders.last
+    if user_signed_in?
+      @order = current_user.orders.last
+    end
   end
 
   # GET /orders/new
