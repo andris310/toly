@@ -16,7 +16,7 @@ class Cart < ActiveRecord::Base
   end
 
   def items_in_cart
-
+    line_items.to_a.sum { |item| item.quantity }.to_s
   end
 
   def is_downloadable?
