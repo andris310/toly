@@ -35,6 +35,16 @@
     <%= f.label :is_downloadable %>
     <%= f.select(:is_downloadable, options_for_select([['Not Downloadable', false], ['Downloadable', true]]), prompt: 'Select...') %>
   </div>
+
+  <div class="field">
+    <% for video in Video.find(:all) %>
+      <div>
+        <%= check_box_tag "product[video_ids][]", video.id, @product.videos.include?(video) %>
+        <%= video.name %>
+      </div>
+    <% end %>
+  </div>
+
   <div class="field">
     <%= f.label :price %><br>
     <%= f.text_field :price %>

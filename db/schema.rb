@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 20131120225116) do
     t.boolean  "image_processed"
   end
 
-  create_table "products_videos_tables", id: false, force: true do |t|
+  create_table "products_videos_table", id: false, force: true do |t|
     t.integer "product_id"
     t.integer "video_id"
   end
