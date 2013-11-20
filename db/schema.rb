@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131117034723) do
+ActiveRecord::Schema.define(version: 20131120225116) do
 
   create_table "carts", force: true do |t|
     t.datetime "created_at"
@@ -72,6 +72,11 @@ ActiveRecord::Schema.define(version: 20131117034723) do
     t.boolean  "image_processed"
   end
 
+  create_table "products_videos_tables", id: false, force: true do |t|
+    t.integer "product_id"
+    t.integer "video_id"
+  end
+
   create_table "rails_admin_histories", force: true do |t|
     t.text     "message"
     t.string   "username"
@@ -103,5 +108,12 @@ ActiveRecord::Schema.define(version: 20131117034723) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "videos", force: true do |t|
+    t.string   "name"
+    t.string   "video_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

@@ -1,4 +1,6 @@
 Toly2Store::Application.routes.draw do
+  resources :videos
+
   resources :coupons
 
   devise_for :users
