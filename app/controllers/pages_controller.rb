@@ -10,6 +10,14 @@ class PagesController < ApplicationController
 
   end
 
+  def spine_therapy
+
+  end
+
+  def real_stories
+
+  end
+
   def about
 
   end
