@@ -77,15 +77,15 @@
       margin: auto;
       text-align: center;
       li {
-        margin: 8%;
+        margin: 2%;
         list-style: none;
         display: inline;
         a {
           transition: color 0.5s ease;
           color: $orange;
-          font-size: 1.4em;
-          font-family: 'Advent Pro', sans-serif;
-          font-weight: 500;
+          font-size: 1.1em;
+          font-family: $roboto;
+          font-weight: 300;
           &:hover {
             color: $green;
           }
