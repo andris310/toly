@@ -12,6 +12,7 @@ class Ability
         cannot :read, Product
         cannot :read, Order
         cannot :read, Coupon
+        cannot :read, Video
     end
   end
 end
