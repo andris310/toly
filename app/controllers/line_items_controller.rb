@@ -1,4 +1,5 @@
 class LineItemsController < ApplicationController
+  load_and_authorize_resource :except => [:show, :create, :update]
   include CurrentCart
   before_action :set_cart, only: [:create]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
