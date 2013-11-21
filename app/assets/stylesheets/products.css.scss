@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .products-controller {
+
+  // ******  SHOW PRODUCT PAGE
   #product {
     font-family: $roboto;
     margin: auto;
@@ -48,4 +50,8 @@
       @include shadow-button($orange, #fff, 200px, 40px);
     }
   }
+
+  // ******* NEW PRODUCT PAGE
+
+
 }

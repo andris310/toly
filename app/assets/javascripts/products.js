@@ -1,7 +1,12 @@
 function readyProduct() {
+
+  var selectDownloadable = $('#select-downloadable');
+
   $('#product_is_downloadable').change(function() {
     if ($('#product_is_downloadable option:selected').val() === 'true') {
-      console.log('display videos');
+      selectDownloadable.removeClass('hidden');
+    } else {
+      selectDownloadable.addClass('hidden');
     }
   });
 }

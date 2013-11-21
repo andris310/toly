@@ -36,7 +36,7 @@
     <%= f.select(:is_downloadable, options_for_select([['Not Downloadable', false], ['Downloadable', true]]), prompt: 'Select...') %>
   </div>
 
-  <div class="field">
+  <div id="select-downloadable" class="field hidden">
     <% Video.order(:name).each do |video| %>
       <div>
         <%= check_box_tag "#{f.object_name}[video_ids][]", video.id, f.object.videos.include?(video) %>
