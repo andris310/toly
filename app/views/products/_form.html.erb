@@ -37,9 +37,9 @@
   </div>
 
   <div class="field">
-    <% for video in Video.find(:all) %>
+    <% Video.order(:name).each do |video| %>
       <div>
-        <%= check_box_tag "product[video_ids][]", video.id, @product.videos.include?(video) %>
+        <%= check_box_tag "#{f.object_name}[video_ids][]", video.id, f.object.videos.include?(video) %>
         <%= video.name %>
       </div>
     <% end %>
