@@ -63,6 +63,14 @@
 
     table {
       width: 100%;
+
+      .visible-product {
+        color: green;
+      }
+
+      .hidden-product {
+        color: orange;
+      }
     }
   }
 
