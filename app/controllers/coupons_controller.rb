@@ -15,6 +15,7 @@ class CouponsController < ApplicationController
 
   # GET /coupons/new
   def new
+    @products = Product.all
     @coupon = Coupon.new
   end
 
@@ -70,6 +71,7 @@ class CouponsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def coupon_params
-      params.require(:coupon).permit(:coupon_code, :times_used, :name, :coupon_type, :usage, :discount_value)
+      params.require(:coupon).permit(:coupon_code, :times_used, :name, :coupon_type,
+                                     :usage, :discount_value, :product_id)
     end
 end
