@@ -10,7 +10,9 @@
   </table>
 
   <div class='coupon-code'>
+
     <input type="text" id="coupon" name="coupon code" value="" placeholder="Coupon Code" />
+
     <%= link_to 'Empty Cart', @cart, method: :delete, remote: true,
       data: { confirm: 'Are you sure?' }, :class => 'empty-cart' %>
   </div>
