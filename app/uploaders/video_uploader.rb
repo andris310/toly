@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 class VideoUploader < CarrierWave::Uploader::Base
+  self.fog_public = false
+  self.fog_authenticated_url_expiration = 120
 
   # storage :file
   storage :fog
