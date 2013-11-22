@@ -1,8 +1,4 @@
 Toly2Store::Application.routes.draw do
-  resources :videos
-
-  resources :coupons
-
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   resources :users, :only => [:show]
@@ -10,15 +6,20 @@ Toly2Store::Application.routes.draw do
   resources :line_items
   resources :carts
   resources :pages
+  resources :coupons
 
   get "store/index"
   resources :products do
     get :who_bought, on: :member
   end
 
-resources :products do
-  member { get :download }
-end
+  resources :products do
+    member { get :download }
+  end
+
+  resources :videos do
+    member { get :download }
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
