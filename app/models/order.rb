@@ -52,6 +52,7 @@ class Order < ActiveRecord::Base
   end
 
   def save_with_payment
+    begin
     if valid?
       customer = Stripe::Customer.create(
         :email => email,
@@ -67,10 +68,14 @@ class Order < ActiveRecord::Base
       self.stripe_customer_token = charge.id
       save!
     end
-    rescue Stripe::InvalidRequestError => e
-      logger.error "Stripe error while creating customer: #{e.message}"
-      flash[:error] = e.message
-      false
+      rescue Stripe::InvalidRequestError => e
+        logger.error "Stripe error while creating customer: #{e.message}"
+        errors.add :base, "There was a problem with your credit card. #{e.message}"
+        false
+      rescue Stripe::CardError => e
+        errors.add :base, "There was a problem with your credit card. #{e.message}"
+        false
+    end
   end
 
 end

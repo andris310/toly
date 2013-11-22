@@ -82,10 +82,15 @@
         }
 
         #error_explanation {
-          h2, li {
-            color: $green;
+          color: $orange;
+          font-family: $roboto;
+          h2 {
+            font-weight: 400;
+            font-size: 1em;
+          }
+
+          li {
             font-weight: 100;
-            font-family: $roboto;
           }
         }
 
