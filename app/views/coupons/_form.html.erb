@@ -23,6 +23,19 @@
     <%= f.label :coupon_type %><br>
     <%= f.select :coupon_type, Coupon::COUPON_TYPES, prompt: 'Coupon Type' %>
   </div>
+
+    <div id="select-coupon-product" class="field">
+      <% Product.order(:title).each do |product| %>
+        <div>
+          <%= check_box_tag "#{f.object_name}[product_ids][]", product.id, f.object.products.include?(product) %>
+          <%= product.title %>
+        </div>
+      <% end %>
+    </div>
+
+  <% if %>
+
+  <% end %>
   <div class="field">
     <%= f.label :usage %><br>
     <%= f.text_field :usage %>
