@@ -17,7 +17,14 @@
           <td><%= number_to_currency(p.price) %></td>
           <td class='download-link'>
             <% if p.is_downloadable %>
-              <%= link_to 'Download', download_product_path(p), class: "download-btn" %>
+              <table>
+                <% p.videos.each do |video| %>
+                  <tr>
+                    <td class='video-name'><%= video.name %></td>
+                    <td><%= link_to 'Download', download_video_path(video), class: "download-btn" %></td>
+                  </tr>
+                <% end %>
+              </table>
             <% end %>
           </td>
         </tr>

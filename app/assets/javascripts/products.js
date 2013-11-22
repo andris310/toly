@@ -11,5 +11,5 @@ function readyProduct() {
   });
 }
 
-$(document).ready(readyProduct)
-$(document).on('page:load', readyProduct)
+$(document).ready(readyProduct);
+$(document).on('page:load', readyProduct);
