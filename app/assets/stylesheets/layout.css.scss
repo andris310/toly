@@ -67,13 +67,14 @@
     background: white;
   }
 
-  #side {
+  #menu {
     padding: 1em 0em;
     width: 100%;
 
     ul {
       padding: 0;
-      width: 70%;
+      min-width: 730px;
+      width: 960px;
       margin: auto;
       text-align: center;
       li {
@@ -83,7 +84,7 @@
         a {
           transition: color 0.5s ease;
           color: $orange;
-          font-size: 1.1em;
+          font-size: 1em;
           font-family: $roboto;
           font-weight: 300;
           &:hover {
