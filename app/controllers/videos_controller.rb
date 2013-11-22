@@ -22,6 +22,15 @@ class VideosController < ApplicationController
   def edit
   end
 
+  def download
+    @video = Video.find(params[:id])
+    data = open(@video.video_url.url)
+    send_data data.read, :type => data.content_type,
+                         :disposition => 'attachment',
+                         :filename => @video.name,
+                         :x_sendfile => true
+  end
+
   # POST /videos
   # POST /videos.json
   def create
