@@ -163,13 +163,13 @@
     h2 {
       text-align: center;
     }
-    width: 400px;
+    width: 600px;
     margin: auto;
     color: $gray;
     font-family: $roboto;
 
     table {
-      width: 400px;
+      width: 600px;
 
       th {
         font-weight: 300;
@@ -177,13 +177,18 @@
 
       td.download-link {
         text-align: right;
-      }
 
-      a.download-btn {
-        @include simple-button($green, #fff, 50px, 17px);
-        padding: 1px 7px;
-        font-size: 0.7em;
-        border: 2px solid $green;
+        table {
+          width: 300px;
+        }
+
+        a.download-btn {
+          float: right;
+          @include simple-button($green, #fff, 50px, 17px);
+          padding: 1px 7px;
+          font-size: 0.7em;
+          border: 2px solid $green;
+        }
       }
     }
 
