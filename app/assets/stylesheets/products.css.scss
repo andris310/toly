@@ -64,6 +64,14 @@
     table {
       width: 100%;
 
+      tr:hover {
+          background-color: #F7F7F7;
+      }
+
+      .product-visibility {
+        text-align: center;
+      }
+
       .visible-product {
         color: green;
       }
@@ -71,6 +79,11 @@
       .hidden-product {
         color: orange;
       }
+    }
+
+    .new-product-btn {
+      font-family: $roboto;
+      @include simple-button($orange, #fff, 100px, 25px);
     }
   }
 
