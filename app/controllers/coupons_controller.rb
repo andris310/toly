@@ -15,7 +15,6 @@ class CouponsController < ApplicationController
 
   # GET /coupons/new
   def new
-    @products = Product.all
     @coupon = Coupon.new
   end
 
