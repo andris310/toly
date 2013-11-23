@@ -10,8 +10,8 @@
   </table>
 
   <div class='coupon-code'>
-    <%= form_tag('/apply-coupon', method: 'get') do %>
-      <%= text_field_tag 'coupon', '', :size => 6, :maxlength => 6, :placeholder => 'code' %>
+    <%= form_tag('/apply-coupon.json', method: 'get') do %>
+      <%= text_field_tag :entered_code, '', :size => 6, :maxlength => 6, :placeholder => 'code' %>
       <%= submit_tag('Apply') %>
     <% end %>
 

@@ -31,6 +31,7 @@ Toly2Store::Application.routes.draw do
    get '/real-stories' => 'pages#real_stories'
    get '/about' => 'pages#about'
    get '/contact' => 'pages#contact'
+   get '/apply-coupon' => 'coupons#apply_coupon'
 
 
    get '/order-finished' => 'orders#order_finished'

@@ -8,6 +8,24 @@ class CouponsController < ApplicationController
     @coupons = Coupon.all
   end
 
+  def apply_coupon
+    # binding.pry
+    @coupons = Coupon.all
+    @coupons.each do |c|
+      if c.coupon_code == params['entered_code']
+        @match = c
+      else
+        @match = 'Sorry, this coupon is not valid.'
+      end
+
+    end
+
+
+    respond_to do |format|
+      format.json { render :json => @match }
+    end
+  end
+
   # GET /coupons/1
   # GET /coupons/1.json
   def show
