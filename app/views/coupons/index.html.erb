@@ -6,6 +6,7 @@
       <tr>
         <th>Coupon Code</th>
         <th>Name</th>
+        <th>Type</th>
         <th>Product</th>
         <th>Times used</th>
         <th></th>
@@ -20,6 +21,7 @@
         <tr>
           <td><%= coupon.coupon_code %></td>
           <td><%= coupon.name %></td>
+          <td><%= coupon.coupon_type %></td>
           <td class='center-text'>
             <% if coupon.product_id %>
               <%= Product.find(coupon.product_id).title %>
