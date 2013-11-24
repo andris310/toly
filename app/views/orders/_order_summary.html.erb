@@ -2,7 +2,11 @@
 <div class='order-summary'>
   <table>
     <%= render(@cart.line_items) %>
-
+      <tr class='discount-row'>
+        <td></td>
+        <td>Discount:</td>
+        <td class='order-discount'></td>
+      </tr>
       <tr class='total_line'>
         <td colspan='2'>Total: </td>
         <td class='total_cell'><%= number_to_currency(@cart.total_price) %></td>
@@ -10,9 +14,9 @@
   </table>
 
   <div class='coupon-code'>
-    <%= form_tag('/apply-coupon.json', method: 'get') do %>
+    <%= form_tag('/apply-coupon.json', remote: true, method: 'get') do %>
       <%= text_field_tag :entered_code, '', :size => 6, :maxlength => 6, :placeholder => 'code' %>
-      <%= submit_tag 'Apply', :id => 'apply-coupon' %>
+      <%= submit_tag('Apply', :id => 'apply-coupon') %>
     <% end %>
 
 
