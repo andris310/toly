@@ -20,7 +20,7 @@ class Cart < ActiveRecord::Base
           end
         end
       else
-        @discount = 'Sorry, this coupon is not valid.'
+        @discount = nil
       end
     end
   end
