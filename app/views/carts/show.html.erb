@@ -6,7 +6,11 @@
   <h2>Your Cart</h2>
   <table>
     <%= render(@cart.line_items) %>
-
+      <tr class='discount-row'>
+        <td></td>
+        <td></td>
+        <td class='order-discount'></td>
+      </tr>
       <tr class='total-line'>
         <td colspan='2'>Total</td>
         <td class='total-cell'><%= number_to_currency(@cart.total_price) %></td>
