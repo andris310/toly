@@ -1,5 +1,6 @@
 class Coupon < ActiveRecord::Base
   belongs_to :product
+  belongs_to :cart
   validates :name, :coupon_code, :coupon_type, presence: true, uniqueness: true
   validates :coupon_code, length: { is: 6 }
   COUPON_TYPES = ['Free PRODUCT']

@@ -12,7 +12,7 @@
   <div class='coupon-code'>
     <%= form_tag('/apply-coupon.json', method: 'get') do %>
       <%= text_field_tag :entered_code, '', :size => 6, :maxlength => 6, :placeholder => 'code' %>
-      <%= submit_tag('Apply') %>
+      <%= submit_tag 'Apply', :id => 'apply-coupon' %>
     <% end %>
 
 

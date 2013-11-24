@@ -11,6 +11,20 @@ class Cart < ActiveRecord::Base
     current_item
   end
 
+  def add_coupon(coupons, entered_code)
+    coupons.each do |c|
+      if c.coupon_code == entered_code
+        self.line_items.each do |item|
+          if item.product_id == c.product_id
+            return Product.find(item.product_id).price
+          end
+        end
+      else
+        @discount = 'Sorry, this coupon is not valid.'
+      end
+    end
+  end
+
   def total_price
     line_items.to_a.sum { |item| item.item_total_price }
   end

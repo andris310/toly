@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
   include CurrentCart
   load_and_authorize_resource :except => [:new, :create, :order_finished]
-  before_action :set_cart, only: [:new, :create]
+  before_action :set_cart, only: [:new, :create, :apply_coupon]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   # GET /orders
@@ -34,6 +34,15 @@ class OrdersController < ApplicationController
     end
 
     @order = Order.new
+  end
+
+  def apply_coupon
+    @coupons = Coupon.all
+    @discount = @cart.add_coupon(@coupons, params[:entered_code])
+
+    respond_to do |format|
+      format.json { render :json => @discount }
+    end
   end
 
   # GET /orders/1/edit
