@@ -1,6 +1,5 @@
 function ready() {
   $('.add-to-cart-btn').on('click', function() {
-    console.log('click');
     var cartId = $('#cart').attr('data-id');
     setTimeout(function() {
       $.ajax({

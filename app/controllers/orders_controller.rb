@@ -39,9 +39,14 @@ class OrdersController < ApplicationController
   def apply_coupon
     @coupons = Coupon.all
     @discount = @cart.add_coupon(@coupons, params[:entered_code])
+    @cart_total = (@cart.total_price) - @discount
+    @totals = {
+      discount: @discount,
+      total: @cart_total
+      }
 
     respond_to do |format|
-      format.json { render :json => @discount }
+      format.json { render :json => @totals }
     end
   end
 
