@@ -1,15 +1,20 @@
 function applyCoupon() {
   $('#apply-coupon').on('click', function() {
-    console.log('apply click');
     var couponCode = $('#entered_code').val();
+    var couponValidity = $('.coupon-validity');
     $.ajax({
       url: '/apply-coupon',
       method: 'get',
       data: {entered_code: couponCode},
       dataType: 'json',
       success: function(result) {
-        $('.order-discount').html('-$' + result.discount);
-        $('.total_cell').html('$' + result.total);
+        if (result.coupon === 'valid') {
+          $('.order-discount').html('-$' + result.discount);
+          $('.total_cell').html('$' + result.total);
+          couponValidity.html('');
+        } else {
+          couponValidity.hide().html('Invalid coupon').fadeIn(400);
+        }
       }
     });
   });

@@ -58,6 +58,12 @@
           color: $gray;
         }
       }
+
+      .coupon-validity {
+        color: #F00;
+        position: absolute;
+        font-size: .8em;
+      }
     }
 
     fieldset {

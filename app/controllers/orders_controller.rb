@@ -38,11 +38,18 @@ class OrdersController < ApplicationController
 
   def apply_coupon
     @coupons = Coupon.all
-    @discount = @cart.add_coupon(@coupons, params[:entered_code])
-    @cart_total = (@cart.total_price) - @discount
+    discount = @cart.add_coupon(@coupons, params[:entered_code])
+
+    if discount > 0
+      validity = 'valid'
+    else
+      validity = 'invalid'
+    end
+    cart_total = (@cart.total_price) - discount
     @totals = {
-      discount: @discount,
-      total: @cart_total
+      coupon: validity,
+      discount: discount,
+      total: cart_total,
       }
 
     respond_to do |format|

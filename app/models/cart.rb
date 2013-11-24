@@ -1,5 +1,6 @@
 class Cart < ActiveRecord::Base
   has_many :line_items, dependent: :destroy
+  has_one :coupon
 
   def add_product(product_id)
     current_item = line_items.find_by(product_id: product_id)
@@ -17,10 +18,12 @@ class Cart < ActiveRecord::Base
         self.line_items.each do |item|
           if item.product_id == c.product_id
             return Product.find(item.product_id).price
+          else
+            return 0
           end
         end
       else
-        @discount = nil
+        return 0
       end
     end
   end
