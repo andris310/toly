@@ -10,7 +10,8 @@
   }
 
   #products-container {
-    max-width: 1300px;
+    overflow: auto;
+    width: 940px;
     margin: auto;
   }
 
