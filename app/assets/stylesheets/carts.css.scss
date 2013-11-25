@@ -11,7 +11,7 @@
   position: absolute;
   border-left: 15px solid rgba(0, 0, 0, 0);
   border-right: 15px solid rgba(0, 0, 0, 0);
-  border-bottom: 11px solid $green;
+  border-bottom: 11px solid #fff;
 }
 
 #cart {
@@ -21,19 +21,19 @@
   width: 300px;
   margin: auto;
   padding: 15px;
-  color: #fff;
+  color: $gray;
   font-family: $roboto;
   font-weight: 300;
   font-size: 1em;
-  background: $green;
+  background: #fff;
   border-radius: 4px;
 
   h2 {
-    color: #fff;
+    color: $gray;
     margin-top: 0;
     font-size: 1.1em;
     padding-bottom: 10px;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid $gray;
   }
 
   table {
@@ -80,7 +80,7 @@
   }
 
   input#checkout-btn {
-    @include shadow-button(#fff, $green, 150px, 35px);
+    @include shadow-button($green, #fff, 150px, 35px);
   }
 }
 

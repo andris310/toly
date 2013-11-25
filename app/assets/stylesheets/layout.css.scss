@@ -15,6 +15,14 @@ body {
     color: $orange;
     text-align: center;
 
+    #logo {
+      margin: auto;
+      height: 90px;
+      width: 90px;
+      background: url(toly_logo.svg);
+      background-size: 90px 90px;
+    }
+
     #right-corner-bar {
       width: 340px;
       position: absolute;
@@ -69,7 +77,6 @@ body {
 
   #main {
     margin: 1em 2em;
-    padding: 1em;
   }
 
   #menu {
