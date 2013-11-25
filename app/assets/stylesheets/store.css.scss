@@ -15,9 +15,10 @@
   }
 
   .entry {
-    width: 400px;
+    width: 260px;
     height: 400px;
-    margin-top: 1em;
+    background-color: #FFF;
+    margin: 10px;
     padding: 1em;
     border-bottom: 1px solid #ddd;
     min-height: 100px;
@@ -26,18 +27,19 @@
     float: left;
 
     img {
-      width: 350px;
-      height: 320px;
+      width: 250px;
+      height: 250px;
       margin: auto;
       display: block;
     }
 
     .title-price{
-      width: 350px;
+      width: 250px;
       height: 70px;
-      background-color: #197031;
       margin: auto;
+      margin-top: 1em;
       display: block;
+      font-weight: 300;
     }
 
     form, div {
@@ -46,22 +48,22 @@
 
     .title {
       float: left;
-      width: 200px;
-      height: 50px;
+      width: 195px;
+      color: #17692E;
+      font-size: 1em;
     }
 
     .price {
       float: right;
-      width: 65px;
+      width: 55px;
     }
 
     .title, .price {
-      color: #FFF;
-      font-size: 1.3em;
-      font-weight: 100;
-      margin: 1em;
+      color: $green;
+      font-size: 1em;
+
       a {
-        color: #FFF;
+        color: $green;
       }
     }
   }
