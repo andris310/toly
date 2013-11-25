@@ -32,6 +32,11 @@
           <% end %>
         </tbody>
       </table>
+      <div>
+        <% if o.discount && o.discount > 0 %>
+          <span>Discount applied: -<%= number_to_currency(o.discount) %></span>
+        <% end %>
+      </div>
     </li>
   <% end %>
 </ul>
