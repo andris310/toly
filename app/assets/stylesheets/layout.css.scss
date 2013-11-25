@@ -24,7 +24,7 @@ body {
     }
 
     #right-corner-bar {
-      width: 340px;
+      width: 300px;
       position: absolute;
       right: 0px;
       top: 0px;
@@ -48,7 +48,7 @@ body {
         float: right;
         font-size: 0.8em;
         font-weight: 300;
-        margin-top: 10px;
+        margin: 10px 5px 0 5px;
         font-family: $roboto;
         color: gray;
 
