@@ -32,9 +32,10 @@
       <div id='sign-in-out'>
         <% if user_signed_in? %>
           <span class='signed-in-as'>
-            <%= link_to(current_user.email, "/users/#{current_user.id.to_s}") %> | Not you?</span>
+            <%= link_to(current_user.email, "/users/#{current_user.id.to_s}") %>
+          </span><br>
           <span id='sign'>
-            <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+            Not you?<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
           </span>
         <% else %>
           <span id='sign'>
