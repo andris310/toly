@@ -81,6 +81,7 @@ class OrdersController < ApplicationController
     end
 
     respond_to do |format|
+      binding.pry
       if process_order
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil

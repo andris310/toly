@@ -10,8 +10,9 @@ function applyCoupon() {
       success: function(result) {
         if (result.coupon === 'valid') {
           $('#order_entered_code').val(couponCode);
-          $('.order-discount').html('-$' + result.discount);
-          $('.total_cell').html('$' + result.total);
+          debugger;
+          $('.order-discount').html('-$' + parseFloat(result.discount, 10).toFixed(2));
+          $('.total_cell').html('$' + parseFloat(result.total, 10).toFixed(2));
           couponValidity.html('');
         } else {
           couponValidity.hide().html('Invalid coupon').fadeIn(400);
