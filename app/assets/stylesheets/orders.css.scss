@@ -9,71 +9,71 @@
     margin: auto;
 
     .order-summary {
+      margin: 0 12px;
       font-family: $roboto;
-      width: 550px;
-      margin: auto;
+      background-color: #fff;
 
-      table {
-        color: $gray;
-        float: left;
-        background: #F8F8F8;
-        margin-bottom: 25px;
-        padding: 10px 30px;
+      .summary {
+        overflow: auto;
+        width: 550px;
+        margin: auto;
+        padding-top: 15px;
 
-        td.item-quantity {
-          width: 35px;
-        }
-
-        td.item-name {
-          width: 200px;
-          text-align: center;
-        }
-
-        td.item-price {
-          width: 80px;
-          text-align: right;
-        }
-
-        td.total_cell {
-          text-align: right;
-          font-weight: bold;
-        }
-
-        .total_line {
-          text-align: right;
-        }
-      }
-
-      .coupon-code {
-        float: right;
-      }
-
-      a.empty-cart {
-        font-size: .9em;
-        color: #B8B8B8;
-        display: block;
-        margin-top: 15px;
-
-        &:hover {
+        table {
           color: $gray;
-        }
-      }
+          float: left;
+          margin-bottom: 25px;
+          padding: 10px 30px;
 
-      .coupon-validity {
-        color: #F00;
-        position: absolute;
-        font-size: .8em;
+          td.item-quantity {
+            width: 35px;
+          }
+
+          td.item-name {
+            width: 200px;
+            text-align: center;
+          }
+
+          td.item-price {
+            width: 80px;
+            text-align: right;
+          }
+
+          td.total_cell {
+            text-align: right;
+            font-weight: bold;
+          }
+
+          .total_line {
+            text-align: right;
+          }
+        }
+
+        .coupon-code {
+          float: right;
+        }
+
+        a.empty-cart {
+          font-size: .9em;
+          color: #B8B8B8;
+          display: block;
+          margin-top: 15px;
+
+          &:hover {
+            color: $gray;
+          }
+        }
+
+        .coupon-validity {
+          color: #F00;
+          position: absolute;
+          font-size: .8em;
+        }
       }
     }
 
     fieldset {
       border: none;
-
-      legend {
-        color: $green;
-        font-family: $roboto;
-        padding: 0.2em 1em;
-      }
 
       form {
 

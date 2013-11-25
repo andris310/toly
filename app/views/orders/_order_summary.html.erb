@@ -1,27 +1,29 @@
 
 <div class='order-summary'>
-  <table>
-    <%= render(@cart.line_items) %>
-      <tr class='discount-row'>
-        <td></td>
-        <td>Discount:</td>
-        <td class='order-discount'></td>
-      </tr>
-      <tr class='total_line'>
-        <td colspan='2'>Total: </td>
-        <td class='total_cell'><%= number_to_currency(@cart.total_price) %></td>
-      </tr>
-  </table>
+  <div class='summary'>
+    <table>
+      <%= render(@cart.line_items) %>
+        <tr class='discount-row'>
+          <td></td>
+          <td>Discount:</td>
+          <td class='order-discount'></td>
+        </tr>
+        <tr class='total_line'>
+          <td colspan='2'>Total: </td>
+          <td class='total_cell'><%= number_to_currency(@cart.total_price) %></td>
+        </tr>
+    </table>
 
-  <div class='coupon-code'>
-    <%= form_tag(apply_coupon_path, :remote => true) do %>
-      <%= text_field_tag :entered_code, '', :size => 6, :maxlength => 6, :placeholder => 'code' %>
-      <span id='apply-coupon'>Apply</span>
-    <% end %>
-    <div class='coupon-validity'>
+    <div class='coupon-code'>
+      <%= form_tag(apply_coupon_path, :remote => true) do %>
+        <%= text_field_tag :entered_code, '', :size => 6, :maxlength => 6, :placeholder => 'code' %>
+        <span id='apply-coupon'>Apply</span>
+      <% end %>
+      <div class='coupon-validity'>
+      </div>
+
+      <%= link_to 'Empty Cart', @cart, method: :delete, remote: true,
+        data: { confirm: 'Are you sure?' }, :class => 'empty-cart' %>
     </div>
-
-    <%= link_to 'Empty Cart', @cart, method: :delete, remote: true,
-      data: { confirm: 'Are you sure?' }, :class => 'empty-cart' %>
   </div>
 </div>
