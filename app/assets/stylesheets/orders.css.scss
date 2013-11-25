@@ -5,7 +5,7 @@
 .orders-controller {
 
   #order-checkout {
-    width: 1080px;
+    width: 100%;
     margin: auto;
 
     .order-summary {
@@ -78,10 +78,11 @@
       form {
 
         .customer-info, .billing-info {
-          width: 520px;
+          width: 500px;
           background: #fff;
           border-radius: 4px;
           margin-bottom: 50px;
+          padding: 20px 0 40px 0;
         }
 
         #error_explanation {
@@ -128,7 +129,9 @@
         }
 
         .submit-area {
-          position: relative;
+          position: absolute;
+          bottom: 35px;
+          right: 0px;
           width: 200px;
           height: 50px;
           float: right;
@@ -144,10 +147,14 @@
 
         .customer-info {
           float: left;
+
+          .field {
+            margin-left: 25px;
+          }
         }
 
         .billing-info {
-          width: 490px;
+          position: relative;
           min-height: 220px;
           float: right;
           label {

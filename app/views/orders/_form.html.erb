@@ -17,11 +17,11 @@
     <div class='customer-info'>
       <div class="field">
         <%= f.label :first_name %><br>
-        <%= f.text_field :first_name, size: 40 %>
+        <%= f.text_field :first_name, size: 35 %>
       </div>
       <div class="field">
         <%= f.label :last_name %><br>
-        <%= f.text_field :last_name, size: 40 %>
+        <%= f.text_field :last_name, size: 35 %>
       </div>
 
       <% if @cart.is_downloadable? %>
@@ -29,11 +29,11 @@
       <% else %>
         <div class="field">
           <%= f.label :address %><br>
-          <%= f.text_field :address, size: 40 %>
+          <%= f.text_field :address, size: 35 %>
         </div>
         <div class="field">
           <%= f.label :city %><br>
-          <%= f.text_field :city, size: 40 %>
+          <%= f.text_field :city, size: 35 %>
         </div>
          <div class="field">
           <%= f.label :state %><br>
@@ -47,7 +47,7 @@
 
       <div class="field">
         <%= f.label :email %><br>
-        <%= f.email_field :email, size: 40 %>
+        <%= f.email_field :email, size: 35 %>
       </div>
     </div>
 

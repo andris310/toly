@@ -1,4 +1,5 @@
 function applyCoupon() {
+  $('.billing-info').height($('.customer-info').height());
   $('#apply-coupon').on('click', function() {
     var couponCode = $('#entered_code').val();
     var couponValidity = $('.coupon-validity');
