@@ -37,8 +37,7 @@ class OrdersController < ApplicationController
   end
 
   def apply_coupon
-    @coupons = Coupon.all
-    discount = @cart.add_coupon(@coupons, params[:entered_code])
+    discount = @cart.add_coupon(params[:entered_code])
 
     if discount > 0
       validity = 'valid'
@@ -69,10 +68,20 @@ class OrdersController < ApplicationController
     if user_signed_in?
       @order.user_id = current_user.id
     end
-    @order.total_price = @cart.total_price
+    discount = @cart.add_coupon(params[:order][:entered_code])
+    @order.discount = discount
+
+    order_total = (@cart.total_price) - discount
+    @order.total_price = order_total
+
+    if order_total > 0
+      process_order = @order.save_with_payment
+    else
+      process_order = @order.save
+    end
 
     respond_to do |format|
-      if @order.save_with_payment
+      if process_order
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         OrderNotifier.received(@order).deliver
@@ -126,6 +135,7 @@ class OrdersController < ApplicationController
     def order_params
       params.require(:order).permit(:first_name, :last_name, :address,
                                     :city, :state, :zipcode, :email,
-                                    :pay_type, :user_id, :total_price, :stripe_card_token)
+                                    :pay_type, :user_id, :total_price,
+                                    :stripe_card_token, :entered_code)
     end
 end

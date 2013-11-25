@@ -4,6 +4,7 @@ class Order < ActiveRecord::Base
   has_one :coupon
 
   attr_accessor :stripe_card_token
+  attr_accessor :entered_code
 
   belongs_to :user
   PAYMENT_TYPES = ["Credit card"]

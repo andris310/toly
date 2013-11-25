@@ -9,6 +9,7 @@ function applyCoupon() {
       dataType: 'json',
       success: function(result) {
         if (result.coupon === 'valid') {
+          $('#order_entered_code').val(couponCode);
           $('.order-discount').html('-$' + result.discount);
           $('.total_cell').html('$' + result.total);
           couponValidity.html('');

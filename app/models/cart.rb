@@ -12,7 +12,8 @@ class Cart < ActiveRecord::Base
     current_item
   end
 
-  def add_coupon(coupons, entered_code)
+  def add_coupon(entered_code)
+    coupons = Coupon.all
     coupons.each do |c|
       if c.coupon_code == entered_code
         self.line_items.each do |item|
