@@ -9,10 +9,12 @@
     font-family: $roboto;
     margin: auto;
     width: 1000px;
+    overflow: auto;
+    background-color: white;
 
     #product-title {
       padding-left: 1em;
-      width: 35%;
+      width: 47%;
       float: left;
       h2 {
         font-weight: 400;
@@ -26,7 +28,7 @@
     }
 
     #product-description {
-      width: 30%;
+      width: 47%;
       float: left;
       padding: 1em;
       font-weight: 300;
