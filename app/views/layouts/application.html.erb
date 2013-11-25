@@ -10,43 +10,43 @@
   <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,500' rel='stylesheet' type='text/css'>
 </head>
 <body class='<%= controller.controller_name %>-controller'>
-  <div id='banner'>
+  <div id='wrapper'>
+    <div id='banner'>
 
-    <%= image_tag('toly_logo.png') %>
-      <% if @cart %>
-        <div id='cart' class='hidden' data-id='<%= @cart.id %>'>
-          <%= render @cart %>
-        </div>
-      <% end %>
-
-    <div id='right-corner-bar'>
-      <% if @cart %>
-        <%= hidden_div_if(@cart.line_items.empty?, id: 'display-cart') do %>
-          <%= image_tag('cart.svg', id: 'cart-icon') %>
-          <div id='cart-item-count'>
-            <%= @cart.items_in_cart %>
+      <%= image_tag('toly_logo.png') %>
+        <% if @cart %>
+          <div id='cart' class='hidden' data-id='<%= @cart.id %>'>
+            <%= render @cart %>
           </div>
         <% end %>
-      <% end %>
 
-      <div id='sign-in-out'>
-        <% if user_signed_in? %>
-          <span class='signed-in-as'>
-            <%= link_to(current_user.email, "/users/#{current_user.id.to_s}") %>
-          </span><br>
-          <span id='sign'>
-            Not you?<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-          </span>
-        <% else %>
-          <span id='sign'>
-          <%= link_to "Sign up", new_user_registration_path %> <span id='or'>|</span> <%= link_to "Sign in", new_user_session_path %>
-          </span>
+      <div id='right-corner-bar'>
+        <% if @cart %>
+          <%= hidden_div_if(@cart.line_items.empty?, id: 'display-cart') do %>
+            <%= image_tag('cart.svg', id: 'cart-icon') %>
+            <div id='cart-item-count'>
+              <%= @cart.items_in_cart %>
+            </div>
+          <% end %>
         <% end %>
-      </div>
-    </div>
 
-  </div>
-  <div id='columns'>
+        <div id='sign-in-out'>
+          <% if user_signed_in? %>
+            <span class='signed-in-as'>
+              <%= link_to(current_user.email, "/users/#{current_user.id.to_s}") %>
+            </span><br>
+            <span id='sign'>
+              Not you?<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+            </span>
+          <% else %>
+            <span id='sign'>
+            <%= link_to "Sign up", new_user_registration_path %> <span id='or'>|</span> <%= link_to "Sign in", new_user_session_path %>
+            </span>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
     <div id='menu'>
       <ul>
         <li><a href='/'>HOME</a></li>
@@ -58,7 +58,6 @@
       </ul>
     </div>
     <div id='main'>
-
       <p class="alert"><%= alert %></p>
 
       <div id='container'>
