@@ -12,44 +12,48 @@
     overflow: auto;
     background-color: white;
 
-    #product-title {
-      padding-left: 1em;
-      width: 47%;
-      float: left;
-      h2 {
-        font-weight: 400;
-        margin-bottom: 0;
-      }
-    }
-
     img {
+      overflow: auto;
       float: left;
       padding: 1em;
     }
 
-    #product-description {
-      width: 47%;
-      float: left;
-      padding: 1em;
-      font-weight: 300;
-    }
+    #product-info {
+      width: 50%;
+      overflow: auto;
 
-    #product-price {
-      margin-top: 2em;
-      margin-bottom: 15px;
-      .price {
-        font-size: 1.3em;
+      #product-title {
+        padding-left: 1em;
+        float: left;
+        h2 {
+          font-weight: 400;
+          margin-bottom: 0;
+        }
       }
-    }
 
-    .add-to-cart {
-      height: 45px;
-      width: 210px;
-      position: relative;
-    }
+      #product-description {
+        float: left;
+        padding: 1em;
+        font-weight: 300;
+      }
 
-    .add-to-cart-btn {
-      @include shadow-button($orange, #fff, 200px, 40px);
+      #product-price {
+        margin-top: 2em;
+        margin-bottom: 15px;
+        .price {
+          font-size: 1.3em;
+        }
+      }
+
+      .add-to-cart {
+        height: 45px;
+        width: 210px;
+        position: relative;
+      }
+
+      .add-to-cart-btn {
+        @include shadow-button($orange, #fff, 200px, 40px);
+      }
     }
   }
 
