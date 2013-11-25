@@ -12,6 +12,7 @@ function applyCoupon() {
         if (result.coupon === 'valid') {
           $('#order_entered_code').val(couponCode);
           debugger;
+          $('.discount').html('Discount: ');
           $('.order-discount').html('-$' + parseFloat(result.discount, 10).toFixed(2));
           $('.total_cell').html('$' + parseFloat(result.total, 10).toFixed(2));
           couponValidity.html('');
