@@ -137,6 +137,6 @@ class OrdersController < ApplicationController
       params.require(:order).permit(:first_name, :last_name, :address,
                                     :city, :state, :zipcode, :email,
                                     :pay_type, :user_id, :total_price,
-                                    :stripe_card_token, :entered_code)
+                                    :stripe_card_token, :entered_code, :coupon_id)
     end
 end

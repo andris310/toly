@@ -1,5 +1,5 @@
 class AddCouponToOrders < ActiveRecord::Migration
   def change
-    add_column :orders, :coupon, :string
+    add_reference :orders, :coupon, index: true
   end
 end

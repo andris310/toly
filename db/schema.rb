@@ -62,8 +62,10 @@ ActiveRecord::Schema.define(version: 20131126041313) do
     t.decimal  "total_price"
     t.string   "stripe_customer_token"
     t.decimal  "discount",              precision: 8, scale: 2
-    t.string   "coupon"
+    t.integer  "coupon_id"
   end
+
+  add_index "orders", ["coupon_id"], name: "index_orders_on_coupon_id"
 
   create_table "products", force: true do |t|
     t.string   "title"
