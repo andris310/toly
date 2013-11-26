@@ -21,6 +21,7 @@ class Cart < ActiveRecord::Base
             return Product.find(item.product_id).price
           end
         end
+        return 0
       else
         return 0
       end
