@@ -15,7 +15,7 @@
           <tr>
             <td></td>
             <td><%= p.title %></td>
-            <td><%= number_to_currency(p.price) %></td>
+            <td class='item-price'><%= number_to_currency(p.price) %></td>
             <td class='download-link'>
               <% if p.is_downloadable %>
                 <table>

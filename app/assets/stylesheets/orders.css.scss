@@ -24,37 +24,6 @@
           float: left;
           margin-bottom: 25px;
           padding: 10px 30px;
-
-          tr.discount-row {
-            height: 21px;
-          }
-
-          td.item-quantity {
-            width: 35px;
-          }
-
-          td.item-name {
-            width: 200px;
-            text-align: center;
-          }
-
-          td.item-price {
-            width: 80px;
-            text-align: right;
-          }
-
-          td.order-discount {
-            color: red;
-          }
-
-          td.total_cell {
-            text-align: right;
-            font-weight: bold;
-          }
-
-          .total_line {
-            text-align: right;
-          }
         }
 
         .coupon-code {
@@ -214,7 +183,7 @@
 
         a.download-btn {
           float: right;
-          @include simple-button($green, #fff, 50px, 17px);
+          @include simple-button($green, $background-gray, 50px, 17px);
           padding: 1px 7px;
           font-size: 0.7em;
           border: 2px solid $green;
@@ -228,5 +197,36 @@
       text-align: center;
       font-weight: 100;
     }
+  }
+
+  .discount-row {
+            height: 21px;
+  }
+
+  .item-quantity {
+    width: 35px;
+  }
+
+  .item-name {
+    width: 200px;
+    text-align: center;
+  }
+
+  .item-price {
+    width: 80px;
+    text-align: right;
+  }
+
+  .order-discount {
+    color: red;
+  }
+
+  .total_cell {
+    text-align: right;
+    font-weight: bold;
+  }
+
+  .total_line {
+    text-align: right;
   }
 }
