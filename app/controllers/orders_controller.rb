@@ -64,11 +64,12 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(order_params)
+    @coupon = Coupon.find_by(:coupon_code => order_params[:entered_code])
     @order.add_line_items_from_cart(@cart)
     if user_signed_in?
       @order.user_id = current_user.id
     end
-    discount = @cart.add_coupon(params[:order][:entered_code])
+    discount = @cart.add_coupon(order_params[:entered_code])
     @order.discount = discount
 
     order_total = (@cart.total_price) - discount
@@ -81,8 +82,9 @@ class OrdersController < ApplicationController
     end
 
     respond_to do |format|
-      binding.pry
       if process_order
+        binding.pry
+        @order.coupon_id = @coupon.id
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         OrderNotifier.received(@order).deliver

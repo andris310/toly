@@ -19,8 +19,6 @@ class Cart < ActiveRecord::Base
         self.line_items.each do |item|
           if item.product_id == c.product_id
             return Product.find(item.product_id).price
-          else
-            return 0
           end
         end
       else
