@@ -5,24 +5,25 @@
 .arrow-up {
   width: 0;
   height: 0;
-  top: -7px;
-  left: 43.5%;
+  top: -11px;
+  left: 44%;
   margin: auto;
   position: absolute;
-  border-left: 15px solid rgba(0, 0, 0, 0);
-  border-right: 15px solid rgba(0, 0, 0, 0);
-  border-bottom: 11px solid #fff;
+  border-left: 17px solid rgba(0, 0, 0, 0);
+  border-right: 17px solid rgba(0, 0, 0, 0);
+  border-bottom: 14px solid #FFF;
 }
 
 #cart {
   position: absolute;
   top: 40px;
-  right: 115px;
+  right: 113px;
   width: 300px;
   margin: auto;
   padding: 15px;
   color: $gray;
   font-family: $roboto;
+  border: 5px solid #CFCFCF;
   font-weight: 300;
   font-size: 1em;
   background: #fff;
