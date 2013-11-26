@@ -64,7 +64,6 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(order_params)
-    @coupon = Coupon.find_by(:coupon_code => order_params[:entered_code])
     @order.add_line_items_from_cart(@cart)
     if user_signed_in?
       @order.user_id = current_user.id
@@ -74,7 +73,11 @@ class OrdersController < ApplicationController
 
     order_total = (@cart.total_price) - discount
     @order.total_price = order_total
-    @order.coupon_id = @coupon.id
+
+    if !order_params[:entered_code].empty?
+      @coupon = Coupon.find_by(:coupon_code => order_params[:entered_code])
+      @order.coupon_id = @coupon.id
+    end
 
     if order_total > 0
       process_order = @order.save_with_payment
@@ -84,6 +87,11 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if process_order
+        if @coupon
+          @coupon.times_used += 1
+          @coupon.save!
+        end
+
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         OrderNotifier.received(@order).deliver
