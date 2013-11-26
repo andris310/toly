@@ -74,6 +74,7 @@ class OrdersController < ApplicationController
 
     order_total = (@cart.total_price) - discount
     @order.total_price = order_total
+    @order.coupon_id = @coupon.id
 
     if order_total > 0
       process_order = @order.save_with_payment
@@ -83,8 +84,6 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if process_order
-        binding.pry
-        @order.coupon_id = @coupon.id
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         OrderNotifier.received(@order).deliver
