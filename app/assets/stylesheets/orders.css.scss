@@ -63,6 +63,7 @@
 
         .customer-info, .billing-info {
           width: 500px;
+          min-height: 180px;
           background: #fff;
           border-radius: 4px;
           margin-bottom: 50px;
@@ -139,7 +140,6 @@
 
         .billing-info {
           position: relative;
-          min-height: 220px;
           float: right;
           label {
             width: 200px;
