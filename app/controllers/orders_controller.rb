@@ -79,11 +79,16 @@ class OrdersController < ApplicationController
       @order.coupon_id = @coupon.id
     end
 
+    if @order.downloadable_order?
+      @order.shipped = true
+    end
+
     if order_total > 0
       process_order = @order.save_with_payment
     else
       process_order = @order.save
     end
+    binding.pry
 
     respond_to do |format|
       if process_order

@@ -32,11 +32,10 @@
           <% end %>
 
           <% if @order.discount %>
-          <% binding.pry %>
             <tr class='discount-row'>
               <td></td>
               <td class='discount'>Discount:</td>
-              <td class='order-discount'><%= number_to_currency(@order.discount) %></td>
+              <td class='order-discount'>-<%= number_to_currency(@order.discount) %></td>
             </tr>
           <% end %>
           <tr class='total_line'>

@@ -22,11 +22,11 @@ class Order < ActiveRecord::Base
 
   validates_presence_of :address, :city, :state,
             :zipcode, :state, inclusion: STATES,
-            :if => :downloadable_order?
+            :unless => :downloadable_order?
 
   def downloadable_order?
     items = line_items.map { |i| Product.find_by(id: i.product_id)}
-    !(items.all? { |i| i.is_downloadable })
+    items.all? { |i| i.is_downloadable }
   end
 
   def has_downloadable?
