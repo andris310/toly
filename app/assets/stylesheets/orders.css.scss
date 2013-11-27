@@ -232,6 +232,8 @@
   // ******** ORDERS INDEX PAGE
 
   #all-orders {
+    font-family: $roboto;
+    color: $gray;
 
     .list_line_odd {
       background: #EEE;
@@ -243,6 +245,10 @@
 
     table {
       width: 100%;
+
+      tr:hover {
+          background-color: #F7F7F7;
+      }
 
       td {
         padding: 5px;
