@@ -245,6 +245,7 @@
 
     table {
       width: 100%;
+      font-size: .8em;
 
       tr:hover {
           background-color: #F7F7F7;
@@ -259,4 +260,14 @@
       }
     }
   }
+
+  // ********** ORDERS SHOW PAGE
+  #order-show {
+
+    table {
+      width: 300px;
+    }
+  }
+
+
 }
