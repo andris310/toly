@@ -114,7 +114,7 @@ class OrdersController < ApplicationController
     ship_date_changed = @order.ship_date_changed?
 
     respond_to do |format|
-      if @order.save_with_payment
+      if @order.save
         OrderNotifier.shipped(@order).deliver if ship_date_changed
         format.html { redirect_to @order, notice: 'Order was successfully updated.' }
         format.json { head :no_content }
@@ -146,6 +146,7 @@ class OrdersController < ApplicationController
       params.require(:order).permit(:first_name, :last_name, :address,
                                     :city, :state, :zipcode, :email,
                                     :pay_type, :user_id, :total_price,
-                                    :stripe_card_token, :entered_code, :coupon_id)
+                                    :stripe_card_token, :entered_code,
+                                    :coupon_id, :shipped)
     end
 end

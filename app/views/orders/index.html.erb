@@ -1,33 +1,50 @@
-<h1>Listing orders</h1>
+<div id='all-orders'>
+  <h1>All Orders</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Email</th>
-      <th>Pay type</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @orders.each do |order| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= order.name %></td>
-        <td><%= order.address %></td>
-        <td><%= order.email %></td>
-        <td><%= order.pay_type %></td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th></th>
+        <th>Total</th>
+        <th>Shipped</th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @orders.each do |order| %>
+        <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+          <td><%= order.name %></td>
+          <td class='order-address'>
+            <%= order.address %><br>
+            <%= order.city %><br>
+            <%= order.state %><%= order.zipcode %>
+          </td>
+          <td><%= order.email %></td>
+          <td><%= order.pay_type %></td>
+          <td><%= number_to_currency(order.total_price) %></td>
+          <td>
+            <% if !order.shipped %>
+            <%= link_to('Ship', order_path(order, :order => {:shipped => true}), :method => :put) %><br>
+            <% else %>
+              <span>Order was shipped on:</span><br>
+              <%= order.ship_date %>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to 'Show', order %><br>
+            <%= link_to 'Edit', edit_order_path(order) %><br>
+            <%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Order', new_order_path %>
+  <br>
+
+  <%= link_to 'New Order', new_order_path %>
+</div>

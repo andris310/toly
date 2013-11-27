@@ -19,7 +19,6 @@ class Order < ActiveRecord::Base
       'WV', 'WI', 'WY'
     ]
   validates :first_name, :last_name, :email, presence: true
-  # validates :pay_type, inclusion: PAYMENT_TYPES
 
   validates_presence_of :address, :city, :state,
             :zipcode, :state, inclusion: STATES,

@@ -229,4 +229,28 @@
   .total_line {
     text-align: right;
   }
+  // ******** ORDERS INDEX PAGE
+
+  #all-orders {
+
+    .list_line_odd {
+      background: #EEE;
+    }
+
+    .list_line_even {
+
+    }
+
+    table {
+      width: 100%;
+
+      td {
+        padding: 5px;
+      }
+
+      .order-address {
+
+      }
+    }
+  }
 }

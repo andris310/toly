@@ -24,7 +24,7 @@
         <%= f.text_field :last_name, size: 35 %>
       </div>
 
-      <% if @cart.is_downloadable? %>
+      <% if @cart && @cart.is_downloadable? %>
 
       <% else %>
         <div class="field">
