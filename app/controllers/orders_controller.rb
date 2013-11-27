@@ -147,6 +147,6 @@ class OrdersController < ApplicationController
                                     :city, :state, :zipcode, :email,
                                     :pay_type, :user_id, :total_price,
                                     :stripe_card_token, :entered_code,
-                                    :coupon_id, :shipped)
+                                    :coupon_id, :shipped, :ship_date)
     end
 end

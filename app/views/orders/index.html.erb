@@ -28,10 +28,15 @@
           <td><%= number_to_currency(order.total_price) %></td>
           <td>
             <% if !order.shipped %>
-            <%= link_to('Ship', order_path(order, :order => {:shipped => true}), :method => :put) %><br>
+            <%= link_to('Ship', order_path(order, :order => { :shipped => true,
+              :ship_date => DateTime.now }), :method => :put) %><br>
             <% else %>
-              <span>Order was shipped on:</span><br>
-              <%= order.ship_date %>
+              <span>Shipped on:</span><br>
+              <% if order.ship_date %>
+                <%= order.ship_date.strftime("%d/%m/%Y") %>
+              <% else %>
+                <span>n/a</span>
+              <% end %>
             <% end %>
           </td>
           <td>
