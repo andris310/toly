@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require bxslider
 //= require turbolinks
 //= rwquire jquery.flowuplabels
 //= require_tree .
