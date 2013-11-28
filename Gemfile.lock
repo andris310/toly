@@ -45,6 +45,7 @@ GEM
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     builder (3.1.4)
+    bxslider-rails (4.1.0)
     cancan (1.6.10)
     carrierwave (0.9.0)
       activemodel (>= 3.2.0)
@@ -220,6 +221,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
+  bxslider-rails
   cancan
   carrierwave
   coffee-rails (~> 4.0.1)
