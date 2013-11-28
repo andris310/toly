@@ -1,4 +1,6 @@
 Toly2Store::Application.routes.draw do
+  resources :slides
+
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   resources :users, :only => [:show]
