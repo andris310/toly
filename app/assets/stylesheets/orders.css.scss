@@ -83,29 +83,17 @@
           }
         }
 
+        .fl_wrap {
+          width: 430px;
+        }
+
         label {
-          width: 5em;
-          float: left;
-          color: $green;
-          text-align: right;
-          padding-top: 1em;
-          margin-right: 0.1em;
-          display: block;
           font-weight: 100;
           font-family: $roboto;
         }
 
         input {
-          font-size: 1.3em;
-          line-height: 1.3em;
-          color: $green;
-          border: none;
-          border-bottom: 2px solid $green;
           outline: none;
-          margin-left: 10px;
-          margin-bottom: 10px;
-          padding-left: 5px;
-          background-color: #fff;
         }
 
         select {
