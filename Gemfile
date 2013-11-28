@@ -50,6 +50,7 @@ gem 'cancan'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog'
+gem 'bxslider-rails'
 # gem 'carrierwave_direct'
 # gem 'sidekiq'
 # gem 'sinatra', '>= 1.3.0', :require => nil
