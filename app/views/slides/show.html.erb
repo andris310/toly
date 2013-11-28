@@ -7,7 +7,8 @@
 
 <p>
   <strong>Url:</strong>
-  <%= @slide.url %>
+
+  <%= image_tag @slide.url.url(:thumb).to_s %>
 </p>
 
 <%= link_to 'Edit', edit_slide_path(@slide) %> |

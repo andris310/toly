@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   before_action :set_cart
 
   def home
-
+    @slides = Slide.all
   end
 
   def contact

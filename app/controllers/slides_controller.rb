@@ -2,28 +2,20 @@ class SlidesController < ApplicationController
   load_and_authorize_resource
   before_action :set_slide, only: [:show, :edit, :update, :destroy]
 
-  # GET /slides
-  # GET /slides.json
   def index
     @slides = Slide.all
   end
 
-  # GET /slides/1
-  # GET /slides/1.json
   def show
   end
 
-  # GET /slides/new
   def new
     @slide = Slide.new
   end
 
-  # GET /slides/1/edit
   def edit
   end
 
-  # POST /slides
-  # POST /slides.json
   def create
     @slide = Slide.new(slide_params)
 
@@ -38,8 +30,6 @@ class SlidesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /slides/1
-  # PATCH/PUT /slides/1.json
   def update
     respond_to do |format|
       if @slide.update(slide_params)
@@ -52,8 +42,7 @@ class SlidesController < ApplicationController
     end
   end
 
-  # DELETE /slides/1
-  # DELETE /slides/1.json
+
   def destroy
     @slide.destroy
     respond_to do |format|
