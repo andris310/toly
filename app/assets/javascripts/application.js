@@ -14,5 +14,6 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
+//= rwquire jquery.flowuplabels
 //= require_tree .
 

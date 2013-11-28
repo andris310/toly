@@ -1,33 +1,38 @@
 <div id='order-show'>
   <p id="notice"><%= notice %></p>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @order.first_name + " " + @order.last_name %>
-  </p>
+  <div class='order-details'>
+    <p>
+      <strong>Name:</strong>
+      <%= @order.first_name + " " + @order.last_name %>
+    </p>
 
-  <p>
-    <strong>Email:</strong>
-    <%= @order.email %>
-  </p>
+    <p>
+      <strong>Email:</strong>
+      <%= @order.email %>
+    </p>
 
-  <p>
-    <strong>Address:</strong><br>
-    <%= @order.address %><br>
-    <%= @order.city %><br>
-    <%= @order.state %>' '<%= @order.zipcode %>
-  </p>
+    <p>
+      <strong>Address:</strong><br>
+      <%= @order.address %><br>
+      <%= @order.city %><br>
+      <%= @order.state %>' '<%= @order.zipcode %>
+    </p>
 
-  <p>
-    <strong>Order Date:</strong>
-    <%= @order.created_at.strftime('%d/%m/%Y') %>
-  </p>
+    <p>
+      <strong>Order Date:</strong>
+      <%= @order.created_at.strftime('%d/%m/%y') %>
+    </p>
 
-  <p>
-    <strong>Ship Date:</strong>
-    <%= @order.ship_date.strftime('%d/%m/%Y') %>
-  </p>
-
+    <p>
+      <strong>Ship Date:</strong>
+      <% if @order.ship_date %>
+        <%= @order.ship_date.strftime('%d/%m/%y') %>
+      <% else %>
+        <span>n/a</span>
+      <% end %>
+    </p>
+  </div>
   <table>
     <% @order.line_items.each do |i| %>
       <tr>
@@ -46,6 +51,8 @@
       </tr>
   </table>
 
-  <%= link_to 'Edit', edit_order_path(@order) %> |
-  <%= link_to 'Back', orders_path %>
+  <div class='order-links'>
+    <%= link_to 'Edit', edit_order_path(@order) %> |
+    <%= link_to 'Back', orders_path %>
+  </div>
 </div>

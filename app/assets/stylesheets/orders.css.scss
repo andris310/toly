@@ -247,6 +247,11 @@
       width: 100%;
       font-size: .8em;
 
+      th.date-column {
+        width: 70px;
+        text-align: center;
+      }
+
       tr:hover {
           background-color: #F7F7F7;
       }
@@ -266,8 +271,19 @@
     font-family: $roboto;
     color: $gray;
 
+    .order-details {
+      float: left;
+      margin: 0 15px;
+    }
+
     table {
       width: 300px;
+      margin: 100px 15px;
+      float: left;
+    }
+
+    .order-links {
+      clear: both;
     }
   }
 

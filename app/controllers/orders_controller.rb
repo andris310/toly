@@ -88,7 +88,6 @@ class OrdersController < ApplicationController
     else
       process_order = @order.save
     end
-    binding.pry
 
     respond_to do |format|
       if process_order

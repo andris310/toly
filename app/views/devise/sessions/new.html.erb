@@ -3,20 +3,27 @@
     <p id="notice"><%= notice %></p>
 <% end %>
 
-<h2>Sign in</h2>
+<div class='sign-in-box'>
+  <h2>Sign in</h2>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'FlowupLabels'}) do |f| %>
+    <div class='fl_wrap'>
+      <%= f.label :email, class: 'fl_label' %>
+      <%= f.email_field :email, class: 'fl_input' %>
+    </div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+    <div class='fl_wrap'>
+      <%= f.label :password, class: 'fl_label' %>
+      <%= f.password_field :password, class: 'fl_input' %></div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+    <% if devise_mapping.rememberable? -%>
+      <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+    <% end -%>
 
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
+    <div>
+      <%= f.submit "Sign in", :class => 'sign-in-btn' %>
+    </div>
+  <% end %>
 
-<%= render "devise/shared/links" %>
+  <%= render "devise/shared/links" %>
+</div>

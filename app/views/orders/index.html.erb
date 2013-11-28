@@ -9,13 +9,14 @@
         <th>Email</th>
         <th></th>
         <th>Total</th>
-        <th>Shipped On</th>
+        <th class='date-column'>Order Date</th>
+        <th class='date-column'>Shipped On</th>
         <th></th>
       </tr>
     </thead>
 
     <tbody>
-      <% @orders.each do |order| %>
+      <% @orders.reverse.each do |order| %>
         <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
           <td><%= order.name %></td>
           <td class='order-address'>
@@ -26,13 +27,14 @@
           <td><%= order.email %></td>
           <td><%= order.pay_type %></td>
           <td><%= number_to_currency(order.total_price) %></td>
+          <td><%= order.created_at.strftime('%d/%m/%y') %></td>
           <td>
             <% if !order.shipped %>
             <%= link_to('Ship', order_path(order, :order => { :shipped => true,
               :ship_date => DateTime.now }), :method => :put) %><br>
             <% else %>
               <% if order.ship_date %>
-                <%= order.ship_date.strftime("%d/%m/%Y") %>
+                <%= order.ship_date.strftime("%d/%m/%y") %>
               <% else %>
                 <span>n/a</span>
               <% end %>
