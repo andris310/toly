@@ -77,6 +77,44 @@ body {
 
   #main {
     margin: 1em;
+
+    #container {
+      margin-bottom: 100px;
+    }
+
+      .alert {
+        text-align: center;
+        color: $orange;
+      }
+
+    .login-signin {
+      font-family: $roboto;
+      color: $gray;
+
+      .sign-in-box {
+        width: 300px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      input {
+        outline: none;
+      }
+
+      .sign-in-btn {
+        margin: 25px 0px 15px 0px;
+        @include simple-button($gray, rgba(0, 0, 0, 0), 301px, 35px);
+      }
+
+      a {
+        color: #B1B1B1;
+
+        &:hover {
+          color: $gray;
+        }
+      }
+
+    }
   }
 
   #menu {
