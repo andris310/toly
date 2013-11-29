@@ -60,6 +60,7 @@
         <%= label_tag :card_code, nil, class: 'fl_label' %>
         <%= text_field_tag :card_code, nil, name: nil, size: 2, maxlength: 3, :class => 'fl_input' %>
       </div>
+
       <div class="field fl_wrap">
         <%= label_tag :card_month, "Card Expiration" %>
         <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
