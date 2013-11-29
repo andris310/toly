@@ -3,10 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .products-controller {
-
+  font-family: $roboto;
   // ******  SHOW PRODUCT PAGE
   #product {
-    font-family: $roboto;
     margin: auto;
     width: 1000px;
     overflow: auto;
