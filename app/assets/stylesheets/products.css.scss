@@ -3,10 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .products-controller {
-
+  font-family: $roboto;
   // ******  SHOW PRODUCT PAGE
   #product {
-    font-family: $roboto;
     margin: auto;
     width: 1000px;
     overflow: auto;
@@ -71,6 +70,10 @@
 
     table {
       width: 100%;
+
+      .list_line_odd {
+        background: #EEE;
+      }
 
       tr:hover {
           background-color: #F7F7F7;
