@@ -29,9 +29,10 @@
       <%= f.collection_select(:product_id, Product.all, :id, :title, prompt: 'Select Product') %>
     </div>
 
-  <% if %>
-
-  <% end %>
+    <div id='discount-value' class='field'>
+      <%= f.label :discount_value %>
+      <%= f.number_field :discount_value, :in => 1..100 %>
+    </div>
 
   <div class="actions">
     <%= f.submit %>
