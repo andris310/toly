@@ -1,16 +1,20 @@
 
 function readyCoupon() {
   var selectCouponProduct = $('#select-coupon-product');
-  var selectedValue = $('#coupon_coupon_type option:selected').val();
+  var selectDiscountValue = $('#discount-value');
 
   $('#coupon_coupon_type').change(function() {
-    console.log('change');
+    var selectedValue = $('#coupon_coupon_type option:selected').val();
+
     if (selectedValue === 'Free PRODUCT') {
       selectCouponProduct.removeClass('hidden');
+      selectDiscountValue.addClass('hidden');
     } else if (selectedValue === 'Order PERCENTAGE') {
-
+      selectCouponProduct.addClass('hidden');
+      selectDiscountValue.removeClass('hidden');
     } else {
       selectCouponProduct.addClass('hidden');
+      selectDiscountValue.addClass('hidden');
     }
   });
 }
