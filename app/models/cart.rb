@@ -15,17 +15,21 @@ class Cart < ActiveRecord::Base
   def add_coupon(entered_code)
     coupons = Coupon.all
     coupons.each do |c|
+      binding.pry
       if c.coupon_code == entered_code
+
         self.line_items.each do |item|
           if item.product_id == c.product_id
             return Product.find(item.product_id).price
           end
         end
-        return 0
+
+        result = 0
       else
-        return 0
+        result = 0
       end
     end
+    result
   end
 
   def total_price
