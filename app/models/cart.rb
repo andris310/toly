@@ -15,13 +15,15 @@ class Cart < ActiveRecord::Base
   def add_coupon(entered_code)
     coupons = Coupon.all
     coupons.each do |c|
-      binding.pry
       if c.coupon_code == entered_code
-
-        self.line_items.each do |item|
-          if item.product_id == c.product_id
-            return Product.find(item.product_id).price
+        if c.coupon_type == 'Free PRODUCT'
+          self.line_items.each do |item|
+            if item.product_id == c.product_id
+              return Product.find(item.product_id).price
+            end
           end
+        elsif c.coupon_type == 'Order PERCENTAGE'
+          return self.total_price/100 * c.discount_value
         end
 
         result = 0
