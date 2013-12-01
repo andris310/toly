@@ -24,7 +24,7 @@
     <%= f.select :coupon_type, Coupon::COUPON_TYPES, prompt: 'Coupon Type' %>
   </div>
 
-    <div id="select-coupon-product" class="field">
+    <div id="select-coupon-product" class="field hidden">
       <%= f.label :product_id %>
       <%= f.collection_select(:product_id, Product.all, :id, :title, prompt: 'Select Product') %>
     </div>
