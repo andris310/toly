@@ -41,6 +41,7 @@ class OrdersController < ApplicationController
 
     if discount > 0
       validity = 'valid'
+      coupon_name = Coupon.find_by(:copon_code => params[:entered_code]).name
     else
       validity = 'invalid'
     end
@@ -49,6 +50,7 @@ class OrdersController < ApplicationController
       coupon: validity,
       discount: discount,
       total: cart_total,
+      couponname: coupon_name
       }
 
     respond_to do |format|
