@@ -15,12 +15,11 @@ function applyCoupon() {
       success: function(result) {
         if (result.coupon === 'valid') {
           $('#order_entered_code').val(couponCode);
-          discountText.html('Discount: ');
-          orderDiscount.html('-$' + parseFloat(result.discount, 10).toFixed(2));
+          discountText.show().html('Discount: ');
+          orderDiscount.show().html('-$' + parseFloat(result.discount, 10).toFixed(2));
           orderTotal.html('$' + parseFloat(result.total, 10).toFixed(2));
           couponValidity.html('');
         } else {
-          debugger;
           couponValidity.hide().html('Invalid coupon').fadeIn(400);
           orderDiscount.html('-$' + parseFloat(result.discount, 10).toFixed(2));
           orderTotal.html('$' + parseFloat(result.total, 10).toFixed(2));

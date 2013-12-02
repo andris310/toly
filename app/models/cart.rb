@@ -26,12 +26,12 @@ class Cart < ActiveRecord::Base
           return self.total_price/100 * c.discount_value
         end
 
-        result = 0
+        @result = 0
       else
-        result = 0
+        @result = 0
       end
     end
-    result
+    @result
   end
 
   def total_price
