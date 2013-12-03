@@ -18,10 +18,9 @@ function applyCoupon() {
           discountText.show().html('Discount: ');
           orderDiscount.show().html('-$' + parseFloat(result.discount, 10).toFixed(2));
           orderTotal.html('$' + parseFloat(result.total, 10).toFixed(2));
-          debugger;
-          couponValidity.html(result.couponname);
+          couponValidity.html(result.couponname).css({'color': 'green'});
         } else {
-          couponValidity.hide().html('Invalid coupon').fadeIn(400);
+          couponValidity.hide().html('Invalid coupon').css({'color': 'red'}).fadeIn(400);
           orderDiscount.html('-$' + parseFloat(result.discount, 10).toFixed(2));
           orderTotal.html('$' + parseFloat(result.total, 10).toFixed(2));
           discountText.hide();
