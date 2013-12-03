@@ -41,7 +41,7 @@ class OrdersController < ApplicationController
 
     if discount > 0
       validity = 'valid'
-      coupon_name = Coupon.find_by(:copon_code => params[:entered_code]).name
+      coupon_name = Coupon.find_by(:coupon_code => params[:entered_code]).name
     else
       validity = 'invalid'
     end

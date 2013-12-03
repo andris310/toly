@@ -18,7 +18,8 @@ function applyCoupon() {
           discountText.show().html('Discount: ');
           orderDiscount.show().html('-$' + parseFloat(result.discount, 10).toFixed(2));
           orderTotal.html('$' + parseFloat(result.total, 10).toFixed(2));
-          couponValidity.html('');
+          debugger;
+          couponValidity.html(result.couponname);
         } else {
           couponValidity.hide().html('Invalid coupon').fadeIn(400);
           orderDiscount.html('-$' + parseFloat(result.discount, 10).toFixed(2));
