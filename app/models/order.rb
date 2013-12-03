@@ -7,7 +7,7 @@ class Order < ActiveRecord::Base
   attr_accessor :entered_code
 
   belongs_to :user
-  PAYMENT_TYPES = ["Credit card"]
+
   STATES = [
       'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT',
       'DE', 'DC', 'FL', 'GA', 'HI', 'ID', 'IL',
@@ -18,11 +18,17 @@ class Order < ActiveRecord::Base
       'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA',
       'WV', 'WI', 'WY'
     ]
-  validates :first_name, :last_name, :email, presence: true
+  validates :first_name, :last_name, :email, presence: true, if: :step1?
 
   validates_presence_of :address, :city, :state,
             :zipcode, :state, inclusion: STATES,
-            :unless => :downloadable_order?
+            if: :step1?
+
+  include MultiStepModel
+
+  def self.total_steps
+    3
+  end
 
   def downloadable_order?
     items = line_items.map { |i| Product.find_by(id: i.product_id)}
