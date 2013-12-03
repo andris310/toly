@@ -24,6 +24,7 @@ class ModelWizard
   end
 
   def save
+    binding.pry
     saved = false
     if @params[:back_button]
       @object.step_back

@@ -32,8 +32,8 @@ class OrdersController < ApplicationController
       redirect_to new_user_session_url, notice: 'You must be logged in to purchase downloadable products'
       return
     end
-
-    @order = Order.new
+    wizard = ModelWizard.new(Order, session).start
+    @order = wizard.object
   end
 
   def apply_coupon
@@ -93,23 +93,25 @@ class OrdersController < ApplicationController
     else
       process_order = @order.save
     end
+    binding.pry
+    if wizard.save
+      respond_to do |format|
+        if process_order
+          if @coupon
+            @coupon.times_used += 1
+            @coupon.save!
+          end
 
-    respond_to do |format|
-      if process_order
-        if @coupon
-          @coupon.times_used += 1
-          @coupon.save!
+          Cart.destroy(session[:cart_id])
+          session[:cart_id] = nil
+          OrderNotifier.received(@order).deliver
+
+          format.html { redirect_to '/order-finished', notice: "Thank You for your order of #{@order.list_products}", order: @order }
+          format.json { render action: 'show', status: :created, location: @order }
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @order.errors, status: :unprocessable_entity }
         end
-
-        Cart.destroy(session[:cart_id])
-        session[:cart_id] = nil
-        OrderNotifier.received(@order).deliver
-
-        format.html { redirect_to '/order-finished', notice: "Thank You for your order of #{@order.list_products}", order: @order }
-        format.json { render action: 'show', status: :created, location: @order }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
       end
     end
   end
