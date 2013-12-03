@@ -65,7 +65,10 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = Order.new(order_params)
+    wizard = ModelWizard.new(Order, session, params).process
+    @order = wizard.object
+
+    # @order = Order.new(order_params)
     @order.add_line_items_from_cart(@cart)
     if user_signed_in?
       @order.user_id = current_user.id
