@@ -1,4 +1,7 @@
-<h2>Shipping Info</h2>
+<div class='checkout-header'>
+  <h2>Your Info</h2>
+  <p>This address will be used to ship physical products.</p>
+</div>
 <div class='customer-info'>
   <div class="field fl_wrap">
     <%= f.label :first_name, :class => 'fl_label' %>
@@ -17,7 +20,7 @@
     <%= f.label :city, :class => 'fl_label' %>
     <%= f.text_field :city, size: 35, :class => 'fl_input' %>
   </div>
-   <div class="field">
+   <div class="field fl_wrap">
     <%= f.label :state %>
     <%= f.select :state, Order::STATES, prompt: 'State' %>
   </div>

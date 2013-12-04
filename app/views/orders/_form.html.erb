@@ -17,9 +17,9 @@
     <%= f.hidden_field :current_step, value: @order.current_step %>
     <%= render "orders/steps/page#{@order.current_step.to_i + 1}", f: f %>
 
-    <div class="field">
+    <div class="field checkout-btns">
       <%= f.submit "Back", name: "back_button" unless @order.first_step? %>
-      <%= f.submit @order.last_step? ? nil: "Next" %>
+      <%= f.submit @order.last_step? ? nil: "Next", :id => 'next-btn' %>
     </div>
 
   <% end %>
