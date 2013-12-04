@@ -136,8 +136,8 @@
         }
 
         #next-btn {
-          @include simple-button($gray, $background-gray, 100px, 35px);
-          float: right;
+          @include simple-button($gray, $background-gray, 120px, 35px);
+          float: left;
           margin: 15px 0px 5px 15px;
         }
 
