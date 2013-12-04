@@ -5,6 +5,33 @@
 <%= f.hidden_field :stripe_card_token %>
 
 <div class='billing-info'>
+
+  <div class="field fl_wrap">
+    <%= label_tag :billing_first_name, nil, class: 'fl_label' %>
+    <%= text_field_tag :billing_first_name, nil, size: 35, :class => 'fl_input' %>
+  </div>
+  <div class="field fl_wrap">
+    <%= label_tag :billing_last_name, nil, class: 'fl_label' %>
+    <%= text_field_tag :billing_last_name, nil, size: 35, :class => 'fl_input' %>
+  </div>
+
+  <div class="field fl_wrap">
+    <%= label_tag :billing_address, nil, class: 'fl_label' %>
+    <%= text_field_tag :billing_address, nil, size: 35, :class => 'fl_input' %>
+  </div>
+  <div class="field fl_wrap">
+    <%= label_tag :billing_city, nil, class: 'fl_label' %>
+    <%= text_field_tag :billing_city, nil, size: 35, :class => 'fl_input' %>
+  </div>
+   <div class="field fl_wrap">
+    <%= label_tag :billing_state %>
+    <%= select_tag :billing_state, options_for_select(Order::STATES), prompt: 'State' %>
+  </div>
+   <div class="field fl_wrap">
+    <%= label_tag :billing_zipcode, nil, class: 'fl_label' %>
+    <%= text_field_tag :billing_zipcode, nil, size: 5, :class => 'fl_input' %>
+  </div>
+
   <div class="field fl_wrap">
     <%= label_tag :card_number, nil, class: 'fl_label' %>
     <%= text_field_tag :card_number, nil, name: nil, size: 23, :class => 'fl_input' %>
