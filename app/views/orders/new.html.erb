@@ -1,6 +1,8 @@
 <div id='order-checkout'>
   <p id="error"><%= flash[:error] %></p>
-  <%= render 'order_summary' %>
+  <% if @order.total_price %>
+    <%= render 'order_summary' %>
+  <% end %>
 
     <fieldset>
       <%= render 'form' %>

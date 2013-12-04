@@ -60,7 +60,6 @@ class Order < ActiveRecord::Base
   end
 
   def save_with_payment
-    binding.pry
     begin
     if valid?
       customer = Stripe::Customer.create(
