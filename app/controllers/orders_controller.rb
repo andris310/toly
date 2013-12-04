@@ -96,7 +96,6 @@ class OrdersController < ApplicationController
     end
 
     if wizard.save
-      binding.pry
       respond_to do |format|
         if process_order.call
           if @coupon

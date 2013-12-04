@@ -7,7 +7,7 @@ function applyCoupon() {
     var orderDiscount = $('.order-discount');
     var orderTotal = $('.total_cell');
     var discountText = $('.discount');
-    var cardInfo = $('#card-info');
+    var cardInfo = $('.billing-info');
     $.ajax({
       url: '/apply-coupon',
       method: 'get',
