@@ -1,6 +1,6 @@
 <div id='order-checkout'>
   <p id="error"><%= flash[:error] %></p>
-  <% if @order.total_price %>
+  <% if !@order.current_step == '0' %>
     <%= render 'order_summary' %>
   <% end %>
 

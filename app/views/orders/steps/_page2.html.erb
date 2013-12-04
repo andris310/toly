@@ -1,5 +1,6 @@
-
-<h2>Stripe Billing Info</h2>
+<div class='checkout-header'>
+  <h2>Stripe Billing Info</h2>
+</div>
 
 <%= f.hidden_field :stripe_card_token %>
 
@@ -22,11 +23,5 @@
 
   <div id="stripe_error">
     <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
-  </div>
-
-  <% binding.pry %>
-
-  <div class="submit-area actions">
-    <%= f.submit 'Place Order', :id => 'submit-btn' %>
   </div>
 </div>
