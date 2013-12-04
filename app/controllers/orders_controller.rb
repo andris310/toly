@@ -65,6 +65,7 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
+
     wizard = ModelWizard.new(Order, session, params).process
     @order = wizard.object
 
@@ -89,14 +90,15 @@ class OrdersController < ApplicationController
     end
 
     if order_total > 0
-      process_order = @order.save_with_payment
+      process_order = @order.method(:save_with_payment)
     else
-      process_order = @order.save
+      process_order = @order.method(:save)
     end
-    binding.pry
+
     if wizard.save
+      binding.pry
       respond_to do |format|
-        if process_order
+        if process_order.call
           if @coupon
             @coupon.times_used += 1
             @coupon.save!
@@ -113,6 +115,8 @@ class OrdersController < ApplicationController
           format.json { render json: @order.errors, status: :unprocessable_entity }
         end
       end
+    else
+      render :new
     end
   end
 
@@ -158,6 +162,6 @@ class OrdersController < ApplicationController
                                     :city, :state, :zipcode, :email,
                                     :pay_type, :user_id, :total_price,
                                     :stripe_card_token, :entered_code,
-                                    :coupon_id, :shipped, :ship_date)
+                                    :coupon_id, :shipped, :ship_date, :current_step)
     end
 end

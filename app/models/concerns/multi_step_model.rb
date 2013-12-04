@@ -17,15 +17,15 @@ module MultiStepModel
   end
 
   def step_forward
-    @current_step = current_step + 1
+    @current_step = current_step.to_i + 1
   end
 
   def step_back
-    @current_step = current_step - 1
+    @current_step = current_step.to_i - 1
   end
 
   def step?(step)
-    @current_step.nil? || current_step + 1 == step
+    @current_step.nil? || current_step.to_i + 1 == step
   end
 
   def last_step?

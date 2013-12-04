@@ -5,6 +5,7 @@ class Order < ActiveRecord::Base
 
   attr_accessor :stripe_card_token
   attr_accessor :entered_code
+  attr_accessor :current_step
 
   belongs_to :user
 

@@ -1,48 +1,47 @@
-// (function() {
-//   var payment;
+(function() {
+  var payment;
 
-//   jQuery(function() {
-//     Stripe.setPublishableKey("<%= ENV['STRIPE_PUBLIC_KEY'] %>");
-//     return payment.setupForm();
-//   });
+  jQuery(function() {
+    Stripe.setPublishableKey("<%= ENV['STRIPE_PUBLIC_KEY'] %>");
+    return payment.setupForm();
+  });
 
-//   payment = {
-//     setupForm: function() {
-//       return $('#new_order').submit(function() {
-//         $('input[value=Place Order]').attr('disabled', true);
-//         if ($('#card_number').length) {
-//           console.log('gets here');
-//           payment.processCard();
-//           return false;
-//         } else {
-//           return true;
-//         }
-//       });
-//     },
-//     processCard: function() {
-//       var card;
-//       card = {
-//         name: $('#order_first_name').val() + ' ' + $('#order_last_name').val(),
-//         address_line1: $('#order_address').val(),
-//         address_city: $('#order_city').val(),
-//         address_state: $('#order_state').val(),
-//         address_zip: $('#order_zipcode').val(),
-//         number: $('#card_number').val(),
-//         cvc: $('#card_code').val(),
-//         exp_month: $('#card_month').val(),
-//         exp_year: $('#card_year').val()
-//       };
-//       return Stripe.createToken(card, payment.handleStripeResponse);
-//     },
-//     handleStripeResponse: function(status, response) {
-//       if (status === 200) {
-//         $('#order_stripe_card_token').val(response.id);
-//         return $('#new_order')[0].submit();
-//       } else {
-//         $('#stripe_error').text(response.error.message);
-//         return $('input[type=submit]').attr('disabled', false);
-//       }
-//     }
-//   };
+  payment = {
+    setupForm: function() {
+      return $('#new_order').submit(function() {
+        $('input[type=submit]').attr('disabled', true);
+        if ($('#card_number').length) {
+          payment.processCard();
+          return false;
+        } else {
+          return true;
+        }
+      });
+    },
+    processCard: function() {
+      var card;
+      card = {
+        name: $('#order_first_name').val() + ' ' + $('#order_last_name').val(),
+        address_line1: $('#order_address').val(),
+        address_city: $('#order_city').val(),
+        address_state: $('#order_state').val(),
+        address_zip: $('#order_zipcode').val(),
+        number: $('#card_number').val(),
+        cvc: $('#card_code').val(),
+        exp_month: $('#card_month').val(),
+        exp_year: $('#card_year').val()
+      };
+      return Stripe.createToken(card, payment.handleStripeResponse);
+    },
+    handleStripeResponse: function(status, response) {
+      if (status === 200) {
+        $('#order_stripe_card_token').val(response.id);
+        return $('#new_order')[0].submit();
+      } else {
+        $('#stripe_error').text(response.error.message);
+        return $('input[type=submit]').attr('disabled', false);
+      }
+    }
+  };
 
-// }).call(this);
+}).call(this);

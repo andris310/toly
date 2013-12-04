@@ -15,7 +15,7 @@
     <%= f.hidden_field :entered_code %>
 
     <%= f.hidden_field :current_step, value: @order.current_step %>
-    <%= render "orders/steps/page#{@order.current_step + 1}", f: f %>
+    <%= render "orders/steps/page#{@order.current_step.to_i + 1}", f: f %>
 
     <div class="field">
       <%= f.submit "Back", name: "back_button" unless @order.first_step? %>
