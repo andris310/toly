@@ -26,7 +26,8 @@
   </div>
    <div class="field fl_wrap">
     <%= f.label :zipcode, :class => 'fl_label' %>
-    <%= f.text_field :zipcode, size: 5, :class => 'fl_input' %>
+    <%= f.text_field :zipcode, maxlength: 5, :class => 'fl_input' %>
+    <span class='validation-msg' id='spnZipStatus'></span>
   </div>
 
   <div class="field fl_wrap">
@@ -37,6 +38,6 @@
   <div class="field fl_wrap">
     <%= f.label :phone, :class => 'fl_label' %>
     <%= f.telephone_field :phone_nr, maxlength: 12, :class => 'fl_input' %>
-    <span id='spnPhoneStatus'></span>
+    <span class='validation-msg' id='spnPhoneStatus'></span>
   </div>
 </div>
