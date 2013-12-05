@@ -32,7 +32,7 @@ class ModelWizard
       if (@object.total_price == 0) && @object.downloadable_order?
         @object.current_step = @object.class.total_steps - 1
       end
-      binding.pry
+
       if @object.last_step?
         if @object.all_steps_valid?
           saved = @object.save

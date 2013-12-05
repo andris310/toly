@@ -1,7 +1,26 @@
-<h2>Confirm Your Order</h2>
-<% binding.pry %>
-<h3>Shipping Address</h3>
-<p><%= @order.name %></p>
-<p><%= @order.address %></p>
-<p><%= @order.city %></p>
-<p><%= @order.zipcode %> <%= @order.state %></p>
+
+<div class='confirm-order'>
+  <h2>Confirm Your Order</h2>
+  <div class='order-shipping-address'>
+    <h3>Shipping Address</h3>
+    <p><%= @order.name %></p>
+    <p><%= @order.address %></p>
+    <p>
+      <%= @order.city %>
+      <%= @order.state %>
+      <%= @order.zipcode %>
+    </p>
+  </div>
+
+  <div class='order-billing-address'>
+    <h3>Billing Address</h3>
+    <p><%= params['billing_first_name'] %> <% params['billing_last_name'] %></p><br>
+    <p><%= params['billing_address'] %></p>
+    <p>
+      <%= params['billing_city'] %>
+      <%= params['billing_state'] %>
+      <%= params['billing_zipcode'] %>
+    </p>
+  </div>
+
+</div>
