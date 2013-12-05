@@ -40,40 +40,64 @@ function orders() {
     });
   });
 
+  var emailStatus = $('#spnEmailStatus');
+  var phoneStatus = $('#spnPhoneStatus');
+  var zipcodeStatus = $('#spnZipStatus');
+
+  $('#order_email').bind('keyup blur', function(e) {
+    if (validateEmail('order_email')) {
+      emailStatus.html('Valid');
+      emailStatus.css('color', '#6ECA6E');
+    }
+    else {
+      emailStatus.html('Invalid Email');
+      emailStatus.css('color', '#FF7000');
+    }
+  });
 
   $('#order_phone_nr').bind('keyup blur', function(e) {
     if (validatePhone('order_phone_nr')) {
-      $('#spnPhoneStatus').html('Valid');
-      $('#spnPhoneStatus').css('color', '#6ECA6E');
+      phoneStatus.html('Valid');
+      phoneStatus.css('color', '#6ECA6E');
     }
     else {
-      $('#spnPhoneStatus').html('Invalid format, enter (xxx-xxx-xxxx)');
-      $('#spnPhoneStatus').css('color', '#FF7000');
+      phoneStatus.html('Invalid format, enter (xxx-xxx-xxxx)');
+      phoneStatus.css('color', '#FF7000');
     }
   });
 
 
   $('#order_zipcode').bind('keyup blur', function(z) {
     if (validateZip('order_zipcode')) {
-      $('#spnZipStatus').html('Valid');
-      $('#spnZipStatus').css('color', '#6ECA6E');
+      zipcodeStatus.html('Valid');
+      zipcodeStatus.css('color', '#6ECA6E');
     }
     else {
-      $('#spnZipStatus').html('Invalid Zipcode');
-      $('#spnZipStatus').css('color', '#FF7000');
+      zipcodeStatus.html('Invalid Zipcode');
+      zipcodeStatus.css('color', '#FF7000');
     }
   });
 
+  function validateEmail(email) {
+    var a = document.getElementById(email).value;
+    var filter = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    if (filter.test(a)) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
 
   function validatePhone(phone) {
-      var a = document.getElementById(phone).value;
-       var filter = /^[2-9]\d{2}-\d{3}-\d{4}$/;
-      if ((filter.test(a)) || (a === "")) {
-        return true;
-      }
-      else {
-        return false;
-      }
+    var a = document.getElementById(phone).value;
+    var filter = /^[2-9]\d{2}-\d{3}-\d{4}$/;
+    if ((filter.test(a)) || (a === "")) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 
 
