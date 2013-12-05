@@ -24,6 +24,9 @@ class Order < ActiveRecord::Base
             :zipcode, :state, inclusion: STATES,
             if: :step1?
 
+  validates_format_of :phone_nr, :with => /\A[2-9]\d{2}-\d{3}-\d{4}$\Z/i, :on => :create,
+            :allow_blank => true, :message => 'Invalid Phone Format. Use xxx-xxx-xxxx', if: :step1?
+
   include MultiStepModel
 
   def self.total_steps
