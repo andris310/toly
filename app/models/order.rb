@@ -19,9 +19,8 @@ class Order < ActiveRecord::Base
       'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA',
       'WV', 'WI', 'WY'
     ]
-  validates :first_name, :last_name, :email, presence: true, if: :step1?
 
-  validates_presence_of :address, :city, :state,
+  validates_presence_of :first_name, :last_name, :email, :address, :city, :state,
             :zipcode, :state, inclusion: STATES,
             if: :step1?
 

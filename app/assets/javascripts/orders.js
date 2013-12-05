@@ -1,5 +1,5 @@
 
-function applyCoupon() {
+function orders() {
   $('.billing-info').height($('.customer-info').height());
   $('#apply-coupon').on('click', function() {
     var couponCode = $('#entered_code').val();
@@ -38,8 +38,59 @@ function applyCoupon() {
       }
     });
   });
-}
 
 
-$(document).ready(applyCoupon);
-$(document).on('page:load', applyCoupon);
+  $('#order_phone_nr').bind('keyup blur', function(e) {
+    if (validatePhone('order_phone_nr')) {
+      $('#spnPhoneStatus').html('Valid');
+      $('#spnPhoneStatus').css('color', '#6ECA6E');
+    }
+    else {
+      $('#spnPhoneStatus').html('Invalid, enter (1234567890)');
+      $('#spnPhoneStatus').css('color', 'red');
+    }
+  });
+
+
+  $('#order_zipcode').bind('keyup blur', function(z) {
+    if (validateZip('info_zipcode')) {
+      $('#spnZipStatus').html('Valid');
+      $('#spnZipStatus').css('color', '#6ECA6E');
+    }
+    else {
+      $('#spnZipStatus').html('Invalid Zipcode');
+      $('#spnZipStatus').css('color', 'red');
+    }
+  });
+
+
+
+
+  function validatePhone(phone) {
+      var a = document.getElementById(phone).value;
+       var filter = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; //(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;)
+      if (filter.test(a)) {
+          return true;
+      }
+      else {
+          return false;
+      }
+  }
+
+
+  function validateZip(zipcode) {
+    var zip = document.getElementById(zipcode).value;
+    var filter = /^\d{5}(-\d{4})?$/;
+    if (filter.test(zip)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+} // end of order function
+
+
+
+$(document).ready(orders);
+$(document).on('page:load', orders);
