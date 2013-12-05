@@ -1,5 +1,6 @@
 
 function orders() {
+
   $('.billing-info').height($('.customer-info').height());
   $('#apply-coupon').on('click', function() {
     var couponCode = $('#entered_code').val();
@@ -46,34 +47,32 @@ function orders() {
       $('#spnPhoneStatus').css('color', '#6ECA6E');
     }
     else {
-      $('#spnPhoneStatus').html('Invalid, enter (1234567890)');
-      $('#spnPhoneStatus').css('color', 'red');
+      $('#spnPhoneStatus').html('Invalid format, enter (xxx-xxx-xxxx)');
+      $('#spnPhoneStatus').css('color', '#FF7000');
     }
   });
 
 
   $('#order_zipcode').bind('keyup blur', function(z) {
-    if (validateZip('info_zipcode')) {
+    if (validateZip('order_zipcode')) {
       $('#spnZipStatus').html('Valid');
       $('#spnZipStatus').css('color', '#6ECA6E');
     }
     else {
       $('#spnZipStatus').html('Invalid Zipcode');
-      $('#spnZipStatus').css('color', 'red');
+      $('#spnZipStatus').css('color', '#FF7000');
     }
   });
 
 
-
-
   function validatePhone(phone) {
       var a = document.getElementById(phone).value;
-       var filter = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; //(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;)
-      if (filter.test(a)) {
-          return true;
+       var filter = /^[2-9]\d{2}-\d{3}-\d{4}$/;
+      if ((filter.test(a)) || (a === "")) {
+        return true;
       }
       else {
-          return false;
+        return false;
       }
   }
 
