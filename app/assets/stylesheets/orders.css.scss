@@ -176,6 +176,20 @@
     }
   }
 
+  .confirm-order {
+    font-family: $roboto;
+
+    .order-shipping-address,
+    .order-billing-address {
+      width: 320px;
+      float: left;
+
+      p {
+        margin: 3px;
+      }
+    }
+  }
+
   .order-finished {
 
     h2 {
