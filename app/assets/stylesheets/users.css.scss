@@ -1,23 +1,35 @@
 .users-controller {
   .user-orders {
     list-style: none;
+    width: 670px;
+    margin: auto;
+    padding-left: 0px;
 
     li.order-summary {
-      width: 600px;
-      color: #FFF;
+      color: $gray;
       margin: 20px 10px;
       padding: 20px 25px;
       font-size: 1em;
       font-weight: 300;
       font-family: $roboto;
       border-radius: 3px;
-      background-color: $green;
+      background-color: #fff;
 
       table {
+        border-collapse:collapse;
         width: 600px;
 
         th {
           font-weight: 300;
+        }
+
+        .price {
+          text-align: right;
+          padding-right: 10px;
+        }
+
+        .total-price {
+          border-top: 1px solid #808080;
         }
 
         td.download-link {
@@ -34,10 +46,10 @@
 
         a.download-btn {
           float: right;
-          @include simple-button(#fff, $green, 50px, 17px);
+          @include simple-button($gray, #fff, 50px, 17px);
           padding: 1px 7px;
           font-size: 0.7em;
-          border: 2px solid #fff;
+          border: 2px solid $gray;
         }
       }
     }

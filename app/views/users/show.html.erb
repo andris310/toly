@@ -1,42 +1,51 @@
-<%= @user.email %>
-<ul class='user-orders'>
-  <% @user.orders.each do |o| %>
-    <li class='order-summary'><spna>Date of the Order: <%= o.created_at.strftime("%d-%m-%Y %H:%M") %></span>
-      <hr/>
-      <table>
-        <thead>
-          <th></th>
-          <th>Items purchased:</th>
-          <th></th>
-          <th></th>
-        </thead>
-        <tbody>
-          <% o.products.each do |p| %>
-          <tr>
-            <td></td>
-            <td><%= p.title %></td>
-            <td><%= number_to_currency(p.price) %></td>
-            <td class='download-link'>
-              <% if p.is_downloadable %>
-                <table>
-                  <% p.videos.each do |video| %>
-                    <tr>
-                      <td class='video-name'><%= video.name %></td>
-                      <td><%= link_to 'Download', download_video_path(video), class: "download-btn" %></td>
-                    </tr>
-                  <% end %>
-                </table>
-              <% end %>
-            </td>
-          </tr>
-          <% end %>
-        </tbody>
-      </table>
-      <div>
-        <% if o.discount && o.discount > 0 %>
-          <span>Discount applied: -<%= number_to_currency(o.discount) %></span>
-        <% end %>
-      </div>
-    </li>
-  <% end %>
-</ul>
+<div id='user-data'>
+  <%= @user.email %>
+  <ul class='user-orders'>
+    <% @user.orders.each do |o| %>
+      <li class='order-summary'><spna>Date of the Order: <%= o.created_at.strftime("%d-%m-%Y %H:%M") %></span>
+        <hr/>
+        <table >
+          <thead>
+            <th></th>
+            <th>Items purchased:</th>
+            <th></th>
+            <th></th>
+          </thead>
+          <tbody>
+            <% o.products.each do |p| %>
+            <tr>
+              <td></td>
+              <td><%= p.title %></td>
+              <td class='price'><%= number_to_currency(p.price) %></td>
+              <td class='download-link'>
+                <% if p.is_downloadable %>
+                  <table>
+                    <% p.videos.each do |video| %>
+                      <tr>
+                        <td class='video-name'><%= video.name %></td>
+                        <td><%= link_to 'Download', download_video_path(video), class: "download-btn" %></td>
+                      </tr>
+                    <% end %>
+                  </table>
+                <% end %>
+              </td>
+            </tr>
+            <% end %>
+            <% if o.discount && o.discount > 0 %>
+              <tr>
+                <td></td>
+                <td>Discount applied:</td>
+                <td class='price'> -<%= number_to_currency(o.discount) %></td>
+              </tr>
+            <% end %>
+            <tr class='total-price'>
+              <td></td>
+              <td>Total:</td>
+              <td class='price'><%= number_to_currency(o.total_price) %></td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+    <% end %>
+  </ul>
+</div>
