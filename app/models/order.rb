@@ -23,7 +23,7 @@ class Order < ActiveRecord::Base
   validates_presence_of :first_name, :last_name, :email, :address, :city, :state,
             :zipcode, :state, inclusion: STATES,
             if: :step1?
-  validates_format_of :email, :with =>/\A[\w-\.]+@([\w-]+\.)+[\w-]{2,4}\Z/i, :on => :create, if: :step1?
+  validates_format_of :email, :with =>/\A[-\w\.]+@([-\w]+\.)+[-\w]{2,4}\Z/i, :on => :create, if: :step1?
 
   validates_format_of :phone_nr, :with => /\A[2-9]\d{2}-\d{3}-\d{4}$\Z/i, :on => :create,
             :allow_blank => true, :message => 'Invalid Phone Format. Use xxx-xxx-xxxx', if: :step1?

@@ -6,12 +6,20 @@
         <tr class='discount-row'>
           <td></td>
           <td class='discount'></td>
-          <td class='order-discount'></td>
+          <td class='order-discount'>
+            <% if !(@order.discount == nil) && @order.discount > 0 %>
+              <%= number_to_currency(@order.discount) %>
+            <% end %>
+          </td>
         </tr>
         <tr class='total_line'>
           <td colspan='2'>Total: </td>
           <td class='total_cell'>
-            <%= number_to_currency(@cart.total_price) %>
+            <% if !(@order.discount == nil) && @order.discount > 0 %>
+              <%= number_to_currency(@order.total_price) %>
+            <% else %>
+              <%= number_to_currency(@cart.total_price) %>
+            <% end %>
           </td>
         </tr>
     </table>

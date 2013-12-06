@@ -1,5 +1,5 @@
 module MultiStepModel
-  attr_accessor :current_step
+  # attr_accessor :current_step
 
   def current_step
     @current_step.to_i
