@@ -43,12 +43,22 @@
 
         .coupon-code {
           float: right;
+          margin-top: 20px;
 
           input#entered_code {
+            border: none;
+            height: 25px;
+            font-size: 1.1em;
+            background-color: #F3F3F3;
+            outline: none;
             text-align: center;
             line-height: 1em;
             font-size: 1em;
             color: $gray;
+          }
+
+          #apply-coupon {
+            cursor: pointer;
           }
         }
 
