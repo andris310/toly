@@ -58,6 +58,7 @@ gem 'bxslider-rails'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 gem 'unf'
+gem "rack-timeout"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
