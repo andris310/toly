@@ -13,7 +13,7 @@
   <div id='wrapper'>
     <div id='banner'>
 
-      <div id='logo'></div>
+      <div><%= image_tag('toly_glogo.svg', id: 'logo') %></div>
 
         <% if @cart %>
           <div id='cart' class='hidden' data-id='<%= @cart.id %>'>
