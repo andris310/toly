@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '1.9.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
@@ -39,12 +39,13 @@ group :development, :test do
 end
 
 group :production do
+  gem 'unicorn'
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 gem 'figaro'
 gem 'devise'
-gem 'rails_admin'
 gem 'cancan'
 
 gem 'carrierwave'
@@ -57,7 +58,6 @@ gem 'bxslider-rails'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 gem 'unf'
-
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
