@@ -32,7 +32,7 @@ Toly2Store::Application.configure do
   # Generate digests for assets URLs.
   config.assets.digest = true
   config.assets.enabled = true
-  config.action_controller.asset_host = "//#{ENV['ASSET_BUCKET']}.s3.amazonaws.com"
+  config.action_controller.asset_host = "dvzwmr82xcdr.cloudfront.net"
   config.assets.initialize_on_precompile = true
 
   # Version of your assets, change this if you want to expire all your assets.
