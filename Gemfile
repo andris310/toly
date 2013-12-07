@@ -3,12 +3,11 @@ ruby '1.9.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
-group :assets do
-  gem 'coffee-rails', '~> 4.0.1'
-  gem 'sass-rails', '~> 4.0.1'
-  gem 'uglifier', '>= 1.3.0'
-  gem 'asset_sync'
-end
+gem 'coffee-rails', '~> 4.0.1'
+gem 'sass-rails', '~> 4.0.1'
+gem 'uglifier', '>= 1.3.0'
+gem 'asset_sync'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
