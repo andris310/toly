@@ -97,7 +97,7 @@
 
     .new-product-btn {
       font-family: $roboto;
-      @include simple-button($orange, #fff, 100px, 25px);
+      @include simple-button($orange, $background-gray, 100px, 25px);
     }
   }
 
