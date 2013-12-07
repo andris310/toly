@@ -22,11 +22,6 @@ class Product < ActiveRecord::Base
   #   File.basename(image.path || image.filename) if image
   # end
 
-  # def enqueue_image
-  #   binding.pry
-  #   ImageWorker.perform_async(id, key) if !image_processed && key.present?
-  # end
-
   def self.latest
     Product.order(:updated_at).last
   end
