@@ -4,10 +4,10 @@ ruby '1.9.3'
 gem 'rails', '4.0.1'
 
 group :assets do
-  gem 'asset_sync'
   gem 'coffee-rails', '~> 4.0.1'
   gem 'sass-rails', '~> 4.0.1'
   gem 'uglifier', '>= 1.3.0'
+  gem 'asset_sync'
 end
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
