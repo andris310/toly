@@ -1,0 +1,18 @@
+<h2>All Users</h2>
+
+<table id='users'>
+  <thead>
+    <th>ID</th>
+    <th>Email</th>
+    <th>Last Sign In</th>
+  </thead>
+  <tbody>
+    <tr>
+      <% @users.each do |user| %>
+        <td><%= user.id %></td>
+        <td><%= user.email %></td>
+        <td><%= user.last_sign_in_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

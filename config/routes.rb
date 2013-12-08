@@ -2,7 +2,7 @@ Toly2Store::Application.routes.draw do
   resources :slides
 
   devise_for :users
-  resources :users, :only => [:show]
+  resources :users, :only => [:show, :index]
   resources :orders
   resources :line_items
   resources :carts

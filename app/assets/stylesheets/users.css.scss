@@ -1,4 +1,16 @@
 .users-controller {
+
+  font-family: $roboto;
+  color: $gray;
+
+  table#users {
+    width: 100%;
+
+    th {
+      text-align: left;
+    }
+  }
+
   .user-orders {
     list-style: none;
     width: 670px;
