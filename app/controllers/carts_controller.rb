@@ -1,13 +1,11 @@
 class CartsController < ApplicationController
-  # load_and_authorize_resource :except => [:show, :destroy, :update]
+  # load_and_authorize_resource :only => [:index]
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
 
-  # GET /carts
-  # GET /carts.json
-  def index
-    @carts = Cart.all
-  end
+  # def index
+  #   @carts = Cart.all
+  # end
 
   # GET /carts/1
   # GET /carts/1.json

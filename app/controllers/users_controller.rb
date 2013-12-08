@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   private
 
   def authenticate_owner!
-    if current_user.role == 'admin'
+    if user_signed_in? && current_user.role == 'admin'
       return
     elsif user_signed_in? && current_user.id == params[:id].to_i
       return

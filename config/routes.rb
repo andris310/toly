@@ -5,7 +5,7 @@ Toly2Store::Application.routes.draw do
   resources :users, :only => [:show, :index]
   resources :orders
   resources :line_items
-  resources :carts
+  resources :carts, :except => [:index]
   resources :pages
   resources :coupons
 
