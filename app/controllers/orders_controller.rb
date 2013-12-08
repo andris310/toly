@@ -75,7 +75,7 @@ class OrdersController < ApplicationController
       @order.user_id = current_user.id
     end
 
-    discount = @cart.add_coupon(order_params[:entered_code]).to_d
+    discount = @cart.add_coupon(order_params[:entered_code])
     @order.discount = discount
 
     order_total = (@cart.total_price) - discount
