@@ -1,3 +1,21 @@
 // Place all the styles related to the Videos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.videos-controller {
+  font-family: $roboto;
+  color: $gray;
+
+  table {
+    .list_line_odd {
+      background: #EEE;
+    }
+
+    td {
+        padding: 5px;
+      }
+
+    tr:hover {
+      background-color: #F7F7F7;
+    }
+  }
+}
