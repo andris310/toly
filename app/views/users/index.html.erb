@@ -5,13 +5,15 @@
     <th>ID</th>
     <th>Email</th>
     <th>Last Sign In</th>
+    <th></th>
   </thead>
   <tbody>
     <tr>
       <% @users.each do |user| %>
         <td><%= user.id %></td>
-        <td><%= user.email %></td>
+        <td><%= link_to(user.email, "/users/#{user.id.to_s}") %></td>
         <td><%= user.last_sign_in_at %></td>
+        <td><%= %></td>
       </tr>
     <% end %>
   </tbody>
