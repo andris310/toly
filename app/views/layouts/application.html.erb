@@ -47,6 +47,17 @@
         </div>
       </div>
 
+      <% if user_signed_in? && current_user.role == 'admin' %>
+        <div id='left-corner-bar'>
+          <ul>
+            <li><a href="/products">Products</a> |</li>
+            <li><a href="/videos">Videos</a> |</li>
+            <li><a href="/coupons">Coupons</a> |</li>
+            <li><a href="/slides">Slides</a></li>
+          </ul>
+        </div>
+      <% end %>
+
     </div>
     <div id='menu'>
       <ul>

@@ -22,6 +22,27 @@ body {
       background-size: 90px 90px;
     }
 
+    #left-corner-bar {
+      color: $gray;
+      width: 350px;
+      height: 30px;
+      position: fixed;
+      top: 0px;
+      font-family: $roboto;
+      background-color: #F0F0F0;
+      z-index: 100;
+
+      ul {
+        margin: 5px;
+        float: left;
+      }
+
+      li {
+        list-style: none;
+        display: inline;
+      }
+    }
+
     #right-corner-bar {
       width: 300px;
       position: absolute;
@@ -62,10 +83,10 @@ body {
     display: none;
   }
 
-  #notice {
+  p#notice {
+    margin: 0px;
     color: #FFF !important;
     border-radius: 2px;
-    margin-bottom: 2em;
     font-weight: 100;
     font-size: 1.2em;
     background-color: $orange;
