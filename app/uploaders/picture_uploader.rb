@@ -2,7 +2,7 @@
 
 class PictureUploader < CarrierWave::Uploader::Base
   self.fog_public = false
-  self.fog_authenticated_url_expiration = 120
+  # self.fog_authenticated_url_expiration = 120
 
   include CarrierWave::RMagick
 
