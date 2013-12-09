@@ -21,7 +21,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   include CarrierWave::MimeTypes
   process :set_content_type
 
-  config.asset_host = 'https://d1ymc90vp1z5i0.cloudfront.net'
+  config.asset_host = 'http://d1ymc90vp1z5i0.cloudfront.net'
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
