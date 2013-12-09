@@ -17,7 +17,7 @@
 
   .entry {
     width: 260px;
-    height: 400px;
+    height: 385px;
     background-color: #FFF;
     margin: 10px;
     padding: 1em;
@@ -36,7 +36,7 @@
 
     .title-price{
       width: 250px;
-      height: 70px;
+      height: 45px;
       margin: auto;
       margin-top: 1em;
       display: block;
@@ -66,6 +66,11 @@
       a {
         color: $green;
       }
+    }
+
+    .product-description {
+      font-size: 0.9em;
+      color: #808080;
     }
   }
 }
