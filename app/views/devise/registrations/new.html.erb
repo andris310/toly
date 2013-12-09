@@ -2,7 +2,7 @@
   <div class='sign-in-box'>
     <h2>Sign up</h2>
 
-    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'FlowupLabels'}) do |f| %>
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'FlowupLabels', :autocomplete => "off"}) do |f| %>
       <%= devise_error_messages! %>
 
       <div class='fl_wrap'>
