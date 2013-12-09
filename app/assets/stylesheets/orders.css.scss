@@ -3,13 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .orders-controller {
+  font-family: $roboto;
 
   #order-checkout {
     width: 100%;
     margin: auto;
 
     .checkout-header {
-      font-family: $roboto;
       color: $gray;
       margin: auto;
       width: 630px;
@@ -25,7 +25,6 @@
 
     .order-summary {
       margin: 0 12px;
-      font-family: $roboto;
       background-color: #fff;
 
       .summary {
@@ -98,7 +97,7 @@
 
         #error_explanation {
           color: $orange;
-          font-family: $roboto;
+
           h2 {
             font-weight: 400;
             font-size: 1em;
@@ -115,7 +114,6 @@
 
         label {
           font-weight: 100;
-          font-family: $roboto;
         }
 
         input {
@@ -177,12 +175,12 @@
       }
 
       .validation-msg {
+        font-size: .8em;
         float: right;
       }
     }
 
     #stripe_error {
-      font-family: $roboto;
       margin: 20px 10px;
       display: block;
       min-height: 30px;
@@ -191,7 +189,6 @@
   }
 
   .confirm-order {
-    font-family: $roboto;
     color: $gray;
 
     .order-shipping-address,
@@ -213,7 +210,6 @@
     width: 600px;
     margin: auto;
     color: $gray;
-    font-family: $roboto;
 
     table {
       width: 600px;
@@ -280,7 +276,6 @@
   // ******** ORDERS INDEX PAGE
 
   #all-orders {
-    font-family: $roboto;
     color: $gray;
 
     .list_line_odd {
@@ -316,7 +311,6 @@
 
   // ********** ORDERS SHOW PAGE
   #order-show {
-    font-family: $roboto;
     color: $gray;
 
     .order-details {
