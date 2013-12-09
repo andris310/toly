@@ -1,5 +1,12 @@
 <div id='user-data'>
-  <%= @user.email %>
+  <div class='purchase-history'>
+    <%= @user.first_name %>
+    <% if @user.orders %>
+      , here is your purchase history.
+    <% else %>
+      , you haven't purchased anything yet.
+    <% end %>
+  </div>
   <ul class='user-orders'>
     <% @user.orders.each do |o| %>
       <li class='order-summary'><spna>Date of the Order: <%= o.created_at.strftime("%d-%m-%Y %H:%M") %></span>

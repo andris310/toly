@@ -2,7 +2,7 @@
 
 class SlideUploader < CarrierWave::Uploader::Base
 
-self.fog_public = false
+self.fog_public = true
   self.fog_authenticated_url_expiration = 120
 
   include CarrierWave::RMagick

@@ -7,21 +7,21 @@
   // ******  SHOW PRODUCT PAGE
   #product {
     margin: auto;
-    width: 1000px;
+    width: 100%;
     overflow: auto;
     background-color: white;
 
     img {
       overflow: auto;
       float: left;
-      padding: 1em;
+      padding: 1em 2em;
       width: 450px;
       width: 450px;
     }
 
     #product-info {
       width: 50%;
-      overflow: auto;
+      float: left;
 
       #product-title {
         padding-left: 1em;
