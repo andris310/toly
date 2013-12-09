@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class PictureUploader < CarrierWave::Uploader::Base
-  self.fog_public = false
+  self.fog_public = true
   # self.fog_authenticated_url_expiration = 120
 
   include CarrierWave::RMagick
@@ -21,17 +21,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   include CarrierWave::MimeTypes
   process :set_content_type
 
-  # if Rails.env.production?
-  #   CarrierWave.configure do |config|
-  #     config.storage :fog
-  #   end
-  # end
-
-  # if Rails.env.development?
-  #   CarrierWave.configure do |config|
-  #     config.storage :file
-  #   end
-  # end
+  config.asset_host = 'https://d1ymc90vp1z5i0.cloudfront.net'
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -71,10 +61,5 @@ class PictureUploader < CarrierWave::Uploader::Base
     %w(jpg jpeg gif png)
   end
 
-  # Override the filename of the uploaded files:
-  # Avoid using model.id or version_name here, see uploader/store.rb for details.
-  # def filename
-  #   "something.jpg" if original_filename
-  # end
 
 end
