@@ -79,6 +79,7 @@ class OrdersController < ApplicationController
     @order.discount = discount
 
     order_total = (@cart.total_price) - discount
+    binding.pry
     @order.total_price = order_total
 
     if !order_params[:entered_code].empty?
