@@ -1,27 +1,29 @@
-<h1>Listing videos</h1>
+<div id='videos-index'>
+  <h1>Listing videos</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @videos.each do |video| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= video.name %></td>
-        <td><%= link_to 'Show', video %></td>
-        <td><%= link_to 'Edit', edit_video_path(video) %></td>
-        <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @videos.each do |video| %>
+        <tr>
+          <td><%= video.name %></td>
+          <td><%= link_to 'Show', video %></td>
+          <td><%= link_to 'Edit', edit_video_path(video) %></td>
+          <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Video', new_video_path %>
+  <br>
+
+  <%= link_to 'New Video', new_video_path %>
+</div>
