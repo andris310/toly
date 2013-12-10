@@ -5,6 +5,10 @@
   font-family: $roboto;
   color: $gray;
 
+  #videos-index {
+    padding: 1em;
+  }
+
   table {
     .list_line_odd {
       background: #EEE;
