@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class PictureUploader < CarrierWave::Uploader::Base
-  self.fog_public = false
+  # self.fog_public = false
   # self.fog_authenticated_url_expiration = 120
 
   include CarrierWave::RMagick
@@ -14,8 +14,16 @@ class PictureUploader < CarrierWave::Uploader::Base
     ENV['AWS_BUCKET']
   end
 
-  def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  if Rails.env.production?
+    def store_dir
+      "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    end
+  end
+
+  if Rails.env.development?
+    def store_dir
+      "uploads/dev_#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    end
   end
 
   include CarrierWave::MimeTypes
