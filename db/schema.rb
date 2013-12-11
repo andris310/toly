@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131209024549) do
+ActiveRecord::Schema.define(version: 20131211055115) do
 
   create_table "carts", force: true do |t|
     t.datetime "created_at"
@@ -76,9 +76,10 @@ ActiveRecord::Schema.define(version: 20131209024549) do
     t.decimal  "price"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "is_downloadable",        default: false
+    t.boolean  "is_downloadable",                                default: false
     t.string   "downloadable_file_size"
-    t.boolean  "visible",                default: true
+    t.boolean  "visible",                                        default: true
+    t.decimal  "shipping",               precision: 8, scale: 2, default: 0.0
   end
 
   create_table "products_videos", id: false, force: true do |t|
