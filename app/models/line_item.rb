@@ -7,4 +7,8 @@ class LineItem < ActiveRecord::Base
     product.price * quantity
   end
 
+  def item_shipping
+    product.shipping * quantity
+  end
+
 end

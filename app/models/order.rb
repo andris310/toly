@@ -62,6 +62,10 @@ class Order < ActiveRecord::Base
     items * ', '
   end
 
+  def shipping(cart)
+    cart.line_items.to_a.sum { |item| item.item_shipping }
+  end
+
   def save_with_payment
     begin
     if valid?
