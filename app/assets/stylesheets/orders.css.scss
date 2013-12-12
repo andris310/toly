@@ -244,7 +244,11 @@
   }
 
   .discount-row {
-            height: 21px;
+    height: 21px;
+  }
+
+  tr.shipping-row {
+    text-align: right;
   }
 
   .item-quantity {
