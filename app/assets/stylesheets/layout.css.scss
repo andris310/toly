@@ -15,11 +15,22 @@ body {
     color: $orange;
     text-align: center;
 
-    #logo {
-      margin: auto;
-      height: 90px;
-      width: 90px;
-      background-size: 90px 90px;
+    #main-logo {
+      display: inline-flex;
+
+      .logo-text {
+        font-family: $roboto;
+        color: #0A723B;
+        font-size: 1.4em;
+        margin: 36px 10px;
+      }
+
+      #logo {
+        margin: auto;
+        height: 90px;
+        width: 90px;
+        background-size: 90px 90px;
+      }
     }
 
     #left-corner-bar {

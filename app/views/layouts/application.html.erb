@@ -12,9 +12,11 @@
 <body class='<%= controller.controller_name %>-controller'>
   <div id='wrapper'>
     <div id='banner'>
-
-      <div><%= image_tag('toly_glogo.svg', id: 'logo') %></div>
-
+      <div id='main-logo'>
+        <div class='logo-text'>TREE OF LIFE</div>
+        <div><%= image_tag('toly_glogo.svg', id: 'logo') %></div>
+        <div class='logo-text'>SPINE THERAPY</div>
+      </div>
         <% if @cart %>
           <div id='cart' class='hidden' data-id='<%= @cart.id %>'>
             <%= render @cart %>
