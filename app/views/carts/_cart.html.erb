@@ -7,10 +7,12 @@
       <td></td>
       <td class='order-discount'></td>
     </tr>
-    <tr class='shipping-row'>
-      <td colspan='2'>Shipping:</td>
-      <td><%= number_to_currency(cart.shipping) %></td>
-    </tr>
+    <% if cart.shipping > 0 %>
+      <tr class='shipping-row'>
+        <td colspan='2'>Shipping:</td>
+        <td><%= number_to_currency(cart.shipping) %></td>
+      </tr>
+    <% end %>
     <tr class='total_line'>
       <td colspan='2'>Total: </td>
       <td class='total_cell'><%= number_to_currency(cart.total_price) %></td>
