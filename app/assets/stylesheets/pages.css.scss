@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .pages-controller {
+  font-family: $roboto;
+  color: $gray;
 
   #container {
     padding: 0px !important;
@@ -10,5 +12,25 @@
 
   .bxslider {
     padding: 0px;
+  }
+
+
+  #about-page {
+    p {
+      font-weight: 300;
+      font-size: 1.1em;
+      padding: 0px 20px;
+    }
+
+    .teacher {
+      margin-bottom: 20px;
+      background-color: #FFF;
+      overflow: auto;
+
+      img {
+        float: left;
+        padding: 20px;
+      }
+    }
   }
 }
