@@ -12,13 +12,15 @@
             <% end %>
           </td>
         </tr>
-        <tr class='shipping-row'>
-          <td></td>
-          <td class='shipping'>Shipping:</td>
-          <td class='order-shipping'>
-            <%= number_to_currency(@order.shipping(@cart)) %>
-          </td>
-        </tr>
+        <% if @order.shipping(@cart) > 0 %>
+          <tr class='shipping-row'>
+            <td></td>
+            <td class='shipping'>Shipping:</td>
+            <td class='order-shipping'>
+              <%= number_to_currency(@order.shipping(@cart)) %>
+            </td>
+          </tr>
+        <% end %>
         <tr class='total_line'>
           <td colspan='2'>Total: </td>
           <td class='total_cell'>
