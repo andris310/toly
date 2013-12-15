@@ -39,6 +39,10 @@ GEM
       activemodel
       fog (>= 1.8.0)
     atomic (1.1.14)
+    aws-s3 (0.6.3)
+      builder
+      mime-types
+      xml-simple
     bcrypt-ruby (3.1.2)
     better_errors (1.0.1)
       coderay (>= 1.0.0)
@@ -200,12 +204,14 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
+    xml-simple (1.1.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   asset_sync
+  aws-s3
   better_errors
   binding_of_caller
   bxslider-rails

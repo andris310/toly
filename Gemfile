@@ -52,6 +52,7 @@ gem 'bxslider-rails'
 # gem 'sidekiq'
 # gem 'sinatra', '>= 1.3.0', :require => nil
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'aws-s3'
 
 gem 'unf'
 gem 'rack-timeout'
