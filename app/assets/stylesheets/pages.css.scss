@@ -19,7 +19,7 @@
     p {
       font-weight: 300;
       font-size: 1.1em;
-      padding: 0px 20px;
+      padding: 0px 20px 20px;
     }
 
     .teacher {
@@ -29,7 +29,30 @@
 
       img {
         float: left;
-        padding: 20px;
+        margin: 20px;
+        border: 1px solid #E9E9E9;
+      }
+
+      p {
+        padding: 0px 20px;
+      }
+
+      .contact-teacher {
+        clear: both;
+        width: 230px;
+        height: 70px;
+        padding: 0 20px;
+        text-align: center;
+        font-weight: 400;
+
+        a {
+          @include simple-button($gray, #fff, 210px, 17px);
+          margin-top: 5px;
+          display: inline-block;
+          padding: 1px 7px 5px;
+          font-size: 0.9em;
+          border: 2px solid $gray;
+        }
       }
     }
   }
