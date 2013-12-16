@@ -10,9 +10,11 @@ $(document).ready(function(){
 function teacherQtip() {
   $('.contact-teacher a').each(function() {
     $(this).qtip({
-      content: $(this).parent().data('email'),
+      content: '<span>' + $(this).parent().data('email') + '</span></br><span>' + $(this).parent().data('phone') + '</span>',
       show: 'mouseover',
-      hide: 'mouseout',
+      hide: {
+        fixed: true
+      },
       style: {
         classes: 'qtip-bootstrap'
       },
