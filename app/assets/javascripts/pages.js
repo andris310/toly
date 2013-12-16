@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  teacherQtip();
   $('.bxslider').bxSlider({
     mode: 'fade',
     controls: false,
@@ -26,5 +27,4 @@ function teacherQtip() {
   });
 }
 
-$(document).ready(teacherQtip);
 $(document).on('page:load', teacherQtip);
