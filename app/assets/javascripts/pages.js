@@ -8,10 +8,12 @@ $(document).ready(function(){
   });
 });
 
+
 function teacherQtip() {
   $('.contact-teacher a').each(function() {
+    var email = $(this).parent().data('email');
     $(this).qtip({
-      content: '<span>' + $(this).parent().data('email') + '</span></br><span>' + $(this).parent().data('phone') + '</span>',
+      content: '<a href="mailto:"' + email + '"target="_top">' + email + '</span></a></br><span>' + $(this).parent().data('phone') + '</span>',
       show: 'mouseover',
       hide: {
         fixed: true
