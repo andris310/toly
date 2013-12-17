@@ -8,13 +8,13 @@
       <% if product.visible %>
         <% cache ['entry', product] do %>
           <div class='entry'>
+            <h3 class='title'><%= link_to(product.title, product_path(product)) %></h3>
             <%= link_to(image_tag(product.image.url(:medium).to_s), product_path(product)) %>
-            <div class='title-price'>
-              <span class='title'><%= link_to(product.title, product_path(product)) %></span>
-              <span class='price'><%= number_to_currency(product.price) %></span>
-            </div>
             <div class='product-description'>
-              <%= truncate(product.description, length: 110) %>
+              <%= product.description %>
+            </div>
+            <div class='price'>
+              <span class='price'><%= number_to_currency(product.price) %></span>
             </div>
           </div>
         <% end %>
