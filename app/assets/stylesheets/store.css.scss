@@ -44,12 +44,13 @@
       font-weight: 300;
     }
 
-    form, div {
-      display: inline;
-    }
+    // form, div {
+    //   display: inline;
+    // }
 
     .title {
-      margin: 0px 0px 10px 0px;
+      margin: 0px 0px 10px 35px;
+      display: inline-block;
 
       a {
         color: $gray;
@@ -58,8 +59,8 @@
 
     .price {
       float: left;
-      clear: both;
-      width: 55px;
+      margin: 8px;
+      width: 65px;
       color: $green;
       font-size: 1.1em;
 
@@ -74,6 +75,18 @@
       color: $gray;
       width: 71%;
       font-size: 1em;
+    }
+
+    .add-to-cart {
+      float: left;
+      margin-left: 35px;
+      height: 60px;
+      width: 205px;
+      position: relative;
+
+      .add-to-cart-btn {
+        @include shadow-button($gray, #fff, 180px, 35px);
+      }
     }
   }
 }
