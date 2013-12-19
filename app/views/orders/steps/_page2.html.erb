@@ -6,44 +6,47 @@
 
 <div class='billing-info'>
 
-  <div class="field fl_wrap">
-    <%= label_tag :billing_first_name, nil, class: 'fl_label' %>
-    <%= text_field_tag :billing_first_name, nil, size: 35, :class => 'fl_input' %>
+  <div class="field">
+    <%= label_tag :billing_first_name, nil %>
+    <%= text_field_tag :billing_first_name, nil, size: 35 %>
   </div>
-  <div class="field fl_wrap">
-    <%= label_tag :billing_last_name, nil, class: 'fl_label' %>
-    <%= text_field_tag :billing_last_name, nil, size: 35, :class => 'fl_input' %>
+  <div class="field">
+    <%= label_tag :billing_last_name, nil %>
+    <%= text_field_tag :billing_last_name, nil, size: 35 %>
   </div>
 
-  <div class="field fl_wrap">
-    <%= label_tag :billing_address, nil, class: 'fl_label' %>
-    <%= text_field_tag :billing_address, nil, size: 35, :class => 'fl_input' %>
+  <div class="field">
+    <%= label_tag :billing_address, nil %>
+    <%= text_field_tag :billing_address, nil, size: 35 %>
   </div>
-  <div class="field fl_wrap">
-    <%= label_tag :billing_city, nil, class: 'fl_label' %>
-    <%= text_field_tag :billing_city, nil, size: 35, :class => 'fl_input' %>
+  <div class="field">
+    <%= label_tag :billing_city, nil %>
+    <%= text_field_tag :billing_city, nil, size: 35 %>
   </div>
-   <div class="field fl_wrap">
+   <div class="field">
     <%= label_tag :billing_state %>
     <%= select_tag :billing_state, options_for_select(Order::STATES), prompt: 'State' %>
   </div>
-   <div class="field fl_wrap">
-    <%= label_tag :billing_zipcode, nil, class: 'fl_label' %>
-    <%= text_field_tag :billing_zipcode, nil, maxlength: 5, :class => 'fl_input' %>
+   <div class="field">
+    <%= label_tag :billing_zipcode, nil %>
+    <%= text_field_tag :billing_zipcode, nil, maxlength: 5 %>
   </div>
 
-  <div class="field fl_wrap">
-    <%= label_tag :card_number, nil, class: 'fl_label' %>
-    <%= text_field_tag :card_number, nil, name: nil, size: 23, :class => 'fl_input' %>
+  <div class="field">
+    <%= label_tag :card_number, nil %>
+    <%= text_field_tag :card_number, nil, name: nil, size: 23 %>
   </div>
-  <div class="field fl_wrap">
-    <%= label_tag :card_code, nil, class: 'fl_label' %>
-    <%= text_field_tag :card_code, nil, name: nil, size: 2, maxlength: 3, :class => 'fl_input' %>
+  <div class="field">
+    <%= label_tag :card_code, nil %>
+    <%= text_field_tag :card_code, nil, name: nil, size: 2, maxlength: 3 %>
   </div>
 
-  <div class="field fl_wrap">
-    <%= label_tag :card_month, "Card Expiration" %>
+  <div class="field">
+    <%= label_tag :card_month, "Expiration Month" %>
     <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
+  </div>
+  <div class="field">
+    <%= label_tag :card_year, "Expiration Year" %>
     <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
   </div>
 
