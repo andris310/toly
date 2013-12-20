@@ -12,12 +12,15 @@
     .checkout-header {
       color: $gray;
       margin: auto;
+      width: 700px;
 
       h2 {
-        margin-bottom: 0px;
+        margin-bottom: 10px;
+        display: inline-block;
       }
 
       p {
+        display: inline-block;
         font-weight: 200;
         margin: 5px;
       }
@@ -25,18 +28,18 @@
 
     .order-summary {
       margin: 0 12px;
-      background-color: #fff;
 
       .summary {
         overflow: auto;
-        width: 550px;
+        width: 600px;
+
+        background-color: #fff;
         margin: auto;
-        padding-top: 15px;
+        padding: 10px 50px;
 
         table {
           color: $gray;
           float: left;
-          margin-bottom: 25px;
           padding: 10px 30px;
         }
 
@@ -83,7 +86,7 @@
 
     fieldset {
       border: none;
-      width: 750px;
+      width: 730px;
       margin: auto;
       margin-bottom: 40px;
 
@@ -168,13 +171,13 @@
 
       .checkout-btns {
         float: right;
-        margin: 8px 25px;
+        margin: 8px 15px;
       }
 
       .validation-msg {
         font-size: .8em;
         position: absolute;
-        right: 20px;
+        right: -10px;
         top: 0px;
       }
     }
