@@ -43,6 +43,7 @@ end
 gem 'figaro'
 gem 'devise'
 gem 'cancan'
+gem 'mail_form'
 
 gem 'carrierwave'
 gem 'rmagick'
