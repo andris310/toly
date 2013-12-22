@@ -38,7 +38,12 @@
   </div>
 
   <div class="field">
-    <%= f.label :is_downloadable %>
+    <%= f.label :category %><br>
+    <%= f.select(:category, options_for_select([['Spine Health Video', '1'], ['Other Product', '2']]), prompt: 'Select...') %>
+  </div>
+
+  <div class="field">
+    <%= f.label :is_downloadable %><br>
     <%= f.select(:is_downloadable, options_for_select([['Not Downloadable', false], ['Downloadable', true]]), prompt: 'Select...') %>
   </div>
 
