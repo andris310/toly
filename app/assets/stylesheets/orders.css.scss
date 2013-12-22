@@ -57,6 +57,22 @@
             line-height: 1em;
             font-size: 1em;
             color: $gray;
+
+            &::-webkit-input-placeholder {
+               font-weight: 200;
+            }
+
+            &:-moz-placeholder { /* Firefox 18- */
+               font-weight: 200;
+            }
+
+            &::-moz-placeholder {  /* Firefox 19+ */
+               font-weight: 200;
+            }
+
+            &:-ms-input-placeholder {
+               font-weight: 200;
+            }
           }
 
           #apply-coupon {
@@ -122,6 +138,9 @@
           color: #808080;
           padding-left: 5px;
           border: none;
+          &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+          }
         }
 
         select {
@@ -205,13 +224,18 @@
   }
 
   .order-finished {
+    width: 600px;
+    margin: auto;
+    color: $gray;
 
     h2 {
       text-align: center;
     }
-    width: 600px;
-    margin: auto;
-    color: $gray;
+
+    p {
+      text-align: center;
+      font-weight: 300;
+    }
 
     table {
       width: 600px;
