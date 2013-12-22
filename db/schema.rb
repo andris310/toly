@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131215012224) do
+ActiveRecord::Schema.define(version: 20131222214444) do
 
   create_table "carts", force: true do |t|
     t.datetime "created_at"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20131215012224) do
     t.string   "downloadable_file_size"
     t.boolean  "visible",                                        default: true
     t.decimal  "shipping",               precision: 8, scale: 2, default: 0.0
+    t.string   "wistia_preview"
   end
 
   create_table "products_videos", id: false, force: true do |t|
