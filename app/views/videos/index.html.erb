@@ -4,6 +4,7 @@
   <table>
     <thead>
       <tr>
+        <th>ID</th>
         <th>Name</th>
         <th></th>
         <th></th>
@@ -14,6 +15,7 @@
     <tbody>
       <% @videos.each do |video| %>
         <tr>
+          <td><%= video.id %></td>
           <td><%= video.name %></td>
           <td><%= link_to 'Show', video %></td>
           <td><%= link_to 'Edit', edit_video_path(video) %></td>
