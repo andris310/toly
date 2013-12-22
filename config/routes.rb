@@ -8,6 +8,7 @@ Toly2Store::Application.routes.draw do
   resources :carts, :except => [:index]
   resources :pages
   resources :coupons
+  resources :contacts, only: [:new, :create]
 
   get "store/index"
   resources :products do
@@ -31,7 +32,7 @@ Toly2Store::Application.routes.draw do
    get '/spine-therapy' => 'pages#spine_therapy'
    get '/real-stories' => 'pages#real_stories'
    get '/about' => 'pages#about'
-   get '/contact' => 'pages#contact'
+   get '/contact' => 'contacts#new'
    get '/apply-coupon' => 'orders#apply_coupon', as: 'apply_coupon'
 
 

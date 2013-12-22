@@ -1,0 +1,71 @@
+.contacts-controller {
+  #contact-form {
+    margin: 0 auto 80px;
+    width: 750px;
+
+    h3 {
+      color: $gray;
+    }
+
+    form {
+
+      .error {
+        font-size: 0.9em;
+        color: $orange;
+        font-weight: 300;
+      }
+
+      .contact_name {
+        float: left;
+      }
+
+      .contact_email {
+        float: right;
+      }
+
+      .contact_message {
+        clear: both;
+      }
+
+      .contact_name, .contact_email {
+        height: 80px;
+        width: 46%;
+        display: inline-block;
+
+        input {
+          width: 100%;
+          outline: none;
+          height: 35px;
+          font-size: 1.2em;
+          color: #808080;
+          border: none;
+        }
+      }
+
+      #contact_message {
+        width: 100%;
+        outline: none;
+        font-size: 1em;
+        color: #808080;
+        border: none;
+      }
+
+      label {
+        font-weight: 100;
+        display: block;
+      }
+
+      .message-btn {
+        @include simple-button($gray, $background-gray, 120px, 35px);
+          float: right;
+          margin: 10px -5px 10px 0px;
+      }
+    }
+  }
+
+  #after-message {
+    text-align: center;
+    color: $gray;
+    margin: 50px;
+  }
+}
