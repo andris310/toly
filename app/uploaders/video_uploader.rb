@@ -10,8 +10,16 @@ class VideoUploader < CarrierWave::Uploader::Base
     ENV['AWS_VIDEO_BUCKET']
   end
 
-  def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  if Rails.env.production?
+    def store_dir
+      "uploads/production_#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    end
+  end
+
+  if Rails.env.development?
+    def store_dir
+      "uploads/development_#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    end
   end
 
   def move_to_cache
