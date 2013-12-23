@@ -19,7 +19,7 @@
       padding: 0px;
     }
 
-    #video-thumbs {
+    .video-thumbs {
       margin: auto;
       display: flex;
       width: 1070px;
@@ -108,6 +108,21 @@
       p {
         font-size: 1em;
         font-weight: 300;
+      }
+    }
+  }
+
+  #real-stories {
+
+    p {
+      font-weight: 200;
+      font-size: 1em;
+      padding: 0px 35px 20px;
+    }
+
+    .video-thumbs {
+      .preview {
+        height: 365px;
       }
     }
   }
