@@ -25,7 +25,7 @@
     display: inline-block;
     background-color: #FFF;
     margin-bottom: 10px;
-    padding: 20px 20px 0px 20px;
+    padding: 20px;
     border-bottom: 1px solid #ddd;
     min-height: 100px;
     font-family: $roboto;
@@ -41,58 +41,56 @@
       display: block;
     }
 
-    .title-price{
-      width: 250px;
-      height: 45px;
-      margin: auto;
-      margin-top: 1em;
-      display: block;
-      font-weight: 300;
-    }
+    .product-details {
+      overflow: auto;
+      padding-left: 25px;
 
-    // form, div {
-    //   display: inline;
-    // }
-
-    .title {
-      margin: 0px 0px 10px 35px;
-      display: inline-block;
-
-      a {
-        color: $gray;
+      .title-price {
+        width: 250px;
+        height: 45px;
+        margin: auto;
+        margin-top: 1em;
+        display: block;
+        font-weight: 300;
       }
-    }
 
-    .price {
-      float: left;
-      margin: 8px;
-      width: 65px;
-      color: $green;
-      font-size: 1.1em;
 
-      a {
+      .title {
+        margin: 0px 0px 10px 0px;
+        display: inline-block;
+
+        a {
+          color: $gray;
+        }
+      }
+
+      .price {
+        width: 65px;
         color: $green;
+        font-size: 1.1em;
+
+        a {
+          color: $green;
+        }
       }
-    }
 
-    .product-description {
-      margin: 0px 20px 20px 0px;
-      float: right;
-      color: $gray;
-      width: 71%;
-      font-weight: 200;
-      font-size: 1em;
-    }
+      .product-description {
+        margin: 0px 20px 20px 0px;
+        color: $gray;
+        width: 71%;
+        font-weight: 200;
+        font-size: 1em;
+      }
 
-    .add-to-cart {
-      clear: both;
-      margin-left: 22px;
-      height: 60px;
-      width: 205px;
-      position: relative;
+      .add-to-cart {
+        height: 60px;
+        width: 195px;
+        margin-left: -8px;
+        position: relative;
 
-      .add-to-cart-btn {
-        @include shadow-button($gray, #fff, 180px, 35px);
+        .add-to-cart-btn {
+          @include shadow-button(#fff, $button-green, 180px, 35px);
+        }
       }
     }
   }

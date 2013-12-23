@@ -1,5 +1,6 @@
 $gray: #707070;
 $background-gray: #E9E9E9;
+$button-green: #1D883B;
 $green: #17692e;
 $hover: #21A045;
 $orange: #F56943;
@@ -33,29 +34,32 @@ $roboto: 'Roboto', sans-serif;
   font-size: 1em;
   cursor: pointer;
   outline: none;
-  border-radius: 4px;
-  border: 3px solid $color;
+  border: none;
+  // border-radius: 4px;
+  // border: 3px solid $color;
   background-color: $background;
 
   &:hover {
-    width: $width + $width/100 * 2;
-    height: $height + $height/100 * 5;
-    font-size: 1em + 1em/100 * 4;
-    @if $color == #fff {
-      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
-    } @else {
-      box-shadow: 0px 2px 6px rgba($color, 0.25);
-    }
+    background-color: #197C19;
+    // width: $width + $width/100 * 2;
+    // height: $height + $height/100 * 5;
+    // font-size: 1em + 1em/100 * 4;
+    // @if $color == #fff {
+    //   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+    // } @else {
+    //   box-shadow: 0px 2px 6px rgba($color, 0.25);
+    // }
   }
 
   &:active {
-    width: $width;
-    height: $height;
-    font-size: 1em;
-    @if $color == #fff {
-      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
-    } @else {
-      box-shadow: 0px 1px 4px rgba($color, 0.25);
-    }
+    background-color: #197C19;
+    // width: $width;
+    // height: $height;
+    // font-size: 1em;
+    // @if $color == #fff {
+    //   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+    // } @else {
+    //   box-shadow: 0px 1px 4px rgba($color, 0.25);
+    // }
   }
 }
