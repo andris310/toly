@@ -9,6 +9,12 @@
     color: #226;
   }
 
+  p {
+    font-weight: 200;
+    font-size: 1em;
+    padding: 0px 35px 5px;
+  }
+
   #products-container {
     overflow: auto;
     margin: auto;
@@ -19,7 +25,7 @@
     display: inline-block;
     background-color: #FFF;
     margin-bottom: 10px;
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
     border-bottom: 1px solid #ddd;
     min-height: 100px;
     font-family: $roboto;
@@ -79,7 +85,7 @@
     }
 
     .add-to-cart {
-      float: left;
+      clear: both;
       margin-left: 25px;
       height: 60px;
       width: 205px;
