@@ -159,7 +159,6 @@ body {
   #menu {
     padding: 1em 0em;
     width: 100%;
-    background: #F3F4ED;
 
     .active {
       color: #D8785D;
@@ -181,7 +180,7 @@ body {
           font-size: 1em;
           font-weight: 300;
           &:hover {
-            color: $orange;
+            color: $hover;
           }
         }
       }
