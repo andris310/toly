@@ -28,7 +28,8 @@ Toly2Store::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'pages#home', as: 'home'
-   get '/spine-health-videos' => 'store#index'
+   get '/spine-health-videos' => 'store#spine_videos'
+   get '/other-products' => 'store#other_products'
    get '/spine-therapy' => 'pages#spine_therapy'
    get '/real-stories' => 'pages#real_stories'
    get '/about' => 'pages#about'
