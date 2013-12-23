@@ -64,13 +64,13 @@
     </div>
     <div id='menu'>
       <ul>
-        <li><a href='/'>HOME</a></li>
-        <li><a href='/about'>ABOUT US</a></li>
-        <li><a href='/spine-health-videos'>SPINE HEALTH VIDEOS</a></li>
-        <li><a href='/other-products'>PRODUCTS</a></li>
-        <li><a href='/spine-therapy'>SPINE THERAPY</a></li>
-        <li><a href='/real-stories'>REAL STORIES</a></li>
-        <li><a href='/contact'>CONTACT</a></li>
+        <li><%= link_to 'HOME', '/', :class => is_active?("home") %></li>
+        <li><%= link_to 'ABOUT US', '/about', :class => is_active?('about') %></li>
+        <li><%= link_to 'SPINE HEALTH VIDEOS', '/spine-health-videos', :class => is_active?('spine_videos') %></li>
+        <li><%= link_to 'PRODUCTS', '/other-products', :class => is_active?('other_products') %></li>
+        <li><%= link_to 'SPINE THERAPY', '/spine-therapy', :class => is_active?('spine_therapy') %></li>
+        <li><%= link_to 'REAL STORIES', '/real-stories', :class => is_active?('real_stories') %></li>
+        <li><%= link_to 'CONTACT', '/contact', :class => is_active?('new') %></li>
       </ul>
     </div>
     <div id='main'>

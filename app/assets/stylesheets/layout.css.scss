@@ -161,6 +161,10 @@ body {
     width: 100%;
     background: #F3F4ED;
 
+    .active {
+      color: #D8785D;
+    }
+
     ul {
       padding: 0;
       min-width: 730px;
