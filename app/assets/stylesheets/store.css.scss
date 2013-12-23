@@ -25,7 +25,7 @@
     display: inline-block;
     background-color: #FFF;
     margin-bottom: 10px;
-    padding: 20px 20px 0px 20px;
+    padding: 20px;
     border-bottom: 1px solid #ddd;
     min-height: 100px;
     font-family: $roboto;
@@ -85,7 +85,7 @@
     }
 
     .add-to-cart {
-      clear: both;
+      float: left;
       margin-left: 25px;
       height: 60px;
       width: 205px;

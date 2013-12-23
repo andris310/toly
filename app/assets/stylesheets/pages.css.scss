@@ -11,12 +11,17 @@
 
     .bx-wrapper {
       height: 600px;
-      margin: 0 auto 60px;
+      margin: 0 auto 50px;
     }
 
     .bxslider {
       margin: 0px;
       padding: 0px;
+    }
+
+    h3 {
+      font-weight: 400;
+      margin: 0px 0px 0px 25px;
     }
 
     .video-thumbs {
@@ -26,7 +31,8 @@
 
       .preview {
         width: 220px;
-        height: 235px;
+        height: 260px;
+        text-align: center;
         background-color: #FFF;
         margin: 10px;
         padding: 1em;
@@ -35,6 +41,16 @@
         font-family: "Roboto", sans-serif;
         font-weight: 300;
         float: left;
+
+        a {
+          transition: color 0.5s ease;
+          color: #767676;
+          font-size: 1em;
+          font-weight: 300;
+          &:hover {
+            color: $orange;
+          }
+        }
       }
     }
   }
