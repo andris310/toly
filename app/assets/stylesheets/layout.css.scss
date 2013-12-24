@@ -5,13 +5,13 @@ body {
   width: 1100px;
   min-height: 100%;
   margin: auto;
-  background: #E9E9E9;
+  background: $background-gray;
   font-family: $roboto;
 
   #wrapper {
     height: 100%;
     overflow: auto;
-    background-color: #e9e9e9;
+    background-color: $background-gray;
   }
 
   #banner {
