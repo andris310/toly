@@ -82,7 +82,7 @@
   }
 
   input#checkout-btn {
-    @include shadow-button($green, #fff, 150px, 35px);
+    @include shadow-button(#fff, $button-green, 150px, 35px);
   }
 }
 
