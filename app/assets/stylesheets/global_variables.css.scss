@@ -14,10 +14,11 @@ $roboto: 'Roboto', sans-serif;
   font-size: 1em;
   cursor: pointer;
   outline: none;
-  border-radius: 4px;
   text-align: center;
-  border: 3px solid $color;
   background-color: $background;
+  &:hover {
+    background-color: darken($background, 5%);
+  }
 }
 
 @mixin shadow-button($color, $background, $width, $height) {
@@ -41,7 +42,7 @@ $roboto: 'Roboto', sans-serif;
   transition: background-color 0.4s ease;
 
   &:hover {
-    background-color: #3DA069;
+    background-color: darken($background, 5%);
     transition: background-color 0.4s ease;
     // width: $width + $width/100 * 2;
     // height: $height + $height/100 * 5;
