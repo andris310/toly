@@ -56,9 +56,10 @@
       }
 
       .message-btn {
-        @include simple-button($gray, $background-gray, 120px, 35px);
+        @include simple-button(#fff, $button-green, 120px, 35px);
           float: right;
           margin: 10px -5px 10px 0px;
+          border: none;
       }
     }
   }
