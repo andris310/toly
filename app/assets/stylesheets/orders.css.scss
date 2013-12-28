@@ -45,10 +45,12 @@
 
         .coupon-code {
           float: right;
+          width: 100%;
           margin-top: 20px;
 
           input#entered_code {
             border: none;
+            width: 75%;
             height: 25px;
             font-size: 1.1em;
             background-color: #F3F3F3;
@@ -76,7 +78,10 @@
           }
 
           #apply-coupon {
-            color: $gray;
+            width: 23%;
+            padding: 2px 14px 4px 14px;
+            color: #FFF;
+            background-color: #B8B8B8;
             cursor: pointer;
           }
         }
@@ -84,8 +89,9 @@
         a.empty-cart {
           font-size: .9em;
           color: #B8B8B8;
+          float: right;
           display: block;
-          margin-top: 15px;
+          margin: 10px 0px;
 
           &:hover {
             color: $gray;
@@ -94,6 +100,7 @@
 
         .coupon-validity {
           color: #F00;
+          margin: 10px 0px;
           position: absolute;
           font-size: .8em;
         }
