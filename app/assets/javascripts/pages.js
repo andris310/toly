@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 
 function teacherQtip() {
-  $('.contact-teacher a').each(function() {
+  $('.contact-info').each(function() {
     var email = $(this).parent().data('email');
     $(this).qtip({
       content: '<a href="mailto:"' + email + '"target="_top" class="qtip_email">' + email + '</span></a></br><span>' + $(this).parent().data('phone') + '</span>',
