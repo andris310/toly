@@ -44,7 +44,7 @@
 
   <div class="field">
     <%= f.label :is_downloadable %><br>
-    <%= f.select(:is_downloadable, options_for_select([['Not Downloadable', false], ['Downloadable', true]]), prompt: 'Select...') %>
+    <%= f.select(:is_downloadable, options_for_select([['Not Downloadable', false], ['Downloadable', true]], :is_downloadable)) %>
   </div>
 
   <div id="select-downloadable" class="field hidden">
