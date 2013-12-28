@@ -27,20 +27,20 @@
     }
 
     .order-summary {
-      margin: 0 12px;
+      float: right;
+      margin-left: 12px;
+      margin-top: 90px;
+      overflow: auto;
+      width: 350px;
+      background-color: #fff;
 
       .summary {
-        overflow: auto;
-        width: 600px;
 
-        background-color: #fff;
         margin: auto;
-        padding: 10px 50px;
+        padding: 20px;
 
         table {
           color: $gray;
-          float: left;
-          padding: 10px 30px;
         }
 
         .coupon-code {
@@ -104,9 +104,14 @@
       border: none;
       width: 730px;
       margin: auto;
+      padding: 0px;
       margin-bottom: 40px;
 
       form {
+
+        #shipping-form {
+          float: left;
+        }
 
         .customer-info, .billing-info {
           overflow: auto;
@@ -167,7 +172,7 @@
         }
 
         #next-btn {
-          @include simple-button($gray, $background-gray, 120px, 35px);
+          @include simple-button(#fff, $button-green, 120px, 35px);
           float: left;
           margin: 15px 0px 5px 15px;
         }

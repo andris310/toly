@@ -1,44 +1,46 @@
-<div class='checkout-header'>
-  <h2>Your Info</h2>
-  <p>This will be used as shipping address</p>
-</div>
-<div class='customer-info'>
-  <div class="field">
-    <%= f.label :first_name, :class => '' %>
-    <%= f.text_field :first_name, size: 35, :class => '' %>
+<div id='shipping-form'>
+  <div class='checkout-header'>
+    <h2>Your Info</h2>
+    <p>This will be used as shipping address</p>
   </div>
-  <div class="field">
-    <%= f.label :last_name, :class => '' %>
-    <%= f.text_field :last_name, size: 35, :class => '' %>
-  </div>
+  <div class='customer-info'>
+    <div class="field">
+      <%= f.label :first_name, :class => '' %>
+      <%= f.text_field :first_name, size: 35, :class => '' %>
+    </div>
+    <div class="field">
+      <%= f.label :last_name, :class => '' %>
+      <%= f.text_field :last_name, size: 35, :class => '' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :address, :class => '' %>
-    <%= f.text_field :address, size: 35, :class => '' %>
-  </div>
-  <div class="field">
-    <%= f.label :city, :class => '' %>
-    <%= f.text_field :city, size: 35, :class => '' %>
-  </div>
-   <div class="field">
-    <%= f.label :state %>
-    <%= f.select :state, Order::STATES, prompt: 'State' %>
-  </div>
-   <div class="field">
-    <%= f.label :zipcode, :class => '' %>
-    <%= f.text_field :zipcode, maxlength: 5, :class => '' %>
-    <span class='validation-msg' id='spnZipStatus'></span>
-  </div>
+    <div class="field">
+      <%= f.label :address, :class => '' %>
+      <%= f.text_field :address, size: 35, :class => '' %>
+    </div>
+    <div class="field">
+      <%= f.label :city, :class => '' %>
+      <%= f.text_field :city, size: 35, :class => '' %>
+    </div>
+     <div class="field">
+      <%= f.label :state %>
+      <%= f.select :state, Order::STATES, prompt: 'State' %>
+    </div>
+     <div class="field">
+      <%= f.label :zipcode, :class => '' %>
+      <%= f.text_field :zipcode, maxlength: 5, :class => '' %>
+      <span class='validation-msg' id='spnZipStatus'></span>
+    </div>
 
-  <div class="field">
-    <%= f.label :email, :class => '' %>
-    <%= f.email_field :email, size: 35, :class => '' %>
-    <span class='validation-msg' id='spnEmailStatus'></span>
-  </div>
+    <div class="field">
+      <%= f.label :email, :class => '' %>
+      <%= f.email_field :email, size: 35, :class => '' %>
+      <span class='validation-msg' id='spnEmailStatus'></span>
+    </div>
 
-  <div class="field">
-    <%= f.label :phone, :class => '' %>
-    <%= f.telephone_field :phone_nr, maxlength: 12, :class => '' %>
-    <span class='validation-msg' id='spnPhoneStatus'></span>
+    <div class="field">
+      <%= f.label :phone, :class => '' %>
+      <%= f.telephone_field :phone_nr, maxlength: 12, :class => '' %>
+      <span class='validation-msg' id='spnPhoneStatus'></span>
+    </div>
   </div>
 </div>
