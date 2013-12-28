@@ -24,10 +24,15 @@ class VideosController < ApplicationController
   end
 
   def download
-    @video = Video.find(params[:id])
-    AWS::S3::Base.establish_connection!( :access_key_id => ENV['AWS_ACCESS_KEY_ID'], :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'])
-    s3File = AWS::S3::S3Object.find @video.video_url, ENV['AWS_VIDEO_BUCKET']
-    redirect_to s3File.url(:expires_in => 30, :response_content_disposition => 'attachment;')
+     @media = Video.find(params[:id])
+     redirect_to @media.download_url
+  end
+
+  # def download
+  #   @video = Video.find(params[:id])
+  #   AWS::S3::Base.establish_connection!( :access_key_id => ENV['AWS_ACCESS_KEY_ID'], :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'])
+  #   s3File = AWS::S3::S3Object.find @video.video_url, ENV['AWS_VIDEO_BUCKET']
+  #   redirect_to s3File.url(:expires_in => 30, :response_content_disposition => 'attachment;')
     # @video = Video.find(params[:id])
     # data = open(@video.video_url.url)
     # send_data data.read, type: data.content_type,
@@ -35,7 +40,7 @@ class VideosController < ApplicationController
     #                 disposition: 'attachment',
     #                 stream: 'true',
     #                 buffer_size: '4096'
-  end
+  # end
 
   # POST /videos
   # POST /videos.json

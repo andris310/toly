@@ -5,4 +5,14 @@ class Video < ActiveRecord::Base
 
   mount_uploader :video_url, VideoUploader
 
+  def download_url
+    s3 = AWS::S3.new
+    bucket = s3.buckets['tolyvideos']
+    object = bucket.objects[video_url.path]
+    object.url_for(:get, {
+      expires: 10.minutes,
+      response_content_disposition: 'attachment;'
+    }).to_s
+  end
+
 end
