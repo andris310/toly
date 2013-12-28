@@ -16,7 +16,8 @@ function teacherQtip() {
       content: '<a href="mailto:"' + email + '"target="_top" class="qtip_email">' + email + '</span></a></br><span>' + $(this).parent().data('phone') + '</span>',
       show: 'mouseover',
       hide: {
-        fixed: true
+        fixed: true,
+        delay: 200
       },
       style: {
         classes: 'qtip-bootstrap'
@@ -24,7 +25,7 @@ function teacherQtip() {
       position: {
          my: 'center left',
          at: 'center right'
-     }
+      }
     });
   });
 }
