@@ -3,23 +3,17 @@ class VideosController < ApplicationController
   load_and_authorize_resource
   before_action :set_video, only: [:show, :edit, :update, :destroy]
 
-  # GET /videos
-  # GET /videos.json
   def index
     @videos = Video.all
   end
 
-  # GET /videos/1
-  # GET /videos/1.json
   def show
   end
 
-  # GET /videos/new
   def new
     @video = Video.new
   end
 
-  # GET /videos/1/edit
   def edit
   end
 
@@ -28,22 +22,6 @@ class VideosController < ApplicationController
      redirect_to @media.download_url
   end
 
-  # def download
-  #   @video = Video.find(params[:id])
-  #   AWS::S3::Base.establish_connection!( :access_key_id => ENV['AWS_ACCESS_KEY_ID'], :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'])
-  #   s3File = AWS::S3::S3Object.find @video.video_url, ENV['AWS_VIDEO_BUCKET']
-  #   redirect_to s3File.url(:expires_in => 30, :response_content_disposition => 'attachment;')
-    # @video = Video.find(params[:id])
-    # data = open(@video.video_url.url)
-    # send_data data.read, type: data.content_type,
-    #                 filename: @video.name
-    #                 disposition: 'attachment',
-    #                 stream: 'true',
-    #                 buffer_size: '4096'
-  # end
-
-  # POST /videos
-  # POST /videos.json
   def create
     @video = Video.new(video_params)
     @video.filename = @video.video_url.filename
@@ -58,8 +36,6 @@ class VideosController < ApplicationController
     end
   end
 
-  # PATCH/PUT /videos/1
-  # PATCH/PUT /videos/1.json
   def update
     respond_to do |format|
       if @video.update(video_params)
@@ -73,8 +49,6 @@ class VideosController < ApplicationController
     end
   end
 
-  # DELETE /videos/1
-  # DELETE /videos/1.json
   def destroy
     @video.destroy
     respond_to do |format|
