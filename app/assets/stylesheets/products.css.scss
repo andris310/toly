@@ -54,7 +54,7 @@
       }
 
       .add-to-cart-btn {
-        @include shadow-button($orange, #fff, 200px, 40px);
+        @include shadow-button(#fff, $button-green, 200px, 40px);
       }
     }
   }
