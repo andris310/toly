@@ -51,7 +51,7 @@ gem 'rmagick'
 gem 'fog'
 gem 'aws-sdk'
 gem 'bxslider-rails'
-# gem 'carrierwave_direct'
+gem 'carrierwave_direct'
 # gem 'sidekiq'
 # gem 'sinatra', '>= 1.3.0', :require => nil
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'

@@ -5,13 +5,15 @@ class VideosController < ApplicationController
 
   def index
     @videos = Video.all
+    @uploader = Video.new.video_url
+    @uploader.success_action_redirect = new_video_url
   end
 
   def show
   end
 
   def new
-    @video = Video.new
+    @video = Video.new(key: params[:key])
   end
 
   def edit
@@ -65,6 +67,6 @@ class VideosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def video_params
-      params.require(:video).permit(:name, :description, :video_url, :filename)
+      params.require(:video).permit(:name, :description, :video_url, :filename, :key)
     end
 end

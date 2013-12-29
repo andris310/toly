@@ -5,6 +5,10 @@ class Video < ActiveRecord::Base
 
   mount_uploader :video_url, VideoUploader
 
+  def video_name
+    File.basename(video_url.path || video_url.filename) if video_url
+  end
+
   def download_url
     s3 = AWS::S3.new
     bucket = s3.buckets['tolyvideos']

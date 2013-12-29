@@ -1,10 +1,10 @@
 # encoding: utf-8
 
 class VideoUploader < CarrierWave::Uploader::Base
+  include CarrierWaveDirect::Uploader
   self.fog_public = false
   self.fog_authenticated_url_expiration = 120
-
-  storage :fog
+  self.max_file_size     = 2300.megabytes
 
   def fog_directory
     ENV['AWS_VIDEO_BUCKET']
@@ -12,13 +12,13 @@ class VideoUploader < CarrierWave::Uploader::Base
 
   if Rails.env.production?
     def store_dir
-      "uploads/production_#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+      "uploads/production_#{model.class.to_s.underscore}"
     end
   end
 
   if Rails.env.development?
     def store_dir
-      "uploads/development_#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+      "uploads/development_#{model.class.to_s.underscore}"
     end
   end
 

@@ -29,5 +29,8 @@
 
   <br>
 
-  <%= link_to 'New Video', new_video_path %>
+  <%= direct_upload_form_for @uploader do |f| %>
+    <p><%= f.file_field :video_url %></p>
+    <p><%= f.submit 'Upload Video' %></p>
+  <% end %>
 </div>
