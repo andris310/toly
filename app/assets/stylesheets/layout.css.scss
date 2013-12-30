@@ -214,9 +214,16 @@ body {
 
     ul {
       list-style: none;
+      display: inline-block;
+      float: right;
+      padding-left: 0px;
 
       li {
         display: inline;
+        .social {
+          width: 40px;
+          opacity: 0.3;
+        }
       }
     }
   }
