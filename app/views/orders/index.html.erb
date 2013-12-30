@@ -4,6 +4,7 @@
   <table>
     <thead>
       <tr>
+        <th>Id</th>
         <th>Name</th>
         <th>Address</th>
         <th>Email</th>
@@ -59,7 +60,5 @@
     </tbody>
   </table>
   <%= paginate @orders %>
-  <br>
-
   <%= link_to 'New Order', new_order_path %>
 </div>

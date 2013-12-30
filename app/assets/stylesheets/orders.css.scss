@@ -336,6 +336,7 @@
     table {
       width: 100%;
       font-size: .8em;
+      margin-bottom: 15px;
 
       th.date-column {
         width: 70px;
@@ -357,6 +358,10 @@
       .order-address {
 
       }
+    }
+    nav.pagination {
+      display: inline-block;
+      float: right;
     }
   }
 
