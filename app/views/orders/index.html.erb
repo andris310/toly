@@ -7,7 +7,7 @@
         <th>Name</th>
         <th>Address</th>
         <th>Email</th>
-        <th></th>
+        <th>Items to ship</th>
         <th>Total</th>
         <th class='date-column'>Order Date</th>
         <th class='date-column'>Shipped On</th>
@@ -25,7 +25,15 @@
             <%= order.state %><%= order.zipcode %>
           </td>
           <td><%= order.email %></td>
-          <td><%= order.pay_type %></td>
+          <td>
+            <ul>
+              <% order.line_items.each do |i| %>
+                <% if !i.product.is_downloadable %>
+                  <li><%= i.quantity %> x <%= i.product.title %></li>
+                <% end %>
+              <% end %>
+            </ul>
+          </td>
           <td><%= number_to_currency(order.total_price) %></td>
           <td><%= order.created_at.strftime('%d/%m/%y') %></td>
           <td>

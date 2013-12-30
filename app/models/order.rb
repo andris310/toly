@@ -62,6 +62,17 @@ class Order < ActiveRecord::Base
     items * ', '
   end
 
+  def products_to_ship
+    products = []
+    line_items.map do |i|
+      product = Product.find_by(id: i.product_id)
+      if prduct.is_downloadable
+        products << product
+      end
+    end
+    products
+  end
+
   def shipping(cart)
     cart.line_items.to_a.sum { |item| item.item_shipping }
   end
