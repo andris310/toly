@@ -113,6 +113,9 @@ GEM
     jquery-ui-rails (4.1.0)
       railties (>= 3.1.0)
     json (1.8.1)
+    kaminari (0.15.0)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     kgio (2.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -236,6 +239,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   jquery-ui-rails
+  kaminari
   mail_form
   pg
   pry-debugger

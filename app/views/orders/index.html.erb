@@ -16,8 +16,9 @@
     </thead>
 
     <tbody>
-      <% @orders.reverse.each do |order| %>
+      <% @orders.each do |order| %>
         <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+          <td><%= order.id %></td>
           <td><%= order.name %></td>
           <td class='order-address'>
             <%= order.address %><br>
@@ -57,7 +58,7 @@
       <% end %>
     </tbody>
   </table>
-
+  <%= paginate @orders %>
   <br>
 
   <%= link_to 'New Order', new_order_path %>
