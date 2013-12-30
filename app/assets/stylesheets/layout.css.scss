@@ -221,8 +221,11 @@ body {
       li {
         display: inline;
         .social {
-          width: 40px;
-          opacity: 0.3;
+          width: 35px;
+          opacity: 0.25;
+          &:hover {
+            opacity: 0.35;
+          }
         }
       }
     }

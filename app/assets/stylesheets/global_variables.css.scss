@@ -6,6 +6,30 @@ $hover: #21A045;
 $orange: #F56943;
 $roboto: 'Roboto', sans-serif;
 
+@mixin preview($height, $width) {
+  width: $width;
+  height: $height;
+  text-align: center;
+  background-color: #FFF;
+  margin: 10px;
+  padding: 1em;
+  border-bottom: 1px solid #DDD;
+  min-height: 100px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  float: left;
+
+  a {
+    transition: color 0.5s ease;
+    color: #767676;
+    font-size: 1em;
+    font-weight: 300;
+    &:hover {
+      color: #21A045;
+    }
+  }
+}
+
 @mixin simple-button($color, $background, $width, $height) {
   color: $color;
   height: $height;
