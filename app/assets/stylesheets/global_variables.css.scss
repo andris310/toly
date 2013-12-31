@@ -3,7 +3,7 @@ $background-gray: #F3F3F3;
 $button-green: #44B476;
 $green: #17692e;
 $hover: #21A045;
-$orange: #F56943;
+$orange: #EC8C72;
 $roboto: 'Roboto', sans-serif;
 
 @mixin preview($height, $width) {
@@ -38,6 +38,7 @@ $roboto: 'Roboto', sans-serif;
   font-size: 1em;
   cursor: pointer;
   outline: none;
+  border: none;
   text-align: center;
   background-color: $background;
   &:hover {

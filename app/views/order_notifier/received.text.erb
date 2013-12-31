@@ -5,6 +5,7 @@ You ordered the following items:
 
 <%= render @order.line_items -%>
 
+
 <% if @order.downloadable_order? %>
   You can download your digital products on our site from your account page.
 <% else %>
