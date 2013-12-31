@@ -3,11 +3,11 @@
   <div class='sign-in-box'>
     <h2>Forgot your password?</h2>
 
-    <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, :class => 'FlowupLabels'}) do |f| %>
+    <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post) do |f| %>
       <%= devise_error_messages! %>
 
-      <div class='fl_wrap'><%= f.label :email, :class => 'fl_label' %><br />
-      <%= f.email_field :email, :class => 'fl_input' %></div>
+      <div class=''><%= f.label :email %><br />
+      <%= f.email_field :email %></div>
 
       <div><%= f.submit "Send me reset password instructions", :class => 'sign-in-btn' %></div>
     <% end %>

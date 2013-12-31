@@ -6,15 +6,15 @@
   <div class='sign-in-box'>
     <h2>Sign in</h2>
 
-    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'FlowupLabels'}) do |f| %>
-      <div class='fl_wrap'>
-        <%= f.label :email, :class => 'fl_label' %>
-        <%= f.email_field :email, :class => 'fl_input' %>
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+      <div class=''>
+        <%= f.label :email %>
+        <%= f.email_field :email %>
       </div>
 
-      <div class='fl_wrap'>
-        <%= f.label :password, :class => 'fl_label' %>
-        <%= f.password_field :password, :class => 'fl_input' %></div>
+      <div class=''>
+        <%= f.label :password %>
+        <%= f.password_field :password %></div>
 
       <% if devise_mapping.rememberable? -%>
         <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>

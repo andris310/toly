@@ -3,14 +3,14 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class='fl_wrap'>
-    <%= f.label :first_name, :class => 'fl_label' %><br />
-    <%= f.text_field :first_name, :class => 'fl_input' %>
+  <div class=''>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
   </div>
 
-  <div class='fl_wrap'>
-    <%= f.label :last_name, :class => 'fl_label' %><br />
-    <%= f.text_field :last_name, :class => 'fl_input' %>
+  <div class=''>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
   </div>
 
   <div><%= f.label :email %><br />
