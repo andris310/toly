@@ -66,7 +66,7 @@ class Order < ActiveRecord::Base
     products = []
     line_items.map do |i|
       product = Product.find_by(id: i.product_id)
-      if prduct.is_downloadable
+      if product.is_downloadable
         products << product
       end
     end

@@ -9,14 +9,12 @@
           <th></th>
           <th>Items purchased:</th>
           <th></th>
-          <th></th>
         </thead>
         <tbody>
           <% @order.products.each do |p| %>
           <tr>
             <td></td>
             <td><%= p.title %></td>
-            <td class='item-price'><%= number_to_currency(p.price) %></td>
             <td class='download-link'>
               <% if p.is_downloadable || (p.is_downloadable && (p.category == '3')) %>
                 <table>
@@ -31,19 +29,6 @@
             </td>
           </tr>
           <% end %>
-
-          <% if @order.discount > 0 %>
-            <tr class='discount-row'>
-              <td></td>
-              <td class='discount'>Discount:</td>
-              <td class='order-discount'>-<%= number_to_currency(@order.discount) %></td>
-            </tr>
-          <% end %>
-          <tr class='total_line'>
-            <td></td>
-            <td>Total:</td>
-            <td class='total_cell'><%= number_to_currency(@order.total_price) %></td>
-          </tr>
         </tbody>
       </table>
     </div>
