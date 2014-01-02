@@ -271,7 +271,7 @@
 
         a.download-btn {
           float: right;
-          @include simple-button(#fff, $button-green, 50px, 17px);
+          @include simple-button(#fff, $button-gray, 50px, 17px);
           padding: 1px 7px;
           font-size: 0.7em;
         }

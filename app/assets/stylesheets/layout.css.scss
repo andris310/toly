@@ -152,7 +152,7 @@ body {
 
       .sign-in-btn {
         margin: 25px 0px 15px 0px;
-        @include simple-button(#fff, #bbb, 301px, 35px);
+        @include simple-button(#fff, $button-gray, 301px, 35px);
       }
 
       a {
