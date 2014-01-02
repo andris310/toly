@@ -252,9 +252,19 @@
 
     table {
       width: 600px;
+      border-collapse: collapse;
 
       th {
         font-weight: 300;
+        text-align: left;
+      }
+
+      tr.product {
+        border-top: 1px solid #E7E7E7;
+
+        & > td {
+          padding: 10px 5px;
+        }
       }
 
       td {
