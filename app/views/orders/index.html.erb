@@ -30,7 +30,7 @@
           <td>
             <ul>
               <% order.line_items.each do |i| %>
-                <% if !i.product.is_downloadable %>
+                <% if !i.product.downloadable %>
                   <li><%= i.quantity %> x <%= i.product.title %></li>
                 <% end %>
               <% end %>

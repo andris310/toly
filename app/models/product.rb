@@ -15,12 +15,15 @@ class Product < ActiveRecord::Base
 
   mount_uploader :image, PictureUploader
 
-  # after_save :enqueue_image
-
-  # def image_name
-  #   binding.pry
-  #   File.basename(image.path || image.filename) if image
-  # end
+  def downloadable
+    if self.category == '3'
+      false
+    elsif self.is_downloadable
+      true
+    else
+      false
+    end
+  end
 
   def self.latest
     Product.order(:updated_at).last
