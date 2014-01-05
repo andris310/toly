@@ -8,6 +8,7 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     @orders = Order.order("id DESC").page(params[:page])
+    @unshipped = Order.where(shipped: false).count
   end
 
   # GET /orders/1
