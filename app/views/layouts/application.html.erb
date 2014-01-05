@@ -12,6 +12,9 @@
 <body class='<%= controller.controller_name %>-controller'>
   <div id='wrapper'>
     <div id='banner'>
+      <div id='mobile-menu'>
+        <a href="#menu" class="box-shadow-menu"></a>
+      </div>
       <div id='main-logo'>
         <div class='logo-text'>TREE OF LIFE</div>
         <div><%= image_tag('toly_glogo.svg', id: 'logo') %></div>
@@ -63,6 +66,7 @@
       <% end %>
 
     </div>
+
     <div id='menu'>
       <ul>
         <li><%= link_to 'HOME', '/', :class => is_active?("home") %></li>

@@ -21,6 +21,11 @@ body {
     color: $orange;
     text-align: center;
 
+    #mobile-menu {
+      position: absolute;
+      display: none;
+    }
+
     #main-logo {
       display: inline-flex;
 
@@ -244,5 +249,49 @@ body {
   }
 }
 @media only screen and (max-width: 568px) {
+  body {
+    width: 100%;
+
+    #banner {
+      height: 65px;
+
+      #mobile-menu {
+        display: block;
+
+        .box-shadow-menu {
+          position: relative;
+          padding-left: 2.25em;
+        }
+        .box-shadow-menu:before {
+          content: "";
+          position: absolute;
+          left: 0.5em;
+          top: 0.25em;
+          width: 1.5em;
+          height: 0.3em;
+          background: #AAA;
+          box-shadow: 0 0.45em 0 0 #AAA, 0 0.9em 0 0 #AAA;
+        }
+      }
+
+      #main-logo {
+
+        .logo-text {
+          font-size: 0.8em;
+          margin: 25px 10px;
+        }
+
+        img#logo {
+          width: 60px;
+          height: 60px;
+          background-size: 60px 60px;
+        }
+      }
+    }
+
+    #menu {
+      display: none;
+    }
+  }
 
 }
