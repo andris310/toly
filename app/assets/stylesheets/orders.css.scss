@@ -340,6 +340,15 @@
   #all-orders {
     color: $gray;
 
+    h1 {
+      display: inline-block;
+    }
+
+    #unshipped {
+      display: inline-block;
+      margin-left: 40px;
+    }
+
     .list_line_odd {
       background: #EEE;
     }

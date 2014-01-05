@@ -63,6 +63,20 @@
 
   #new-product {
     margin: 2em;
+
+    #category-select {
+      margin: 10px 0px;
+      .field {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      ul {
+        font-size: 0.9em;
+        width: 480px;
+        display: inline-block;
+      }
+    }
   }
 
   // ******* PRODUCT INDEX PAGE

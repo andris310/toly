@@ -37,9 +37,16 @@
     <%= f.file_field :image %>
   </div>
 
-  <div class="field">
-    <%= f.label :category %><br>
-    <%= f.select(:category, options_for_select([['Spine Health Video', '1'], ['Spine Health Video + physical product', '3'], ['Other Product', '2']]), prompt: 'Select...') %>
+  <div id='category-select'>
+    <div class="field">
+      <%= f.label :category %><br>
+      <%= f.select(:category, options_for_select([['Spine Health Video', '1'], ['Spine Health Video + physical product', '3'], ['Other Product', '2']]), prompt: 'Select...') %>
+    </div>
+    <ul>
+      <li>Use 'Spine Health Video' for downloadable video products only</li>
+      <li>Use 'Spine Health Video + physical product' for items that have downloadable product but also include items that need shippment</li>
+      <li>Use 'Other Product' for items that need shipment</li>
+    </ul>
   </div>
 
   <div class="field">
