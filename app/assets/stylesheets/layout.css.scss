@@ -255,7 +255,8 @@ body {
     #banner {
       height: 65px;
 
-      #mobile-menu {
+      #mobile-menu-button {
+        position: absolute;
         display: block;
 
         .box-shadow-menu {
@@ -272,6 +273,11 @@ body {
           background: #AAA;
           box-shadow: 0 0.45em 0 0 #AAA, 0 0.9em 0 0 #AAA;
         }
+      }
+
+      #mobile-menu {
+        position: absolute;
+        background: #FFF;
       }
 
       #main-logo {

@@ -12,8 +12,12 @@
 <body class='<%= controller.controller_name %>-controller'>
   <div id='wrapper'>
     <div id='banner'>
-      <div id='mobile-menu'>
+      <div id='mobile-menu-button'>
         <a href="#menu" class="box-shadow-menu"></a>
+      </div>
+      <div id='mobile-menu'>
+        <span class='close'>X</span>
+        <%= render 'menu' %>
       </div>
       <div id='main-logo'>
         <div class='logo-text'>TREE OF LIFE</div>
@@ -68,15 +72,7 @@
     </div>
 
     <div id='menu'>
-      <ul>
-        <li><%= link_to 'HOME', '/', :class => is_active?("home") %></li>
-        <li><%= link_to 'ABOUT US', '/about', :class => is_active?('about') %></li>
-        <li><%= link_to 'SPINE HEALTH VIDEOS', '/spine-health-videos', :class => is_active?('spine_videos') %></li>
-        <li><%= link_to 'PRODUCTS', '/other-products', :class => is_active?('other_products') %></li>
-        <li><%= link_to 'SPINE THERAPY', '/spine-therapy', :class => is_active?('spine_therapy') %></li>
-        <li><%= link_to 'REAL STORIES', '/real-stories', :class => is_active?('real_stories') %></li>
-        <li><%= link_to 'CONTACT', '/contact', :class => is_active?('new') %></li>
-      </ul>
+      <%= render 'menu' %>
     </div>
     <div id='main'>
       <p class="alert"><%= alert %></p>
