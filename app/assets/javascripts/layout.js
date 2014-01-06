@@ -1,9 +1,15 @@
-function mobileMenu() {
+
+function mobileMenuSlide() {
+  var mobileMenu = $('#mobile-menu');
   $('#mobile-menu-button').click(function() {
-    $('#mobile-menu').toggle('slide');
+    mobileMenu.toggle('slide');
+  });
+
+  $('.close').click(function() {
+    mobileMenu.toggle('slide');
   });
 }
 
 
-$(document).ready(mobileMenu);
-$(document).on('page:load', mobileMenu);
+$(document).ready(mobileMenuSlide);
+$(document).on('page:load', mobileMenuSlide);
