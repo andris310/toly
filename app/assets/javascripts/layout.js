@@ -2,11 +2,15 @@
 function mobileMenuSlide() {
   var mobileMenu = $('#mobile-menu');
   $('#mobile-menu-button').click(function() {
-    mobileMenu.toggle('slide');
+    mobileMenu.animate({
+      'margin-left':'-2px'
+    }, 200);
   });
 
   $('.close').click(function() {
-    mobileMenu.toggle('slide');
+    mobileMenu.animate({
+      'margin-left': '-200px'
+    }, 200);
   });
 }
 

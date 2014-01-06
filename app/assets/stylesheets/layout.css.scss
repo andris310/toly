@@ -277,7 +277,9 @@ body {
 
       #mobile-menu {
         position: absolute;
+        display: block;
         background: #FFF;
+        margin-left: -200px;
         z-index: 100;
 
         .close {
@@ -288,6 +290,7 @@ body {
         }
 
         ul {
+          height: 200px;
           list-style: none;
           padding: 0px 10px;
           margin: 5px 0px;
