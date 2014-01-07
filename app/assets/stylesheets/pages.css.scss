@@ -150,5 +150,21 @@
         }
       }
     }
+
+    #real-stories {
+
+      p {
+        padding: 10px 15px;
+      }
+
+      .video-thumbs {
+        width: 100%;
+
+        .preview {
+          margin: auto;
+          float: none;
+        }
+      }
+    }
   }
 }
