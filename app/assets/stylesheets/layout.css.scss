@@ -321,6 +321,32 @@ body {
     #menu {
       display: none;
     }
+
+    #main {
+
+      #container {
+
+        #home-page {
+
+          .video-thumbs {
+            display: block;
+            width: 265px;
+            overflow: auto;
+            margin: auto;
+          }
+
+          .bx-wrapper {
+            height: 100%;
+            margin-bottom: 30px;
+
+            .bx-pager.bx-default-pager a {
+              width: 6px;
+              height: 6px;
+            }
+          }
+        }
+      }
+    }
   }
 
 }
