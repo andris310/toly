@@ -130,5 +130,25 @@
 
   @media only screen and (max-width: 568px) {
 
+    #about-page {
+      p {
+        padding: 10px 15px;
+      }
+
+      #about-image {
+        width: 100%;
+      }
+
+      .teacher {
+        img.teacher-img {
+          width: 180px;
+          margin: 15px 15px 10px 15px;
+        }
+
+        p {
+          padding: 0px 15px;
+        }
+      }
+    }
   }
 }

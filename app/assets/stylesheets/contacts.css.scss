@@ -69,4 +69,17 @@
     color: $gray;
     margin: 50px;
   }
+
+  @media only screen and (max-width: 568px) {
+    #contact-form {
+      width: 94%;
+
+      form {
+        .contact_name, .contact_email {
+          height: 70px;
+          width: 100%;
+        }
+      }
+    }
+  }
 }
