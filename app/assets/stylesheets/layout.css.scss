@@ -27,16 +27,34 @@ body {
     }
 
     #main-logo {
-      display: inline-flex;
+      height: 100px;
+      width: 430px;
+      margin: auto;
+      position: relative;
+      display: block;
 
-      .logo-text {
+      .logo-text-left {
         color: #0A723B;
         font-size: 1.4em;
-        margin: 36px 10px;
+        top: 33px;
+        left: 0;
+        position: absolute;
+      }
+
+      .logo-text-right {
+        color: #0A723B;
+        font-size: 1.4em;
+        top: 33px;
+        right: 0;
+        position: absolute;
+      }
+
+      #logo-img {
+        display: inline-block;
       }
 
       #logo {
-        margin: auto;
+        margin-right: 25px;
         height: 90px;
         width: 90px;
         background-size: 90px 90px;
@@ -304,15 +322,19 @@ body {
       }
 
       #main-logo {
+        width: 260px;
+        height: 70px;
 
-        .logo-text {
+        .logo-text-left,
+        .logo-text-right {
+          top: 23px;
           font-size: 0.8em;
-          margin: 25px 10px;
         }
 
         img#logo {
           width: 60px;
           height: 60px;
+          margin-right: 16px;
           background-size: 60px 60px;
         }
       }

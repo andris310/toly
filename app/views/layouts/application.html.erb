@@ -21,9 +21,9 @@
         <%= render 'pages/menu' %>
       </div>
       <div id='main-logo'>
-        <div class='logo-text'>TREE OF LIFE</div>
-        <div><%= image_tag('toly_glogo.svg', id: 'logo') %></div>
-        <div class='logo-text'>SPINE THERAPY</div>
+        <div class='logo-text-left'>TREE OF LIFE</div>
+        <div id='logo-img'><%= image_tag('toly_glogo.svg', id: 'logo') %></div>
+        <div class='logo-text-right'>SPINE THERAPY</div>
       </div>
         <% if @cart %>
           <div id='cart' class='hidden' data-id='<%= @cart.id %>'>
