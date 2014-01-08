@@ -9,7 +9,7 @@ function mobileMenuSlide() {
 
   $('.close').click(function() {
     mobileMenu.animate({
-      'margin-left': '-200px'
+      'margin-left': '-210px'
     }, 200);
   });
 }

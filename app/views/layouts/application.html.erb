@@ -19,6 +19,7 @@
       <div id='mobile-menu'>
         <span class='close'>X</span>
         <%= render 'pages/menu' %>
+        <%= render 'signin' %>
       </div>
       <div id='main-logo'>
         <div class='logo-text-left'>TREE OF LIFE</div>
@@ -41,20 +42,8 @@
           <% end %>
         <% end %>
 
-        <div id='sign-in-out'>
-          <% if user_signed_in? %>
-            <span class='signed-in-as'>
-              <%= link_to(current_user.first_name, "/users/#{current_user.id.to_s}") %>
-            </span>
-            <span id='sign'>
-              |<%= link_to " Sign out", destroy_user_session_path, :method => :delete %>
-            </span>
-          <% else %>
-            <span id='sign'>
-            <%= link_to "Sign up", new_user_registration_path %> <span id='or'>|</span> <%= link_to "Sign in", new_user_session_path %>
-            </span>
-          <% end %>
-        </div>
+        <%= render 'signin' %>
+
       </div>
 
       <% if user_signed_in? && current_user.role == 'admin' %>

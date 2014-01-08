@@ -273,9 +273,14 @@ body {
     #banner {
       height: 65px;
 
+      #right-corner-bar {
+        display: none;
+      }
+
       #mobile-menu-button {
         position: absolute;
         display: block;
+        top: 8px;
 
         .box-shadow-menu {
           position: relative;
@@ -297,7 +302,7 @@ body {
         position: absolute;
         display: block;
         background: #FFF;
-        margin-left: -200px;
+        margin-left: -210px;
         z-index: 100;
 
         .close {
@@ -308,27 +313,33 @@ body {
         }
 
         ul {
-          height: 204px;
+          height: 289px;
           list-style: none;
           padding: 0px 10px;
           margin: 5px 0px;
           text-align: left;
 
           li {
-            padding: 4px;
+            padding: 10px;
             border-bottom: 1px solid #EEE;
           }
+        }
+
+        #sign-in-out {
+          margin-top: 15px;
+          font-size: 17px;
+          height: 37px;
         }
       }
 
       #main-logo {
-        width: 260px;
+        width: 240px;
         height: 70px;
 
         .logo-text-left,
         .logo-text-right {
           top: 23px;
-          font-size: 0.8em;
+          font-size: 0.75em;
         }
 
         img#logo {
@@ -352,9 +363,17 @@ body {
 
           .video-thumbs {
             display: block;
-            width: 265px;
+            width: 300px;
             overflow: auto;
             margin: auto;
+
+            .preview {
+              width: 250px;
+
+              a {
+                display: block;
+              }
+            }
           }
 
           .bx-wrapper {
