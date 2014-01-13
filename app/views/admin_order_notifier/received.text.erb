@@ -3,3 +3,10 @@ New order received. Order ID: <%= @order.id %>
 You sold:
 
 <%= render @order.line_items -%>
+
+<% if @coupon %>
+  Coupon used: <%= @coupon.name %>, <%= @coupon.coupon_code %>
+  Order Discount: <%= number_to_currency(@order.discount) %>
+<% end %>
+
+Order Total: <%= number_to_currency(@order.total_price) %>
