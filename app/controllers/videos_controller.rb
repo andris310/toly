@@ -24,6 +24,18 @@ class VideosController < ApplicationController
      redirect_to @media.download_url
   end
 
+  def download_url
+    binding.pry
+    @video = Video.find(params[:video_id])
+    @url = @video.download_url
+    @url_data = {
+      url: @url
+    }
+    respond_to do |format|
+      format.json { render :json => @url_data }
+    end
+  end
+
   def create
     @video = Video.new(video_params)
     @video.filename = @video.video_url.filename

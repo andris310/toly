@@ -7,7 +7,7 @@
 
 <p>
   <strong>Video url:</strong>
-  <%= @video.video_url %>
+  <%= link_to 'Generate link', get_download_url_path(video_id: @video), remote: true, id: 'generate-link' %>
 </p>
 
 <%= link_to 'Edit', edit_video_path(@video) %> |

@@ -35,6 +35,7 @@ Toly2Store::Application.routes.draw do
    get '/about' => 'pages#about'
    get '/contact' => 'contacts#new'
    get '/apply-coupon' => 'orders#apply_coupon', as: 'apply_coupon'
+   get '/create-download-link' => 'videos#download_url', as: 'get_download_url'
 
 
    get '/order-finished' => 'orders#order_finished'

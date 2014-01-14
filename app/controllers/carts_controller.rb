@@ -3,12 +3,6 @@ class CartsController < ApplicationController
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
 
-  # def index
-  #   @carts = Cart.all
-  # end
-
-  # GET /carts/1
-  # GET /carts/1.json
   def show
     begin
       @cart = Cart.find(params[:id])
@@ -24,7 +18,6 @@ class CartsController < ApplicationController
     end
   end
 
-  # GET /carts/new
   def new
     @cart = Cart.new
   end
@@ -37,7 +30,6 @@ class CartsController < ApplicationController
     end
   end
 
-  # GET /carts/1/edit
   def edit
   end
 
