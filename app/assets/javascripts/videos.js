@@ -1,5 +1,6 @@
 function videos() {
   $('#generate-link').on('click', function(e) {
+    e.preventDefault();
     var id = $('#video-id').html().trim();
     $.ajax({
       url: '/create-download-link',
