@@ -10,6 +10,7 @@ class Video < ActiveRecord::Base
   end
 
   def download_url
+    binding.pry
     s3 = AWS::S3.new
     bucket = s3.buckets['tolyvideos']
     object = bucket.objects[video_url.path]

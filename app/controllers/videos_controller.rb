@@ -25,7 +25,6 @@ class VideosController < ApplicationController
   end
 
   def download_url
-    binding.pry
     @video = Video.find(params[:video_id])
     @url = @video.download_url
     @url_data = {

@@ -4,11 +4,17 @@
   <strong>Name:</strong>
   <%= @video.name %>
 </p>
-
+<strong>ID:</strong>
+<div id='video-id'>
+  <%= @video.id %>
+</div>
 <p>
   <strong>Video url:</strong>
   <%= link_to 'Generate link', get_download_url_path(video_id: @video), remote: true, id: 'generate-link' %>
 </p>
+<div id='generated-link'>
+
+</div>
 
 <%= link_to 'Edit', edit_video_path(@video) %> |
 <%= link_to 'Back', videos_path %>
