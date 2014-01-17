@@ -25,8 +25,9 @@ class VideosController < ApplicationController
   end
 
   def download_url
+    binding.pry
     @video = Video.find(params[:video_id])
-    @url = @video.download_url
+    @url = @video.download_url(params[:expiration].to_i)
     @url_data = {
       url: @url
     }
