@@ -61,7 +61,7 @@ function orders() {
       phoneStatus.css('color', '#6ECA6E');
     }
     else {
-      phoneStatus.html('Invalid format, enter (xxx-xxx-xxxx)');
+      phoneStatus.html('Invalid format, enter (xxxxxxxxxx)');
       phoneStatus.css('color', '#FF7000');
     }
   });
@@ -91,7 +91,7 @@ function orders() {
 
   function validatePhone(phone) {
     var a = document.getElementById(phone).value;
-    var filter = /^[2-9]\d{2}-\d{3}-\d{4}$/;
+    var filter = /^[2-9]\d{2}\d{3}\d{4}$/;
     if ((filter.test(a)) || (a === "")) {
       return true;
     }
