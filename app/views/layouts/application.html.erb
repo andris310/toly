@@ -32,15 +32,20 @@
           </div>
         <% end %>
 
-      <div id='right-corner-bar'>
-        <% if @cart %>
-          <%= hidden_div_if(@cart.line_items.empty?, id: 'display-cart') do %>
-            <%= image_tag('cart.svg', id: 'cart-icon') %>
-            <div id='cart-item-count'>
-              <%= @cart.items_in_cart %>
-            </div>
+      <div id='fixed-cart'>
+        <div id='cart-bar'>
+          <% if @cart %>
+            <%= hidden_div_if(@cart.line_items.empty?, id: 'display-cart') do %>
+              <%= image_tag('cart.svg', id: 'cart-icon') %>
+              <div id='cart-item-count'>
+                <%= @cart.items_in_cart %>
+              </div>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
+      </div>
+
+      <div id='right-corner-bar'>
 
         <%= render 'users/signin' %>
 
