@@ -84,8 +84,9 @@ body {
 
     #fixed-cart {
       position: absolute;
-      right: 180px;
+      right: 211px;
       top: 0px;
+      z-index: 1;
 
       #cart-bar {
         position: fixed;
@@ -97,6 +98,7 @@ body {
         img#cart-icon {
           width: 25px;
           float: left;
+          cursor: pointer;
           margin-top: 7px;
         }
 
