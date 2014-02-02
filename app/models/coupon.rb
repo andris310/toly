@@ -4,7 +4,7 @@ class Coupon < ActiveRecord::Base
   belongs_to :order
   validates :name, :coupon_code, uniqueness: true
   validates :name, :coupon_code, :coupon_type, presence: true
-  validates :coupon_code, length: { is: 6 }
+  validates :coupon_code, length: { is: 8 }
   COUPON_TYPES = ['Free PRODUCT', 'Order PERCENTAGE']
 end
 
