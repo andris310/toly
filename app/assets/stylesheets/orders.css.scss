@@ -409,5 +409,43 @@
     }
   }
 
+  @media only screen and (max-width: 568px) {
+    #order-checkout {
+      .checkout-header {
+        width: 100%;
+      }
+
+      .order-summary {
+        margin-top: 10px;
+        width: 320px;
+        margin: auto;
+        float: none;
+      }
+
+      fieldset {
+        width: 100%;
+        min-width: 300px;
+
+        form {
+          #shipping-form {
+            width: 100%;
+            float: none;
+
+            .checkout-header {
+              width: 100%;
+            }
+          }
+
+          .customer-info {
+
+            .field {
+              float: none;
+            }
+          }
+        }
+      }
+    }
+
+  }
 
 }
