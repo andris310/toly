@@ -18,7 +18,7 @@
     <%= render "orders/steps/page#{@order.current_step.to_i + 1}", f: f %>
 
     <div class="field checkout-btns">
-      <%= f.submit @order.last_step? ? nil: "Next", :id => 'next-btn' %>
+      <%= f.submit @order.last_step? ? "Submit Order": "Next", :id => 'next-btn' %>
     </div>
 
   <% end %>
