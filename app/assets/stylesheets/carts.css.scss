@@ -88,3 +88,14 @@
   }
 }
 
+@media only screen and (max-width: 568px) {
+  #cart {
+    right: -3px;
+    width: 275px;
+
+    .arrow-up {
+      left: 83%;
+    }
+  }
+}
+

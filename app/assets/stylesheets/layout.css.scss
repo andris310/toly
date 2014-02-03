@@ -86,7 +86,7 @@ body {
       position: absolute;
       right: 211px;
       top: 0px;
-      z-index: 1;
+      z-index: 100;
 
       #cart-bar {
         position: fixed;
@@ -291,6 +291,14 @@ body {
 
     #banner {
       height: 65px;
+
+      #left-corner-bar {
+        display: none;
+      }
+
+      #fixed-cart {
+        right: 60px;
+      }
 
       #right-corner-bar {
         width: 50px;
