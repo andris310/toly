@@ -264,7 +264,6 @@ body {
     bottom: 0;
     height: 100px;
     color: $gray;
-    padding-right: 15px;
     margin-top: 15px;
     border-top: 1px solid #E6E6E6;
 
@@ -272,6 +271,7 @@ body {
       list-style: none;
       display: inline-block;
       float: right;
+      padding-right: 15px;
       padding-left: 0px;
 
       li {
