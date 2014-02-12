@@ -7,12 +7,12 @@ function ready() {
         method: 'get',
         dataType: 'json',
         success: function(result) {
-          $('#cart-item-count').html(result)
+          $('#cart-item-count span').html(result);
         }
       });
-    }, 200);
+    }, 1000);
   });
 }
 
-$(document).ready(ready)
-$(document).on('page:load', ready)
+$(document).ready(ready);
+$(document).on('page:load', ready);

@@ -33,7 +33,8 @@
             <%= hidden_div_if(@cart.line_items.empty?, id: 'display-cart') do %>
               <%= image_tag('cart.svg', id: 'cart-icon') %>
               <div id='cart-item-count'>
-                <%= @cart.items_in_cart %>
+                <span>
+                  <%= @cart.items_in_cart + (@cart.items_in_cart == '1' ? ' item' : ' items') %>
               </div>
             <% end %>
           <% end %>
