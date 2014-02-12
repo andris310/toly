@@ -96,6 +96,10 @@
   #spine-therapy {
     margin-top: 25px;
 
+    p {
+      @include text-on-gray();
+    }
+
     .story {
       padding: 30px;
       margin-bottom: 20px;
@@ -121,9 +125,7 @@
   #real-stories {
 
     p {
-      font-weight: 200;
-      font-size: 1em;
-      padding: 0px 15px;
+      @include text-on-gray();
     }
 
     .video-thumbs {
