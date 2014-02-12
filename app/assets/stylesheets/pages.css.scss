@@ -134,7 +134,18 @@
       padding-left: 5px;
 
       .preview {
-        @include preview(365px, 220px);
+        @include preview(415px, 220px);
+
+        h4 {
+          margin: 10px 0px;
+          text-align: left;
+        }
+
+        p {
+          padding: 0;
+          margin: 8px 0px;
+          text-align: left;
+        }
       }
     }
   }
