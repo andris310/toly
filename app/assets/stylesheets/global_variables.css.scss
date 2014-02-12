@@ -7,10 +7,10 @@ $hover: #21A045;
 $orange: #EC8C72;
 $roboto: 'Roboto', sans-serif;
 
-@mixin text-on-gray() {
+@mixin text-on-gray($padding) {
   font-weight: 200;
   font-size: 1em;
-  padding: 0px 15px;
+  padding: $padding;
 }
 
 @mixin preview($height, $width) {

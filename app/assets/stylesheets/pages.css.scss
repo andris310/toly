@@ -58,6 +58,7 @@
       overflow: auto;
 
       img {
+        width: 350px;
         float: left;
         margin: 20px 35px 20px 20px;
         border: 1px solid #E9E9E9;
@@ -97,7 +98,7 @@
     margin-top: 25px;
 
     p {
-      @include text-on-gray();
+      @include text-on-gray(0 0);
     }
 
     .story {
@@ -125,7 +126,7 @@
   #real-stories {
 
     p {
-      @include text-on-gray();
+      @include text-on-gray(0px 15px);
     }
 
     .video-thumbs {
