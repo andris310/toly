@@ -7,10 +7,10 @@ function ready() {
         method: 'get',
         dataType: 'json',
         success: function(result) {
-          $('#cart-item-count span').html(result);
+          $('#cart-item-count').html(result + (result === 1 ? ' item' : ' items'));
         }
       });
-    }, 1000);
+    }, 300);
   });
 }
 

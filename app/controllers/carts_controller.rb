@@ -25,7 +25,7 @@ class CartsController < ApplicationController
   def count_items
     @cart = Cart.find(params[:id])
     respond_to do |format|
-      format.json { render :json => @cart.items_in_cart.to_s + (@cart.items_in_cart == '1' ? ' item' : ' items')}
+      format.json { render :json => @cart.items_in_cart}
     end
   end
 
