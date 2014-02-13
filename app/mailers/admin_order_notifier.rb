@@ -3,7 +3,11 @@ class AdminOrderNotifier < ActionMailer::Base
 
   def received(order)
     @order = order
-    @coupon = Coupon.find(order.coupon_id)
+
+    if order.coupon_id
+      @coupon = Coupon.find(order.coupon_id)
+    end
+
     mail to: ENV['TEST_EMAIL'], subject: 'NEW order!'
   end
 
