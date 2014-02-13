@@ -4,33 +4,35 @@
   <p>You should receive a confirmation email shortly</p>
   <% if user_signed_in? %>
     <div class='summary'>
-      <table>
-        <thead>
-          <th></th>
-          <th>Items purchased:</th>
-          <th></th>
-        </thead>
-        <tbody>
-          <% @order.products.each do |p| %>
-          <tr class='product'>
-            <td></td>
-            <td><%= p.title %></td>
-            <td class='download-link'>
-              <% if p.is_downloadable || (p.is_downloadable && (p.category == '3')) %>
-                <table>
-                  <% p.videos.each do |video| %>
-                    <tr>
-                      <td class='video-name'><%= video.name %></td>
-                      <td><%= link_to 'Download', download_video_path(video), class: "download-btn" %></td>
-                    </tr>
-                  <% end %>
-                </table>
-              <% end %>
-            </td>
-          </tr>
-          <% end %>
-        </tbody>
-      </table>
+      <% if @order.has_downloadable? %>
+        <table>
+          <thead>
+            <th></th>
+            <th>Items purchased:</th>
+            <th></th>
+          </thead>
+          <tbody>
+            <% @order.products.each do |p| %>
+            <tr class='product'>
+              <td></td>
+              <td><%= p.title %></td>
+              <td class='download-link'>
+                <% if p.is_downloadable || (p.is_downloadable && (p.category == '3')) %>
+                  <table>
+                    <% p.videos.each do |video| %>
+                      <tr>
+                        <td class='video-name'><%= video.name %></td>
+                        <td><%= link_to 'Download', download_video_path(video), class: "download-btn" %></td>
+                      </tr>
+                    <% end %>
+                  </table>
+                <% end %>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% end %>
     </div>
 
     <% if @order.has_downloadable? %>
