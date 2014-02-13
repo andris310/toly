@@ -5,6 +5,11 @@
 .orders-controller {
   font-family: $roboto;
 
+  .disabled {
+    cursor: auto !important;
+    background-color: #CECDCD !important;
+  }
+
   #order-checkout {
     width: 100%;
     margin: auto;

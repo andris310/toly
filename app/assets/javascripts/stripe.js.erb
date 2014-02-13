@@ -39,7 +39,7 @@
         return $('#new_order')[0].submit();
       } else {
         $('#stripe_error').text(response.error.message).hide().fadeIn('fast');
-        return $('input[type=submit]').attr('disabled', false);
+        return $('input[type=submit]').attr('disabled', false).removeClass('disabled');
       }
     }
   };

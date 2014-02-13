@@ -40,6 +40,10 @@ function orders() {
     });
   });
 
+  $('#next-btn').on('click', function() {
+    $(this).addClass('disabled');
+  });
+
   var emailStatus = $('#spnEmailStatus');
   var phoneStatus = $('#spnPhoneStatus');
   var zipcodeStatus = $('#spnZipStatus');
