@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .store-controller {
+  .promotion {
+
+    img {
+      width: 250px;
+      padding: 20px;
+    }
+  }
+
   h2 {
     margin: 0;
     padding-bottom: 0.5em;
