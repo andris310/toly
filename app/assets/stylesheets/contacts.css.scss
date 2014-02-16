@@ -7,7 +7,19 @@
       color: $gray;
     }
 
+    #contact-info {
+      color: $gray;
+      margin-bottom: 15px;
+
+      h4 {
+        margin-bottom: 5px;
+      }
+
+    }
+
     form {
+
+      margin-top: 25px;
 
       .error {
         font-size: 0.9em;
@@ -76,6 +88,7 @@
 
       form {
         .contact_name, .contact_email {
+          margin-top: 5px;
           height: 70px;
           width: 100%;
         }

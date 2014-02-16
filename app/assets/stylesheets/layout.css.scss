@@ -267,6 +267,18 @@ body {
     margin-top: 15px;
     border-top: 1px solid #E6E6E6;
 
+    #contact-info {
+      width: 70%;
+      padding: 15px;
+      font-weight: 300;
+      position: absolute;
+
+      div {
+        margin-right: 15px;
+        display: inline-block;
+      }
+    }
+
     ul {
       list-style: none;
       display: inline-block;
