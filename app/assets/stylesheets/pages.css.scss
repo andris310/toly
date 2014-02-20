@@ -46,6 +46,8 @@
 
 
   #about-page {
+    margin-top: 35px;
+
     p {
       font-weight: 200;
       font-size: 1em;
@@ -58,9 +60,9 @@
       overflow: auto;
 
       img {
-        width: 350px;
+        width: 250px;
         float: left;
-        margin: 20px 35px 20px 20px;
+        margin: 20px 35px 10px 20px;
         border: 1px solid #E9E9E9;
       }
 
@@ -70,24 +72,21 @@
 
       .contact-teacher {
         clear: both;
-        width: 230px;
+        width: 250px;
         height: 70px;
         padding: 0 20px;
         text-align: center;
         font-weight: 400;
 
         .contact-info {
-          @include simple-button($gray, #fff, 210px, 17px);
+          @include simple-button(#fff, $button-green, 238px, 20px);
           margin-top: 5px;
           display: inline-block;
-          padding: 1px 7px 5px;
+          padding: 5px 7px 5px;
           font-size: 0.9em;
-          border: 2px solid $gray;
 
           &:hover {
-            // color: red;
-            color: lighten($gray, 20%);
-            border: 2px solid lighten($gray, 30%);
+            background-color: darken($button-green, 7%);
           }
         }
       }
