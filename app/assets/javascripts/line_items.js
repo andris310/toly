@@ -10,7 +10,7 @@ function ready() {
           $('#cart-item-count').html(result + (result === 1 ? ' item' : ' items'));
         }
       });
-    }, 300);
+    }, 500);
   });
 }
 
