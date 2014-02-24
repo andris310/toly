@@ -1,5 +1,5 @@
 class OrderNotifier < ActionMailer::Base
-  default from: "TEST andris310@gmail.com"
+  default from: ENV['TEST_EMAIL']
 
   def received(order)
     @order = order
