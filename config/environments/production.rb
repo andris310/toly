@@ -93,6 +93,4 @@ Toly2Store::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  ENV['DATABASE_URL'] = 'postgres://yzazrqjtuhcxhg:nP7e6Rf3SiWL5L9HIKUZFw5eSG@ec2-54-204-37-113.compute-1.amazonaws.com:5432/d6sra6ukr83dra'
-
 end
