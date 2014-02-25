@@ -6,6 +6,7 @@
     <thead>
       <th></th>
       <th>Product Name/Description</th>
+      <th>Downloadable</th>
       <th>Show In Store</th>
       <th></th>
     </thead>
@@ -20,6 +21,13 @@
               <dt><%= product.title %></dt>
               <dd><%= truncate(strip_tags(product.description), length: 80) %></dd>
             </dl>
+          </td>
+          <td class='downloadable'>
+            <% if product.is_downloadable %>
+              <span class='is-d'>Yes</span>
+            <% else %>
+              <span class='not-d'>No</span>
+            <% end %>
           </td>
           <td class='product-visibility'>
             <% if product.visible %>
