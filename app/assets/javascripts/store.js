@@ -1,4 +1,4 @@
 
-$(document).on('click', '#cart-icon', function() {
+$(document).on('click', '#display-cart', function() {
   $('#cart').toggleClass('hidden');
 });

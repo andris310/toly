@@ -29,6 +29,9 @@
 
       <div id='fixed-cart'>
         <div id='cart-bar'>
+          <div id='right-corner-bar'>
+            <%= render 'users/signin' %>
+          </div>
           <% if @cart %>
             <%= hidden_div_if(@cart.line_items.empty?, id: 'display-cart') do %>
               <%= image_tag('cart.svg', id: 'cart-icon') %>
@@ -44,12 +47,6 @@
             </div>
           <% end %>
         </div>
-      </div>
-
-      <div id='right-corner-bar'>
-
-        <%= render 'users/signin' %>
-
       </div>
 
       <% if user_signed_in? && current_user.role == 'admin' %>

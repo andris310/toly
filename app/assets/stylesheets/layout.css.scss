@@ -91,23 +91,31 @@ body {
       z-index: 100;
 
       #cart-bar {
-        width: 90px;
-        right: 125px;
+        width: 200px;
+        right: 0px;
         position: fixed;
         padding: 0 5px;
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
         background: $background-gray;
 
+        #display-cart {
+          height: 30px;
+          width: 90px;
+          cursor: pointer;
+          position: relative;
+          z-index: 100
+        }
+
         img#cart-icon {
           width: 25px;
           float: left;
           cursor: pointer;
-          margin-top: 7px;
+          margin-top: 6px;
         }
 
         #cart-item-count {
-          margin-top: 10px;
+          margin-top: 7px;
           float: left;
           display: block;
           width: 64px;
