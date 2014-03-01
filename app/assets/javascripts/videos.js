@@ -19,4 +19,3 @@ function videos() {
 }
 
 $(document).ready(videos);
-$(document).on('page:load', videos);
