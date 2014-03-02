@@ -4,6 +4,8 @@
 
 <%= f.hidden_field :stripe_card_token %>
 
+<%= check_box_tag :same_address %>
+<%= label_tag :same_address, 'Same as shipping address', { :class => 'inline-label' } %>
 <div class='billing-info'>
 
   <div class="field">

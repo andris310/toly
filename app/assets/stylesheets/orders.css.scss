@@ -126,6 +126,15 @@
           float: left;
         }
 
+        input#same_address {
+          width: 15px;
+          height: 15px;
+        }
+
+        .inline-label {
+          display: inline;
+        }
+
         .customer-info, .billing-info {
           overflow: auto;
         }
