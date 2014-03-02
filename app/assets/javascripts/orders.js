@@ -44,6 +44,20 @@ function orders() {
     $(this).addClass('disabled');
   });
 
+  $('#same_address').change(function() {
+    var dataShipping = $('[data-shipping]');
+
+    if ($('#same_address').is(':checked')) {
+      dataShipping.each(function() {
+        $(this).val($(this).attr('data-shipping'));
+      });
+    } else {
+      dataShipping.each(function() {
+        $(this).val('');
+      });
+    }
+  });
+
   var emailStatus = $('#spnEmailStatus');
   var phoneStatus = $('#spnPhoneStatus');
   var zipcodeStatus = $('#spnZipStatus');

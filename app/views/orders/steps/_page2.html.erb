@@ -7,31 +7,30 @@
 <%= check_box_tag :same_address %>
 <%= label_tag :same_address, 'Same as shipping address', { :class => 'inline-label' } %>
 <div class='billing-info'>
-
   <div class="field">
     <%= label_tag :billing_first_name, nil %>
-    <%= text_field_tag :billing_first_name, nil, size: 35 %>
+    <%= text_field_tag :billing_first_name, nil, :data => {:shipping => @order.first_name }, size: 35 %>
   </div>
   <div class="field">
     <%= label_tag :billing_last_name, nil %>
-    <%= text_field_tag :billing_last_name, nil, size: 35 %>
+    <%= text_field_tag :billing_last_name, nil, :data => {:shipping => @order.last_name }, size: 35 %>
   </div>
 
   <div class="field">
     <%= label_tag :billing_address, nil %>
-    <%= text_field_tag :billing_address, nil, size: 35 %>
+    <%= text_field_tag :billing_address, nil, :data => {:shipping => @order.address }, size: 35 %>
   </div>
   <div class="field">
     <%= label_tag :billing_city, nil %>
-    <%= text_field_tag :billing_city, nil, size: 35 %>
+    <%= text_field_tag :billing_city, nil, :data => {:shipping => @order.city }, size: 35 %>
   </div>
    <div class="field">
     <%= label_tag :billing_state %>
-    <%= select_tag :billing_state, options_for_select(Order::STATES), prompt: 'State' %>
+    <%= select_tag :billing_state, options_for_select(Order::STATES), prompt: 'State', :data => {:shipping => @order.state } %>
   </div>
    <div class="field">
     <%= label_tag :billing_zipcode, nil %>
-    <%= text_field_tag :billing_zipcode, nil, maxlength: 5 %>
+    <%= text_field_tag :billing_zipcode, nil, :data => {:shipping => @order.zipcode }, maxlength: 5 %>
   </div>
 
   <div class="field">
