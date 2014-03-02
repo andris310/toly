@@ -44,14 +44,14 @@
             </ul>
           </td>
           <td><%= number_to_currency(order.total_price) %></td>
-          <td><%= order.created_at.strftime('%d/%m/%y') %></td>
+          <td><%= order.created_at.strftime('%m/%d/%y') %></td>
           <td>
             <% if !order.shipped %>
             <%= link_to('Ship', order_path(order, :order => { :shipped => true,
               :ship_date => DateTime.now }), :method => :put) %><br>
             <% else %>
               <% if order.ship_date %>
-                <%= order.ship_date.strftime("%d/%m/%y") %>
+                <%= order.ship_date.strftime("%m/%d/%y") %>
               <% else %>
                 <span>n/a</span>
               <% end %>

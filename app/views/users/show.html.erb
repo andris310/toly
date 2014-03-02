@@ -9,7 +9,7 @@
   </div>
   <ul class='user-orders'>
     <% @user.orders.reverse.each do |o| %>
-      <li class='order-summary'><spna>Date of the Order: <%= o.created_at.strftime("%d-%m-%Y %H:%M") %></span>
+      <li class='order-summary'><spna>Date of the Order: <%= o.created_at.strftime("%m-%d-%Y %H:%M") %></span>
         <hr/>
         <table >
           <thead>
