@@ -33,18 +33,17 @@
         </tr>
     </table>
 
-    <% if !@order.last_step? %>
-      <div class='coupon-code'>
-        <%= form_tag(apply_coupon_path, :remote => true) do %>
-          <%= text_field_tag :entered_code, '', :size => 6, :maxlength => 6, :placeholder => 'coupon' %>
-          <span id='apply-coupon'>Apply</span>
-        <% end %>
-        <div class='coupon-validity'>
-        </div>
-
-        <%= link_to 'Empty Cart', @cart, method: :delete, remote: true,
-          data: { confirm: 'Are you sure?' }, :class => 'empty-cart' %>
+    <div class='coupon-code'>
+      <%= form_tag(apply_coupon_path, :remote => true) do %>
+        <%= text_field_tag :entered_code, '', :size => 6, :maxlength => 6, :placeholder => 'coupon' %>
+        <span id='apply-coupon'>Apply</span>
+      <% end %>
+      <div class='coupon-validity'>
       </div>
-    <% end %>
+
+      <%= link_to 'Empty Cart', @cart, method: :delete, remote: true,
+        data: { confirm: 'Are you sure?' }, :class => 'empty-cart' %>
+    </div>
+
   </div>
 </div>

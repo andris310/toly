@@ -21,18 +21,12 @@ class Order < ActiveRecord::Base
     ]
 
   validates_presence_of :first_name, :last_name, :email, :address, :city, :state,
-            :zipcode, :state, inclusion: STATES,
-            if: :step1?
-  validates_format_of :email, :with =>/\A[-\w\.]+@([-\w]+\.)+[-\w]{2,4}\Z/i, :on => :create, if: :step1?
+            :zipcode, :state, inclusion: STATES
+  validates_format_of :email, :with =>/\A[-\w\.]+@([-\w]+\.)+[-\w]{2,4}\Z/i, :on => :create
 
   validates_format_of :phone_nr, :with => /\A[2-9]\d{2}\d{3}\d{4}$\Z/i, :on => :create,
-            :allow_blank => true, :message => 'Invalid Phone Format. Use xxxxxxxxxx', if: :step1?
+            :allow_blank => true, :message => 'Invalid Phone Format. Use xxxxxxxxxx'
 
-  include MultiStepModel
-
-  def self.total_steps
-    3
-  end
 
   def downloadable_order?
     items = line_items.map { |i| Product.find_by(id: i.product_id)}

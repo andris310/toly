@@ -1,38 +1,47 @@
 
 function orders() {
 
-  $('.billing-info').height($('.customer-info').height());
   $('#apply-coupon').on('click', function() {
     var couponCode = $('#entered_code').val();
     var couponValidity = $('.coupon-validity');
     var orderDiscount = $('.order-discount');
     var orderTotal = $('.total_cell');
     var discountText = $('.discount');
+    var cInfo = $('.customer-info');
     var cardInfo = $('.billing-info');
+    var x = $('<div id="carpet"></div>');
+
     $.ajax({
       url: '/apply-coupon',
       method: 'get',
       data: {entered_code: couponCode},
       dataType: 'json',
       success: function(result) {
+
         if (result.coupon === 'valid') {
           $('#order_entered_code').val(couponCode);
           discountText.show().html('Discount: ');
           orderDiscount.show().html('-$' + parseFloat(result.discount, 10).toFixed(2));
           orderTotal.html('$' + parseFloat(result.total, 10).toFixed(2));
           couponValidity.html(result.couponname).css({'color': 'green'});
+
           if (result.total === '0.0') {
+            cInfo.append(x);
             cardInfo.addClass('hidden');
           } else if (cardInfo.hasClass('hidden')) {
+            x.remove();
             cardInfo.removeClass('hidden');
           }
+
         } else {
           couponValidity.hide().html('Invalid coupon').css({'color': 'red'}).fadeIn(400);
           orderDiscount.html('-$' + parseFloat(result.discount, 10).toFixed(2));
           orderTotal.html('$' + parseFloat(result.total, 10).toFixed(2));
           discountText.hide();
           orderDiscount.hide();
+
           if (cardInfo.hasClass('hidden')){
+            x.remove();
             cardInfo.removeClass('hidden');
           }
         }
@@ -45,16 +54,21 @@ function orders() {
   });
 
   $('#same_address').change(function() {
-    var dataShipping = $('[data-shipping]');
 
     if ($('#same_address').is(':checked')) {
-      dataShipping.each(function() {
-        $(this).val($(this).attr('data-shipping'));
-      });
+      $('#billing_first_name').val($('#order_first_name').val());
+      $('#billing_last_name').val($('#order_first_name').val());
+      $('#billing_address').val($('#order_address').val());
+      $('#billing_city').val($('#order_city').val());
+      $('#billing_state').val($('#order_state').val());
+      $('#billing_zipcode').val($('#order_zipcode').val());
     } else {
-      dataShipping.each(function() {
-        $(this).val('');
-      });
+      $('#billing_first_name').val('');
+      $('#billing_last_name').val('');
+      $('#billing_address').val('');
+      $('#billing_city').val('');
+      $('#billing_state').val('');
+      $('#billing_zipcode').val('');
     }
   });
 
@@ -130,8 +144,6 @@ function orders() {
   }
 
 } // end of order function
-
-
 
 $(document).ready(orders);
 $(document).on('page:load', orders);

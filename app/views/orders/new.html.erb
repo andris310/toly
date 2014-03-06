@@ -1,11 +1,10 @@
 <div id='order-checkout'>
   <p id="error"><%= flash[:error] %></p>
-  <% if (@order.current_step.to_i == 0) || @order.last_step? %>
-    <%= render 'order_summary' %>
-  <% end %>
 
-    <fieldset>
-      <%= render 'form' %>
-    </fieldset>
+  <%= render 'order_summary' %>
+
+  <fieldset>
+    <%= render 'form' %>
+  </fieldset>
 
 </div>

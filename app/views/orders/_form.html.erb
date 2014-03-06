@@ -14,11 +14,118 @@
 
     <%= f.hidden_field :entered_code %>
 
-    <%= f.hidden_field :current_step, value: @order.current_step %>
-    <%= render "orders/steps/page#{@order.current_step.to_i + 1}", f: f %>
+    <div id='shipping-form'>
+      <div class='checkout-header'>
+        <h2>Your Info</h2>
+        <p>This will be used as shipping address</p>
+      </div>
+      <div class='customer-info'>
+        <div class="field">
+          <%= f.label :first_name, :class => '' %>
+          <%= f.text_field :first_name, size: 35, :class => '' %>
+        </div>
+        <div class="field">
+          <%= f.label :last_name, :class => '' %>
+          <%= f.text_field :last_name, size: 35, :class => '' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :address, :class => '' %>
+          <%= f.text_field :address, size: 35, :class => '' %>
+        </div>
+        <div class="field">
+          <%= f.label :city, :class => '' %>
+          <%= f.text_field :city, size: 35, :class => '' %>
+        </div>
+         <div class="field">
+          <%= f.label :state %>
+          <%= f.select :state, Order::STATES, prompt: 'State' %>
+        </div>
+         <div class="field">
+          <%= f.label :zipcode, :class => '' %>
+          <%= f.text_field :zipcode, maxlength: 5, :class => '' %>
+          <span class='validation-msg' id='spnZipStatus'></span>
+        </div>
+
+        <div class="field">
+          <%= f.label :email, :class => '' %>
+          <%= f.email_field :email, size: 35, :class => '' %>
+          <span class='validation-msg' id='spnEmailStatus'></span>
+        </div>
+
+        <div class="field">
+          <%= f.label :phone, :class => '' %>
+          <%= f.telephone_field :phone_nr, maxlength: 12, :class => '' %>
+          <span class='validation-msg' id='spnPhoneStatus'></span>
+        </div>
+      </div>
+    </div>
+
+    <div class='billing-info'>
+
+      <div class='checkout-header'>
+        <h2>Billing Info</h2>
+      </div>
+
+      <%= f.hidden_field :stripe_card_token %>
+
+      <div class='same-address'>
+        <%= check_box_tag :same_address %>
+        <%= label_tag :same_address, 'Same as shipping address', { :class => 'inline-label' } %>
+      </div>
+
+      <div class="field">
+        <%= label_tag :billing_first_name, nil %>
+        <%= text_field_tag :billing_first_name, nil, size: 35 %>
+      </div>
+      <div class="field">
+        <%= label_tag :billing_last_name, nil %>
+        <%= text_field_tag :billing_last_name, nil, size: 35 %>
+      </div>
+
+      <div class="field">
+        <%= label_tag :billing_address, nil %>
+        <%= text_field_tag :billing_address, nil, size: 35 %>
+      </div>
+      <div class="field">
+        <%= label_tag :billing_city, nil %>
+        <%= text_field_tag :billing_city, nil, size: 35 %>
+      </div>
+       <div class="field">
+        <%= label_tag :billing_state %>
+        <%= select_tag :billing_state, options_for_select(Order::STATES), prompt: 'State' %>
+      </div>
+       <div class="field">
+        <%= label_tag :billing_zipcode, nil %>
+        <%= text_field_tag :billing_zipcode, nil, maxlength: 5 %>
+      </div>
+
+      <div class="field">
+        <%= label_tag :card_number, nil %>
+        <%= text_field_tag :card_number, nil, name: nil, size: 23 %>
+      </div>
+      <div class="field">
+        <%= label_tag :card_code, 'Security Code (CCV)' %>
+        <%= text_field_tag :card_code, nil, name: nil, size: 2, maxlength: 3 %>
+      </div>
+
+      <div class="field">
+        <%= label_tag :card_month, "Expiration Month" %>
+        <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
+      </div>
+      <div class="field">
+        <%= label_tag :card_year, "Expiration Year" %>
+        <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
+      </div>
+
+
+      <div id="stripe_error">
+        <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
+      </div>
+    </div>
 
     <div class="field checkout-btns">
-      <%= f.submit @order.last_step? ? "Submit Order": "Next", :id => 'next-btn' %>
+      <%= f.submit "Submit Order", :id => 'next-btn' %>
     </div>
 
   <% end %>

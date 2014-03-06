@@ -24,6 +24,7 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
+    @order = Order.new
     if @cart.line_items.empty?
       redirect_to home_url, notice: 'Your cart is empty'
       return
@@ -33,8 +34,6 @@ class OrdersController < ApplicationController
       redirect_to new_user_session_url, notice: 'You must be logged in to purchase downloadable products'
       return
     end
-    wizard = ModelWizard.new(Order, session).start
-    @order = wizard.object
   end
 
   def apply_coupon
@@ -67,10 +66,7 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
 
-    wizard = ModelWizard.new(Order, session, params).process
-    @order = wizard.object
-
-    # @order = Order.new(order_params)
+    @order = Order.new(order_params)
     @order.add_line_items_from_cart(@cart)
     if user_signed_in?
       @order.user_id = current_user.id
@@ -97,28 +93,24 @@ class OrdersController < ApplicationController
       process_order = @order.method(:save)
     end
 
-    if wizard.save
-      respond_to do |format|
-        if process_order.call
-          if @coupon
-            @coupon.times_used += 1
-            @coupon.save!
-          end
-
-          Cart.destroy(session[:cart_id])
-          session[:cart_id] = nil
-          OrderNotifier.received(@order).deliver
-          AdminOrderNotifier.received(@order).deliver
-
-          format.html { redirect_to '/order-finished', notice: "Thank You for your order of #{@order.list_products}", order: @order }
-          format.json { render action: 'show', status: :created, location: @order }
-        else
-          format.html { render action: 'new' }
-          format.json { render json: @order.errors, status: :unprocessable_entity }
+    respond_to do |format|
+      if process_order.call
+        if @coupon
+          @coupon.times_used += 1
+          @coupon.save!
         end
+
+        Cart.destroy(session[:cart_id])
+        session[:cart_id] = nil
+        OrderNotifier.received(@order).deliver
+        AdminOrderNotifier.received(@order).deliver
+
+        format.html { redirect_to '/order-finished', notice: "Thank You for your order of #{@order.list_products}", order: @order }
+        format.json { render action: 'show', status: :created, location: @order }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @order.errors, status: :unprocessable_entity }
       end
-    else
-      render :new
     end
   end
 
