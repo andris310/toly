@@ -135,8 +135,9 @@ body {
         float: right;
         font-size: 0.8em;
         font-weight: 400;
-        margin: 10px 15px 0 5px;
-        color: gray;
+        padding: 10px 5px 3px 5px;
+        margin-right: 10px;
+        background: $background-gray;
 
         a {
           color: $orange;
