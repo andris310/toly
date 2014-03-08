@@ -36,7 +36,7 @@
     </div>
 
     <% if @order.has_downloadable? %>
-      <div id='download-info'>All downloadable products can be accessed in your Users Account page for later download.</div>
+      <div id='download-info'>All downloadable products can be accessed in your <%= link_to 'Users Account', "/users/#{current_user.id.to_s}" %> page for later download.</div>
     <% end %>
   <% end %>
 </div>

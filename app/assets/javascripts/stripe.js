@@ -10,7 +10,10 @@
     setupForm: function() {
       return $('#new_order').submit(function() {
         $('input[type=submit]').attr('disabled', true);
-        if ($('#card_number').length) {
+
+        if ($('#code-o').is(':visible')) {
+          return $('#new_order')[0].submit();
+        } else if ($('#card_number').length) {
           payment.processCard();
           return false;
         } else {

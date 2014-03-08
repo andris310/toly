@@ -9,7 +9,7 @@ function orders() {
     var discountText = $('.discount');
     var cInfo = $('.customer-info');
     var cardInfo = $('.billing-info');
-    var x = $('<div id="carpet"></div>');
+    var x = $('<div id="code-o"></div>');
 
     $.ajax({
       url: '/apply-coupon',
@@ -57,7 +57,7 @@ function orders() {
 
     if ($('#same_address').is(':checked')) {
       $('#billing_first_name').val($('#order_first_name').val());
-      $('#billing_last_name').val($('#order_first_name').val());
+      $('#billing_last_name').val($('#order_last_name').val());
       $('#billing_address').val($('#order_address').val());
       $('#billing_city').val($('#order_city').val());
       $('#billing_state').val($('#order_state').val());
