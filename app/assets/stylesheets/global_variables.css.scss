@@ -16,11 +16,13 @@ $roboto: 'Roboto', sans-serif;
 @mixin remove-item() {
   .remove-item {
     padding: 5px;
-    color: #BEBEBE;
-    cursor: pointer;
 
-    &:hover {
-      color: red;
+    a {
+      color: #BEBEBE;
+
+      &:hover {
+        color: red;
+      }
     }
   }
 }
