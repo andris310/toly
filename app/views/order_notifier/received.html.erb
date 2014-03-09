@@ -1,0 +1,13 @@
+<p>Dear <%= @order.first_name %>,</p>
+
+<p>Thank you for your order from TOLY Store.
+You ordered the following items:</p>
+
+<%= render @order.line_items -%>
+
+
+<% if @order.downloadable_order? %>
+  <p>You can download your digital products on our site from <%= link_to 'your profile page', user_url(@order.user_id) %>.</p>
+<% else %>
+  <p>We'll send you a seperate e-mail when your order ships.</p>
+<% end %>
