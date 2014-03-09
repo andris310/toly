@@ -55,6 +55,12 @@
     -moz-box-sizing:    border-box;
     box-sizing: border-box;
 
+    .image {
+      float: left;
+      width: 250px;
+      height: 250px;
+    }
+
     img {
       width: 250px;
       max-height: 250px;

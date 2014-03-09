@@ -7,12 +7,13 @@
     <% if product.visible %>
       <% cache ['entry', product] do %>
         <div class='entry'>
-
-          <% if !product.wistia_preview.empty? %>
-            <%= raw product.wistia_preview %>
-          <% else %>
-            <%= image_tag(product.image.url(:medium).to_s) %>
-          <% end %>
+          <div class='image'>
+            <% if !product.wistia_preview.empty? %>
+              <%= raw product.wistia_preview %>
+            <% else %>
+              <%= image_tag(product.image.url(:medium).to_s) %>
+            <% end %>
+          </div>
 
           <div class='product-details'>
             <h3 class='title'><%= link_to(product.title, product_path(product)) %></h3>
