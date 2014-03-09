@@ -99,6 +99,10 @@
       @include text-on-gray(0 0);
     }
 
+    > img {
+      height: 540px;
+    }
+
     .story {
       padding: 30px;
       margin-bottom: 20px;

@@ -47,6 +47,10 @@
         table {
           color: $gray;
           border-collapse: collapse;
+
+          tr.item {
+            border-bottom: 1px solid #F5F5F5;
+          }
         }
 
         .coupon-code {
@@ -332,6 +336,7 @@
   .item-name {
     width: 200px;
     text-align: center;
+    padding: 5px 3px;
   }
 
   .item-price {
@@ -433,7 +438,7 @@
   @media only screen and (max-width: 568px) {
     #order-checkout {
       .checkout-header {
-        width: 100%;
+        width: 90%;
       }
 
       .order-summary {
@@ -441,13 +446,42 @@
         width: 320px;
         margin: auto;
         float: none;
+
+        .summary {
+
+          .coupon-code {
+
+            input#entered_code {
+              width: 73%;
+            }
+          }
+        }
       }
 
       fieldset {
         width: 100%;
         min-width: 300px;
+        margin-bottom: 0px;
 
         form {
+
+          .billing-info, .customer-info {
+            width: 95%;
+            overflow: hidden;
+
+            .field {
+              width: 96%;
+            }
+          }
+
+          select {
+            width: 99%;
+          }
+
+          input {
+            width: 100%;
+          }
+
           #shipping-form {
             width: 100%;
             float: none;
@@ -463,6 +497,11 @@
               float: none;
             }
           }
+        }
+
+        #stripe_error {
+          width: 90%;
+          margin: 0px 5px;
         }
       }
     }
