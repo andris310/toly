@@ -13,6 +13,18 @@ $roboto: 'Roboto', sans-serif;
   padding: $padding;
 }
 
+@mixin remove-item() {
+  .remove-item {
+    padding: 5px;
+    color: #BEBEBE;
+    cursor: pointer;
+
+    &:hover {
+      color: red;
+    }
+  }
+}
+
 @mixin preview($height, $width) {
   width: $width;
   height: $height;

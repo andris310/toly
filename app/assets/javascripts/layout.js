@@ -1,7 +1,8 @@
 
 function mobileMenuSlide() {
-  var mobileMenu = $('#mobile-menu');
   var body = $('body').width();
+  var cartBar = $('#cart-bar');
+  var mobileMenu = $('#mobile-menu');
 
   $('#mobile-menu-button').click(function() {
     mobileMenu.animate({
@@ -16,13 +17,13 @@ function mobileMenuSlide() {
   });
 
   if ($(this).width() > body) {
-    $('#cart-bar').css({'right': (($(this).width() - body) / 2)});
+    cartBar.css({'right': (($(this).width() - body) / 2)});
   }
 
   $(window).resize(function(){
 
     if ($(this).width() > body) {
-      $('#cart-bar').css({'right': (($(this).width() - body) / 2)});
+      cartBar.css({'right': (($(this).width() - body) / 2)});
     }
   });
 }

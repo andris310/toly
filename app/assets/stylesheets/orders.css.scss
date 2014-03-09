@@ -51,6 +51,8 @@
           tr.item {
             border-bottom: 1px solid #F5F5F5;
           }
+
+          @include remove-item();
         }
 
         .coupon-code {
