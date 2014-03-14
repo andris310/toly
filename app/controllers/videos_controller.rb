@@ -1,6 +1,6 @@
 class VideosController < ApplicationController
   require 'aws/s3'
-  load_and_authorize_resource
+  load_and_authorize_resource :except => [:download, :download_url]
   before_action :set_video, only: [:show, :edit, :update, :destroy]
 
   def index
