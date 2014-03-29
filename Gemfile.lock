@@ -167,6 +167,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.12.0)
     rake (10.1.0)
+    rb-readline (0.5.1)
     rdoc (3.12.2)
       json (~> 1.4)
     rest-client (1.6.7)
@@ -246,6 +247,7 @@ DEPENDENCIES
   rack-timeout
   rails (= 4.0.1)
   rails_12factor
+  rb-readline
   rmagick
   sass-rails (~> 4.0.1)
   sdoc
