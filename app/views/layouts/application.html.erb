@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= tag :meta, :name => "stripe-key", :content => ENV['STRIPE_PUBLIC_KEY'] %>
+  <%= tag :meta, :name => "ga-key", :content => ENV['GA_URL'] %>
   <link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,600,500,300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,500' rel='stylesheet' type='text/css'>
   <script>
@@ -81,9 +82,9 @@
       </div>
 
     </div>
-    <% if Rails.env.production? %>
+    <% if Rails.env.development? %>
       <script>
-        ga('create', ENV['GA_UA'], ENV['GA_URL']);
+        ga('create', "<%= ENV['GA_UA'] %>", "<%= ENV['GA_URL'] %>");
         ga('send', 'pageview');
       </script>
     <% end %>
