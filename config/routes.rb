@@ -39,6 +39,7 @@ Toly2Store::Application.routes.draw do
 
    get '/order-finished' => 'orders#order_finished'
    get '/count_items/:id' => 'carts#count_items'
+   get '/robots.txt' => 'pages#robots'
    # get '/download' => 'products#download_product'
 
   # require 'sidekiq/web'
