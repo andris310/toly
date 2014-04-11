@@ -27,7 +27,8 @@ Toly2Store::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'pages#home', as: 'home'
+   # root 'pages#home', as: 'home'
+   root :to => 'pages#home'
    get '/spine-health-videos' => 'store#spine_videos'
    get '/other-products' => 'store#other_products'
    get '/spine-therapy' => 'pages#spine_therapy'
@@ -39,6 +40,8 @@ Toly2Store::Application.routes.draw do
 
    get '/order-finished' => 'orders#order_finished'
    get '/count_items/:id' => 'carts#count_items'
+
+   get 'sitemap.xml' => 'pages#sitemap', format: :xml, as: :sitemap
    get '/robots.txt' => 'pages#robots'
    # get '/download' => 'products#download_product'
 
