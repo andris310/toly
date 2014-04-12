@@ -36,7 +36,7 @@ Toly2Store::Application.routes.draw do
    get '/apply-coupon' => 'orders#apply_coupon', as: 'apply_coupon'
    get '/create-download-link' => 'videos#download_url', as: 'get_download_url'
 
-   get 'sitemap.xml' => 'sitemap#index', as: 'sitemap', defaults: { format: 'xml' }
+   get '/sitemap.xml' => 'sitemap#index', as: 'sitemap', defaults: { format: 'xml' }
 
    get '/order-finished' => 'orders#order_finished'
    get '/count_items/:id' => 'carts#count_items'
