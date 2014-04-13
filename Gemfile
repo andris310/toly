@@ -54,6 +54,7 @@ gem 'aws-sdk'
 gem 'bxslider-rails'
 gem 'carrierwave_direct'
 gem 'rb-readline'
+gem 'dynamic_sitemaps'
 # gem 'sidekiq'
 # gem 'sinatra', '>= 1.3.0', :require => nil
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
