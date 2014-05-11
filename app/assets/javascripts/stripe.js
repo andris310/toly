@@ -29,6 +29,7 @@
         address_city: $('#billing_city').val(),
         address_state: $('#billing_state').val(),
         address_zip: $('#billing_zipcode').val(),
+        address_country: $('#billing_country_code').val(),
         number: $('#card_number').val(),
         cvc: $('#card_code').val(),
         exp_month: $('#card_month').val(),
