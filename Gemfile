@@ -46,6 +46,7 @@ gem 'cancan'
 gem 'mail_form'
 gem 'simple_form'
 gem 'kaminari'
+gem 'country_select'
 
 gem 'carrierwave'
 gem 'rmagick'

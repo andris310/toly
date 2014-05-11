@@ -38,13 +38,18 @@
           <%= f.text_field :city, size: 35, :class => '' %>
         </div>
          <div class="field">
-          <%= f.label :state %>
-          <%= f.select :state, Order::STATES, prompt: 'State' %>
+          <%= f.label "State/Province/Region" %>
+          <%= f.text_field :state, size: 35 %>
         </div>
          <div class="field">
           <%= f.label :zipcode, :class => '' %>
-          <%= f.text_field :zipcode, maxlength: 5, :class => '' %>
+          <%= f.text_field :zipcode, :class => '' %>
           <span class='validation-msg' id='spnZipStatus'></span>
+        </div>
+
+        <div class="field">
+          <%= f.label :country, size: 35 %>
+          <%= f.select :country %>
         </div>
 
         <div class="field">
