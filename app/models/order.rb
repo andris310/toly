@@ -5,7 +5,6 @@ class Order < ActiveRecord::Base
 
   attr_accessor :stripe_card_token
   attr_accessor :entered_code
-  attr_accessor :current_step
 
   belongs_to :user
 
@@ -21,7 +20,7 @@ class Order < ActiveRecord::Base
     ]
 
   validates_presence_of :first_name, :last_name, :email, :address, :city, :state,
-            :zipcode, :state, inclusion: STATES
+            :zipcode, :country_code
   validates_format_of :email, :with =>/\A[-\w\.]+@([-\w]+\.)+[-\w]{2,4}\Z/i, :on => :create
 
   validates_format_of :phone_nr, :with => /\A[2-9]\d{2}\d{3}\d{4}$\Z/i, :on => :create,

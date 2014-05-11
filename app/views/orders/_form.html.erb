@@ -48,8 +48,8 @@
         </div>
 
         <div class="field">
-          <%= f.label :country, size: 35 %>
-          <%= f.select :country %>
+          <%= f.label :country_code, "Country" %>
+          <%= f.country_select :country_code, {priority: %w(US CA), prompt: 'Please select a country'} %>
         </div>
 
         <div class="field">

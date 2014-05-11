@@ -46,7 +46,7 @@ gem 'cancan'
 gem 'mail_form'
 gem 'simple_form'
 gem 'kaminari'
-gem 'country_select'
+gem 'carmen-rails', '~> 1.0.0'
 
 gem 'carrierwave'
 gem 'rmagick'

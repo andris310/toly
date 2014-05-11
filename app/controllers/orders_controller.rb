@@ -157,6 +157,6 @@ class OrdersController < ApplicationController
                                     :pay_type, :user_id, :total_price,
                                     :stripe_card_token, :entered_code,
                                     :coupon_id, :shipped, :ship_date,
-                                    :current_step, :phone_nr)
+                                    :current_step, :phone_nr, :country_code)
     end
 end
