@@ -38,16 +38,16 @@
           <%= f.text_field :city, size: 35, :class => '' %>
         </div>
          <div class="field">
-          <%= f.label "State/Province/Region" %>
+          <%= f.label(:state, "State/Province/Region") %>
           <%= f.text_field :state, size: 35 %>
         </div>
          <div class="field">
           <%= f.label :zipcode, :class => '' %>
-          <%= f.text_field :zipcode, :class => '' %>
+          <%= f.text_field :zipcode, maxlength: 10, :class => '' %>
           <span class='validation-msg' id='spnZipStatus'></span>
         </div>
 
-        <div class="field">
+        <div class="field country">
           <%= f.label :country_code, "Country" %>
           <%= f.country_select :country_code, {priority: %w(US CA), prompt: 'Please select a country'} %>
         </div>
@@ -97,12 +97,17 @@
         <%= text_field_tag :billing_city, nil, size: 35 %>
       </div>
        <div class="field">
-        <%= label_tag :billing_state %>
-        <%= select_tag :billing_state, options_for_select(Order::STATES), prompt: 'State' %>
+        <%= label_tag "State/Province/Region" %>
+        <%= text_field_tag :billing_state, nil, size: 35 %>
       </div>
        <div class="field">
-        <%= label_tag :billing_zipcode, nil %>
-        <%= text_field_tag :billing_zipcode, nil, maxlength: 5 %>
+        <%= label_tag :billing_zipcode, nil, size: 10 %>
+        <%= text_field_tag :billing_zipcode, nil, maxlength: 10 %>
+      </div>
+
+      <div class="field country">
+        <%= label_tag :billing_country_code, "Country" %>
+        <%= country_select nil, {priority: %w(US CA)}, {prompt: 'Please select a country'}, {name: nil, id: "billing_country_code"} %>
       </div>
 
       <div class="field">
@@ -122,6 +127,12 @@
         <%= label_tag :card_year, "Expiration Year" %>
         <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
       </div>
+    </div>
+
+    <div class='make-sure'>
+      <p>
+        Make sure you get your stuff! If the address is not entered correctly, your package may be returned as undeliverable. You would then have to place a new order. Save time and avoid frustration by entering the address information in the appropriate boxes and double-checking for typos and other errors.
+      </p>
     </div>
 
     <div id="stripe_error">

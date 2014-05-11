@@ -62,6 +62,7 @@ function orders() {
       $('#billing_city').val($('#order_city').val());
       $('#billing_state').val($('#order_state').val());
       $('#billing_zipcode').val($('#order_zipcode').val());
+      $('#billing_country_code').val($('#order_country_code').val());
     } else {
       $('#billing_first_name').val('');
       $('#billing_last_name').val('');
@@ -69,6 +70,7 @@ function orders() {
       $('#billing_city').val('');
       $('#billing_state').val('');
       $('#billing_zipcode').val('');
+      $('#billing_country_code').val('');
     }
   });
 
@@ -99,16 +101,16 @@ function orders() {
   });
 
 
-  $('#order_zipcode').bind('keyup blur', function(z) {
-    if (validateZip('order_zipcode')) {
-      zipcodeStatus.html('Valid');
-      zipcodeStatus.css('color', '#6ECA6E');
-    }
-    else {
-      zipcodeStatus.html('Invalid Zipcode');
-      zipcodeStatus.css('color', '#FF7000');
-    }
-  });
+  // $('#order_zipcode').bind('keyup blur', function(z) {
+  //   if (validateZip('order_zipcode')) {
+  //     zipcodeStatus.html('Valid');
+  //     zipcodeStatus.css('color', '#6ECA6E');
+  //   }
+  //   else {
+  //     zipcodeStatus.html('Invalid Zipcode');
+  //     zipcodeStatus.css('color', '#FF7000');
+  //   }
+  // });
 
   function validateEmail(email) {
     var a = document.getElementById(email).value;
@@ -133,15 +135,15 @@ function orders() {
   }
 
 
-  function validateZip(zipcode) {
-    var zip = document.getElementById(zipcode).value;
-    var filter = /^\d{5}(-\d{4})?$/;
-    if (filter.test(zip)) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  // function validateZip(zipcode) {
+  //   var zip = document.getElementById(zipcode).value;
+  //   var filter = /^\d{5}(-\d{4})?$/;
+  //   if (filter.test(zip)) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
 
 } // end of order function
 
