@@ -27,7 +27,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development, :test do
+group :development, :test, :staging do
   gem 'sqlite3'
   gem 'pry-debugger'
   gem 'better_errors'
