@@ -93,11 +93,4 @@ Toly2Store::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  config.middleware.use ExceptionNotification::Rack,
-  :email => {
-    :email_prefix => "[Whatever] ",
-    :sender_address => %{"notifier" ENV['TEST_EMAIL']},
-    :exception_recipients => %w{ENV['TEST_EMAIL']}
-  }
-
 end

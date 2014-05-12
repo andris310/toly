@@ -30,11 +30,10 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'pry-debugger'
-  gem 'better_errors'
   gem 'binding_of_caller'
 end
 
-group :staging do
+group :development, :staging, :test do
   gem 'better_errors'
 end
 
@@ -51,7 +50,6 @@ gem 'mail_form'
 gem 'simple_form'
 gem 'kaminari'
 gem 'carmen-rails', '~> 1.0.0'
-gem 'exception_notification'
 
 gem 'carrierwave'
 gem 'rmagick'
