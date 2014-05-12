@@ -27,11 +27,15 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development, :test, :staging do
+group :development, :test do
   gem 'sqlite3'
   gem 'pry-debugger'
   gem 'better_errors'
   gem 'binding_of_caller'
+end
+
+group :staging do
+  gem 'better_errors'
 end
 
 group :production do
