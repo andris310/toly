@@ -3,8 +3,7 @@
 <p>Thank you for your order from TOLY Store.
 You ordered the following items:</p>
 
-<%= render @order.line_items -%>
-
+<%= render @order.line_items %>
 
 <% if @order.downloadable_order? %>
   <p>You can download your digital products on our site from <%= link_to 'your profile page', user_url(@order.user_id) %>.</p>
