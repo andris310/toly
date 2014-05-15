@@ -1,0 +1,2695 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+ */
+/* line 1, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+html {
+  height: 100%;
+}
+
+/* line 4, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body {
+  position: relative;
+  width: 1100px;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background: #f3f3f3;
+  font-family: "Roboto", sans-serif;
+}
+/* line 13, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #wrapper {
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 100px;
+  background-color: #f3f3f3;
+}
+/* line 20, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #banner {
+  height: 105px;
+  padding: 10px 0px 0px 0px;
+  position: relative;
+  color: #ec8c72;
+  text-align: center;
+}
+/* line 27, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #banner #mobile-menu {
+  position: absolute;
+  display: none;
+}
+/* line 32, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #banner #main-logo {
+  height: 100px;
+  width: 430px;
+  margin: auto;
+  position: relative;
+  display: block;
+}
+/* line 39, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #banner #main-logo .logo-text-left {
+  color: #0A723B;
+  font-size: 1.4em;
+  top: 33px;
+  left: 0;
+  position: absolute;
+}
+/* line 47, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #banner #main-logo .logo-text-right {
+  color: #0A723B;
+  font-size: 1.4em;
+  top: 33px;
+  right: 0;
+  position: absolute;
+}
+/* line 55, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #banner #main-logo #logo-img {
+  display: inline-block;
+}
+/* line 59, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #banner #main-logo #logo {
+  margin-right: 25px;
+  height: 90px;
+  width: 90px;
+  background-size: 90px 90px;
+}
+/* line 67, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #banner #left-corner-bar {
+  color: #707070;
+  width: 350px;
+  height: 30px;
+  position: fixed;
+  top: 0px;
+  font-size: 0.8em;
+  background-color: #F0F0F0;
+  z-index: 100;
+}
+/* line 77, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #banner #left-corner-bar ul {
+  margin: 5px;
+  float: left;
+}
+/* line 82, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #banner #left-corner-bar li {
+  list-style: none;
+  display: inline;
+}
+/* line 88, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #banner #fixed-cart {
+  position: absolute;
+  right: 211px;
+  top: 0px;
+  z-index: 100;
+}
+/* line 94, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #banner #fixed-cart #cart-bar {
+  width: 200px;
+  right: 0px;
+  position: fixed;
+  padding: 0 5px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background: #f3f3f3;
+}
+/* line 103, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #banner #fixed-cart #cart-bar #display-cart {
+  height: 30px;
+  width: 90px;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+}
+/* line 111, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #banner #fixed-cart #cart-bar img#cart-icon {
+  width: 25px;
+  float: left;
+  cursor: pointer;
+  margin-top: 6px;
+}
+/* line 118, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #banner #fixed-cart #cart-bar #cart-item-count {
+  margin-top: 7px;
+  float: left;
+  display: block;
+  width: 64px;
+  height: 20px;
+}
+/* line 128, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #banner #right-corner-bar {
+  width: 206px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+/* line 134, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #banner #right-corner-bar #sign-in-out {
+  float: right;
+  font-size: 0.8em;
+  font-weight: 400;
+  margin-right: 10px;
+  padding: 10px 5px 3px 5px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background: #f3f3f3;
+}
+/* line 144, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #banner #right-corner-bar #sign-in-out a {
+  color: #ec8c72;
+}
+/* line 151, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body .hidden {
+  display: none;
+}
+/* line 155, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body p#notice {
+  margin: 0px;
+  color: #FFF !important;
+  border-radius: 2px;
+  font-weight: 100;
+  font-size: 1.2em;
+  background-color: #ec8c72;
+  padding: 10px 10px 10px 50px;
+}
+/* line 167, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #main p.alert {
+  margin: 4px;
+}
+/* line 171, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #main #container {
+  padding: 0;
+  margin-bottom: 3 0px;
+}
+/* line 176, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #main .alert {
+  text-align: center;
+  color: #ec8c72;
+}
+/* line 181, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #main .login-signin {
+  color: #707070;
+}
+/* line 184, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #main .login-signin h2 {
+  text-align: center;
+}
+/* line 188, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #main .login-signin .sign-in-box {
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+}
+/* line 194, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #main .login-signin label {
+  font-weight: 100;
+}
+/* line 198, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #main .login-signin input {
+  outline: none;
+  height: 35px;
+  width: 98%;
+  font-size: 1.2em;
+  color: #808080;
+  padding-left: 5px;
+  border: none;
+}
+/* line 208, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #main .login-signin input#user_remember_me {
+  width: 15px;
+  height: 15px;
+  margin-top: 15px;
+}
+/* line 214, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #main .login-signin .sign-in-btn {
+  margin: 25px 0px 15px 0px;
+  color: white;
+  height: 35px;
+  width: 301px;
+  display: block;
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-align: center;
+  background-color: #bbbbbb;
+}
+/* line 65, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+body #main .login-signin .sign-in-btn:hover {
+  background-color: #aeaeae;
+}
+/* line 219, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #main .login-signin a {
+  color: #B1B1B1;
+}
+/* line 222, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #main .login-signin a:hover {
+  color: #707070;
+}
+/* line 230, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #menu {
+  padding: 5px 0 15px 0;
+  width: 100%;
+  margin-bottom: 5px;
+}
+/* line 235, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #menu .active {
+  color: #D8785D;
+}
+/* line 239, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #menu ul {
+  padding: 0;
+  min-width: 730px;
+  width: 960px;
+  margin: auto;
+  text-align: center;
+}
+/* line 245, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #menu ul li {
+  margin: 2%;
+  list-style: none;
+  display: inline;
+}
+/* line 249, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #menu ul li a {
+  transition: color 0.5s ease;
+  color: #767676;
+  font-size: 1em;
+  font-weight: 300;
+}
+/* line 254, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body #menu ul li a:hover {
+  color: #21a045;
+}
+/* line 262, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body tr.discount-row {
+  text-align: right;
+}
+/* line 266, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body a {
+  text-decoration: none;
+}
+/* line 268, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body a:hover {
+  background-color: none;
+}
+/* line 273, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body a.qtip_email {
+  color: #ec8c72;
+}
+/* line 277, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body span.gc-cs-link {
+  color: #707070;
+}
+/* line 281, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body footer {
+  position: absolute;
+  width: 1100px;
+  bottom: 0;
+  height: 100px;
+  color: #707070;
+  margin-top: 15px;
+  border-top: 1px solid #E6E6E6;
+}
+/* line 290, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body footer #contact-info {
+  width: 70%;
+  padding: 15px;
+  font-size: 13px;
+  font-weight: 300;
+  position: absolute;
+}
+/* line 297, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body footer #contact-info div {
+  margin-right: 15px;
+  display: inline-block;
+}
+/* line 303, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body footer ul {
+  list-style: none;
+  display: inline-block;
+  float: right;
+  padding-right: 15px;
+  padding-left: 0px;
+}
+/* line 310, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body footer ul li {
+  display: inline;
+}
+/* line 312, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body footer ul li .social {
+  width: 35px;
+  opacity: 0.25;
+}
+/* line 315, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+body footer ul li .social:hover {
+  opacity: 0.35;
+}
+
+@media only screen and (max-width: 568px) {
+  /* line 326, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body {
+    width: 100%;
+  }
+  /* line 329, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #banner {
+    height: 65px;
+  }
+  /* line 332, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #banner #left-corner-bar {
+    display: none;
+  }
+  /* line 336, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #banner #fixed-cart {
+    right: 103px;
+  }
+  /* line 339, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #banner #fixed-cart #cart-bar {
+    width: 90px;
+  }
+  /* line 344, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #banner #right-corner-bar {
+    width: 50px;
+  }
+  /* line 347, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #banner #right-corner-bar #display-cart {
+    float: right;
+  }
+  /* line 351, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #banner #right-corner-bar #sign-in-out {
+    display: none;
+  }
+  /* line 356, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #banner #mobile-menu-button {
+    position: absolute;
+    display: block;
+    top: 8px;
+  }
+  /* line 361, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #banner #mobile-menu-button .box-shadow-menu {
+    position: relative;
+    padding-left: 2.25em;
+  }
+  /* line 365, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #banner #mobile-menu-button .box-shadow-menu:before {
+    content: "";
+    position: absolute;
+    left: 0.5em;
+    top: 0.25em;
+    width: 1.5em;
+    height: 0.3em;
+    background: #AAA;
+    box-shadow: 0 0.45em 0 0 #AAA, 0 0.9em 0 0 #AAA;
+  }
+  /* line 377, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #banner #mobile-menu {
+    position: absolute;
+    display: block;
+    background: #FFF;
+    margin-left: -210px;
+    z-index: 100;
+  }
+  /* line 384, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #banner #mobile-menu .close {
+    cursor: pointer;
+    padding: 2px 7px;
+    right: 5px;
+    position: absolute;
+  }
+  /* line 391, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #banner #mobile-menu ul {
+    height: 289px;
+    list-style: none;
+    padding: 0px 10px;
+    margin: 5px 0px;
+    text-align: left;
+  }
+  /* line 398, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #banner #mobile-menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #EEE;
+  }
+  /* line 404, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #banner #mobile-menu #sign-in-out {
+    margin-top: 15px;
+    font-size: 17px;
+    height: 37px;
+  }
+  /* line 411, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #banner #main-logo {
+    width: 240px;
+    height: 70px;
+    margin-top: 7px;
+  }
+  /* line 417, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #banner #main-logo .logo-text-left,
+  body #banner #main-logo .logo-text-right {
+    top: 23px;
+    font-size: 0.75em;
+  }
+  /* line 422, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #banner #main-logo img#logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 16px;
+    background-size: 60px 60px;
+  }
+  /* line 431, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #menu {
+    display: none;
+  }
+  /* line 441, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #main #container #home-page .video-thumbs {
+    display: block;
+    width: 300px;
+    overflow: auto;
+    margin: auto;
+  }
+  /* line 447, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #main #container #home-page .video-thumbs .preview {
+    width: 250px;
+  }
+  /* line 450, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #main #container #home-page .video-thumbs .preview a {
+    display: block;
+  }
+  /* line 456, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #main #container #home-page .bx-wrapper {
+    height: 100%;
+    margin-bottom: 30px;
+  }
+  /* line 460, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #main #container #home-page .bx-wrapper .bx-pager.bx-default-pager a {
+    width: 6px;
+    height: 6px;
+  }
+  /* line 469, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body #main #container .login-signin .sign-in-box {
+    width: 100%;
+    max-width: 300px;
+    padding: 0px;
+  }
+  /* line 478, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/layout.css.scss */
+  body footer {
+    height: 70px;
+    width: 100%;
+  }
+}
+/* line 5, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller .promotion {
+  overflow: auto;
+}
+/* line 8, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller .promotion img {
+  float: left;
+  width: 250px;
+  padding: 0px 20px 20px;
+}
+/* line 14, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller .promotion p {
+  margin: 0;
+  padding: 20px;
+}
+/* line 20, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller h2 {
+  margin: 0;
+  padding-bottom: 0.5em;
+  font: 150% sans-serif;
+  color: #226;
+}
+/* line 27, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller p {
+  font-weight: 200;
+  font-size: 1em;
+  padding: 5px 0px;
+}
+/* line 33, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller .therapy-description {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+/* line 38, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller #products-container {
+  clear: both;
+  overflow: auto;
+  margin: auto;
+}
+/* line 44, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller .entry {
+  width: 100%;
+  display: inline-block;
+  background-color: #FFF;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  min-height: 100px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 58, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller .entry .image {
+  float: left;
+  width: 250px;
+  height: 250px;
+}
+/* line 64, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller .entry img {
+  width: 250px;
+  max-height: 250px;
+  float: left;
+  display: block;
+}
+/* line 71, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller .entry .product-details {
+  overflow: auto;
+  padding-left: 25px;
+}
+/* line 75, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller .entry .product-details .title-price {
+  width: 250px;
+  height: 45px;
+  margin: auto;
+  margin-top: 1em;
+  display: block;
+  font-weight: 300;
+}
+/* line 85, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller .entry .product-details .title {
+  margin: 0px 0px 10px 0px;
+  display: inline-block;
+}
+/* line 89, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller .entry .product-details .title a {
+  color: #707070;
+}
+/* line 94, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller .entry .product-details .price {
+  width: 65px;
+  color: #17692e;
+  font-size: 1.1em;
+}
+/* line 99, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller .entry .product-details .price a {
+  color: #17692e;
+}
+/* line 104, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller .entry .product-details .product-description {
+  margin: 0px 20px 20px 0px;
+  color: #707070;
+  width: 99%;
+  font-weight: 200;
+  font-size: 1em;
+}
+/* line 112, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller .entry .product-details .add-to-cart {
+  height: 60px;
+  width: 195px;
+  margin-left: -8px;
+  position: relative;
+}
+/* line 118, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+.store-controller .entry .product-details .add-to-cart .add-to-cart-btn {
+  color: white;
+  height: 35px;
+  width: 180px;
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #44b476;
+  transition: background-color 0.4s ease;
+}
+/* line 90, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.store-controller .entry .product-details .add-to-cart .add-to-cart-btn:hover {
+  background-color: #3da16a;
+  transition: background-color 0.4s ease;
+}
+/* line 103, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.store-controller .entry .product-details .add-to-cart .add-to-cart-btn:active {
+  background-color: #197C19;
+}
+@media only screen and (max-width: 568px) {
+  /* line 127, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+  .store-controller .entry {
+    padding: 10px;
+  }
+  /* line 130, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+  .store-controller .entry img {
+    margin: auto;
+    margin-bottom: 10px;
+    float: none;
+  }
+  /* line 136, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/store.css.scss */
+  .store-controller .entry .product-details {
+    overflow: inherit;
+    padding-left: 5px;
+  }
+}
+
+/* line 5, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/carts.css.scss */
+.arrow-up {
+  width: 0;
+  height: 0;
+  top: -11px;
+  left: 44%;
+  margin: auto;
+  position: absolute;
+  border-left: 17px solid rgba(0, 0, 0, 0);
+  border-right: 17px solid rgba(0, 0, 0, 0);
+  border-bottom: 14px solid #FFF;
+}
+
+/* line 17, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/carts.css.scss */
+#cart {
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  width: 330px;
+  margin: auto;
+  padding: 15px;
+  color: #707070;
+  font-family: "Roboto", sans-serif;
+  border: 5px solid #CFCFCF;
+  font-weight: 300;
+  font-size: 1em;
+  background: #fff;
+  border-radius: 4px;
+  z-index: 100;
+}
+/* line 33, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/carts.css.scss */
+#cart h2 {
+  color: #707070;
+  margin-top: 0;
+  font-size: 1.1em;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #707070;
+}
+/* line 41, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/carts.css.scss */
+#cart table {
+  border-collapse: collapse;
+  margin: 10px 5px 15px 5px;
+}
+/* line 17, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+#cart table .remove-item {
+  padding: 5px;
+}
+/* line 20, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+#cart table .remove-item a {
+  color: #BEBEBE;
+}
+/* line 23, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+#cart table .remove-item a:hover {
+  color: red;
+}
+/* line 48, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/carts.css.scss */
+#cart td {
+  height: 30px;
+}
+/* line 52, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/carts.css.scss */
+#cart td.item-name {
+  width: 230px;
+  padding-left: 15px;
+  text-align: left;
+}
+/* line 59, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/carts.css.scss */
+#cart .total_line tr {
+  border-top: 1px solid #FFF;
+}
+/* line 63, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/carts.css.scss */
+#cart .total_line td {
+  text-align: right;
+}
+/* line 68, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/carts.css.scss */
+#cart .item-price, #cart .total_line {
+  text-align: right;
+}
+/* line 71, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/carts.css.scss */
+#cart .total_line .total_cell {
+  width: 65px;
+  font-weight: bold;
+  border-top: 1px solid #fff;
+}
+/* line 77, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/carts.css.scss */
+#cart .empty-cart {
+  float: right;
+  font-size: 0.8em;
+  color: #707070;
+}
+/* line 83, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/carts.css.scss */
+#cart .checkout {
+  margin-top: 30px;
+  position: relative;
+}
+/* line 88, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/carts.css.scss */
+#cart input#checkout-btn {
+  color: white;
+  height: 35px;
+  width: 150px;
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #44b476;
+  transition: background-color 0.4s ease;
+}
+/* line 90, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+#cart input#checkout-btn:hover {
+  background-color: #3da16a;
+  transition: background-color 0.4s ease;
+}
+/* line 103, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+#cart input#checkout-btn:active {
+  background-color: #197C19;
+}
+
+@media only screen and (max-width: 568px) {
+  /* line 94, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/carts.css.scss */
+  #cart {
+    right: -3px;
+    width: 275px;
+  }
+  /* line 98, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/carts.css.scss */
+  #cart .arrow-up {
+    left: 83%;
+  }
+}
+/* line 5, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller {
+  font-family: "Roboto", sans-serif;
+  color: #707070;
+}
+/* line 9, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product {
+  margin: auto;
+  width: 100%;
+  overflow: auto;
+  background-color: white;
+}
+/* line 15, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product img {
+  overflow: auto;
+  float: left;
+  padding: 1em 2em;
+  width: 450px;
+  width: 450px;
+}
+/* line 23, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product #product-info {
+  width: 50%;
+  float: left;
+}
+/* line 27, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product #product-info #product-title {
+  padding-left: 1em;
+  float: left;
+}
+/* line 30, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product #product-info #product-title h2 {
+  font-weight: 400;
+  margin-bottom: 0;
+}
+/* line 36, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product #product-info #product-description {
+  float: left;
+  padding: 1em;
+  font-weight: 300;
+}
+/* line 42, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product #product-info #product-price {
+  margin-top: 2em;
+  margin-bottom: 15px;
+}
+/* line 45, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product #product-info #product-price .price {
+  font-size: 1.3em;
+}
+/* line 50, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product #product-info .add-to-cart {
+  height: 45px;
+  width: 210px;
+  position: relative;
+}
+/* line 56, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product #product-info .add-to-cart-btn {
+  color: white;
+  height: 40px;
+  width: 200px;
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #44b476;
+  transition: background-color 0.4s ease;
+}
+/* line 90, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.products-controller #product #product-info .add-to-cart-btn:hover {
+  background-color: #3da16a;
+  transition: background-color 0.4s ease;
+}
+/* line 103, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.products-controller #product #product-info .add-to-cart-btn:active {
+  background-color: #197C19;
+}
+/* line 64, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #new-product {
+  margin: 2em;
+}
+/* line 67, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #new-product #category-select {
+  margin: 10px 0px;
+}
+/* line 69, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #new-product #category-select .field {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 74, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #new-product #category-select ul {
+  font-size: 0.9em;
+  width: 480px;
+  display: inline-block;
+}
+/* line 84, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product-list {
+  width: 100%;
+  max-width: 1080px;
+  margin: auto;
+}
+/* line 89, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product-list table {
+  width: 100%;
+}
+/* line 92, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product-list table .list_line_odd {
+  background: #EEE;
+}
+/* line 96, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product-list table tr:hover {
+  background-color: #F7F7F7;
+}
+/* line 100, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product-list table .downloadable {
+  text-align: center;
+}
+/* line 104, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product-list table .product-visibility {
+  text-align: center;
+}
+/* line 108, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product-list table .visible-product {
+  color: green;
+}
+/* line 112, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product-list table .hidden-product {
+  color: orange;
+}
+/* line 117, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller #product-list .new-product-btn {
+  font-family: "Roboto", sans-serif;
+  color: #ec8c72;
+  height: 25px;
+  width: 100px;
+  display: block;
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-align: center;
+  background-color: #f3f3f3;
+}
+/* line 65, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.products-controller #product-list .new-product-btn:hover {
+  background-color: #e6e6e6;
+}
+/* line 125, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/products.css.scss */
+.products-controller .edit_product #product_title, .products-controller .edit_product #product_description, .products-controller .edit_product #product_wistia_preview {
+  width: 450px;
+}
+
+/* line 5, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller {
+  font-family: "Roboto", sans-serif;
+}
+/* line 8, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .disabled {
+  cursor: auto !important;
+  background-color: #CECDCD !important;
+}
+/* line 13, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout {
+  width: 100%;
+  margin: auto;
+}
+/* line 17, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout .checkout-header {
+  color: #707070;
+  margin: auto;
+  width: 700px;
+}
+/* line 22, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout .checkout-header h2 {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+/* line 27, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout .checkout-header p {
+  display: inline-block;
+  font-weight: 200;
+  margin: 5px;
+}
+/* line 34, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout .order-summary {
+  float: right;
+  margin-left: 12px;
+  margin-top: 90px;
+  overflow: auto;
+  width: 350px;
+  background-color: #fff;
+}
+/* line 42, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout .order-summary .summary {
+  margin: auto;
+  padding: 20px;
+}
+/* line 47, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout .order-summary .summary table {
+  color: #707070;
+  border-collapse: collapse;
+}
+/* line 51, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout .order-summary .summary table tr.item {
+  border-bottom: 1px solid #F5F5F5;
+}
+/* line 17, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.orders-controller #order-checkout .order-summary .summary table .remove-item {
+  padding: 5px;
+}
+/* line 20, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.orders-controller #order-checkout .order-summary .summary table .remove-item a {
+  color: #BEBEBE;
+}
+/* line 23, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.orders-controller #order-checkout .order-summary .summary table .remove-item a:hover {
+  color: red;
+}
+/* line 58, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout .order-summary .summary .coupon-code {
+  float: right;
+  width: 100%;
+  margin-top: 20px;
+}
+/* line 63, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout .order-summary .summary .coupon-code input#entered_code {
+  border: none;
+  width: 75%;
+  height: 25px;
+  font-size: 1.1em;
+  background-color: #F3F3F3;
+  outline: none;
+  text-align: center;
+  line-height: 1em;
+  font-size: 1em;
+  color: #707070;
+}
+/* line 75, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout .order-summary .summary .coupon-code input#entered_code::-webkit-input-placeholder {
+  font-weight: 200;
+}
+/* line 79, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout .order-summary .summary .coupon-code input#entered_code:-moz-placeholder {
+  /* Firefox 18- */
+  font-weight: 200;
+}
+/* line 83, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout .order-summary .summary .coupon-code input#entered_code::-moz-placeholder {
+  /* Firefox 19+ */
+  font-weight: 200;
+}
+/* line 87, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout .order-summary .summary .coupon-code input#entered_code:-ms-input-placeholder {
+  font-weight: 200;
+}
+/* line 92, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout .order-summary .summary .coupon-code #apply-coupon {
+  width: 23%;
+  padding: 2px 14px 4px 14px;
+  color: #FFF;
+  background-color: #B8B8B8;
+  cursor: pointer;
+}
+/* line 101, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout .order-summary .summary a.empty-cart {
+  font-size: .9em;
+  color: #B8B8B8;
+  float: right;
+  display: block;
+  margin: 10px 0px;
+}
+/* line 108, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout .order-summary .summary a.empty-cart:hover {
+  color: #707070;
+}
+/* line 113, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout .order-summary .summary .coupon-validity {
+  color: #F00;
+  margin: 10px 0px;
+  position: absolute;
+  font-size: .8em;
+}
+/* line 122, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset {
+  border: none;
+  width: 730px;
+  margin: auto;
+  padding: 0px;
+  margin-bottom: 40px;
+}
+/* line 135, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset form .billing-info {
+  width: 100%;
+}
+/* line 139, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset form input#same_address {
+  width: 15px;
+  height: 15px;
+  margin-left: 16px;
+}
+/* line 145, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset form .inline-label {
+  display: inline;
+}
+/* line 149, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset form .customer-info, .orders-controller #order-checkout fieldset form .billing-info {
+  overflow: auto;
+}
+/* line 153, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset form #error_explanation {
+  color: #ec8c72;
+}
+/* line 156, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset form #error_explanation h2 {
+  font-weight: 400;
+  font-size: 1em;
+}
+/* line 161, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset form #error_explanation li {
+  font-weight: 100;
+}
+/* line 166, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset form label {
+  font-weight: 100;
+  display: block;
+}
+/* line 171, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset form input {
+  outline: none;
+  height: 35px;
+  width: 335px;
+  font-size: 1.2em;
+  color: #808080;
+  padding-left: 5px;
+  border: none;
+}
+/* line 179, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset form input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+/* line 184, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset form select {
+  height: 35px;
+  width: 343px;
+  font-size: 1em;
+  border-radius: 1px;
+  border: 2px solid #C5C5C5;
+  line-height: 0em;
+  color: #808080;
+}
+/* line 194, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset form .submit-area {
+  position: absolute;
+  bottom: 35px;
+  right: 0px;
+  width: 200px;
+  height: 50px;
+  float: right;
+}
+/* line 203, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset form #submit-btn {
+  color: #17692e;
+  height: 35px;
+  width: 150px;
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: white;
+  transition: background-color 0.4s ease;
+}
+/* line 90, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.orders-controller #order-checkout fieldset form #submit-btn:hover {
+  background-color: #f2f2f2;
+  transition: background-color 0.4s ease;
+}
+/* line 103, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.orders-controller #order-checkout fieldset form #submit-btn:active {
+  background-color: #197C19;
+}
+/* line 207, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset form #next-btn {
+  color: white;
+  height: 35px;
+  width: 120px;
+  display: block;
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-align: center;
+  background-color: #44b476;
+  float: left;
+  margin: 15px 0px 5px 15px;
+}
+/* line 65, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.orders-controller #order-checkout fieldset form #next-btn:hover {
+  background-color: #3da16a;
+}
+/* line 213, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset form br {
+  display: none;
+}
+/* line 219, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset form .customer-info .field, .orders-controller #order-checkout fieldset form .billing-info .field {
+  float: left;
+  margin: auto;
+  margin: 7px 15px;
+  width: 45%;
+  position: relative;
+}
+/* line 227, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset form .customer-info .country, .orders-controller #order-checkout fieldset form .billing-info .country {
+  width: 90%;
+}
+/* line 233, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset .make-sure {
+  margin: 15px;
+  font-weight: 300;
+  font-size: 14px;
+}
+/* line 239, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset .checkout-btns {
+  float: right;
+  margin: 8px 15px;
+}
+/* line 244, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout fieldset .validation-msg {
+  font-size: .8em;
+  position: absolute;
+  right: -10px;
+  top: 0px;
+}
+/* line 252, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-checkout #stripe_error {
+  float: left;
+  width: 500px;
+  margin: 20px 18px;
+  display: block;
+  min-height: 30px;
+  color: #F00;
+}
+/* line 262, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .confirm-order {
+  color: #707070;
+}
+/* line 266, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .confirm-order .order-shipping-address,
+.orders-controller .confirm-order .order-billing-address {
+  width: 320px;
+  float: left;
+}
+/* line 270, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .confirm-order .order-shipping-address p,
+.orders-controller .confirm-order .order-billing-address p {
+  margin: 3px;
+}
+/* line 276, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .order-finished {
+  width: 600px;
+  margin: auto;
+  color: #707070;
+}
+/* line 281, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .order-finished h2 {
+  text-align: center;
+}
+/* line 285, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .order-finished p {
+  text-align: center;
+  font-weight: 300;
+}
+/* line 290, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .order-finished table {
+  width: 600px;
+  border-collapse: collapse;
+}
+/* line 294, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .order-finished table th {
+  font-weight: 300;
+  text-align: left;
+}
+/* line 299, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .order-finished table tr.product {
+  border-top: 1px solid #E7E7E7;
+}
+/* line 302, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .order-finished table tr.product > td {
+  padding: 10px 5px;
+}
+/* line 307, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .order-finished table td {
+  padding-left: 5px;
+  text-align: left;
+}
+/* line 312, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .order-finished table td.download-link {
+  text-align: right;
+}
+/* line 315, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .order-finished table td.download-link table {
+  width: 300px;
+}
+/* line 319, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .order-finished table td.download-link a.download-btn {
+  float: right;
+  color: white;
+  height: 17px;
+  width: 50px;
+  display: block;
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-align: center;
+  background-color: #bbbbbb;
+  padding: 1px 7px;
+  font-size: 0.7em;
+}
+/* line 65, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.orders-controller .order-finished table td.download-link a.download-btn:hover {
+  background-color: #aeaeae;
+}
+/* line 328, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .order-finished #download-info {
+  display: block;
+  padding: 60px 0px 40px;
+  text-align: center;
+  font-weight: 100;
+}
+/* line 334, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .order-finished #download-info a {
+  font-weight: 300;
+}
+/* line 340, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .discount-row {
+  height: 21px;
+}
+/* line 344, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller tr.shipping-row {
+  text-align: right;
+}
+/* line 348, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .item-quantity {
+  width: 35px;
+}
+/* line 352, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .item-name {
+  width: 200px;
+  text-align: center;
+  padding: 5px 3px;
+}
+/* line 358, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .item-price {
+  width: 80px;
+  text-align: right;
+}
+/* line 363, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .order-discount {
+  color: red;
+}
+/* line 367, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .total_cell {
+  text-align: right;
+  font-weight: bold;
+}
+/* line 372, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .total_line {
+  border-top: 2px solid #E7E7E7;
+  text-align: right;
+}
+/* line 376, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller .total_line td {
+  padding-top: 5px;
+}
+/* line 382, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #all-orders {
+  color: #707070;
+}
+/* line 385, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #all-orders h1 {
+  display: inline-block;
+}
+/* line 389, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #all-orders #unshipped {
+  display: inline-block;
+  margin-left: 40px;
+}
+/* line 394, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #all-orders .list_line_odd {
+  background: #EEE;
+}
+/* line 402, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #all-orders table {
+  width: 100%;
+  font-size: .8em;
+  margin-bottom: 15px;
+}
+/* line 407, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #all-orders table th.date-column {
+  width: 70px;
+  text-align: center;
+}
+/* line 412, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #all-orders table tr:hover {
+  background-color: #F7F7F7;
+}
+/* line 416, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #all-orders table td {
+  padding: 5px;
+}
+/* line 419, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #all-orders table td ul {
+  list-style: none;
+}
+/* line 428, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #all-orders nav.pagination {
+  display: inline-block;
+  float: right;
+}
+/* line 435, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-show {
+  color: #707070;
+}
+/* line 438, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-show .order-details {
+  float: left;
+  margin: 0 15px;
+}
+/* line 443, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-show table {
+  width: 300px;
+  margin: 100px 15px;
+  float: left;
+}
+/* line 449, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+.orders-controller #order-show .order-links {
+  clear: both;
+}
+@media only screen and (max-width: 568px) {
+  /* line 456, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+  .orders-controller #order-checkout .checkout-header {
+    width: 90%;
+  }
+  /* line 460, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+  .orders-controller #order-checkout .order-summary {
+    margin-top: 10px;
+    width: 320px;
+    margin: auto;
+    float: none;
+  }
+  /* line 470, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+  .orders-controller #order-checkout .order-summary .summary .coupon-code input#entered_code {
+    width: 73%;
+  }
+  /* line 477, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+  .orders-controller #order-checkout fieldset {
+    width: 100%;
+    min-width: 300px;
+    margin-bottom: 0px;
+  }
+  /* line 484, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+  .orders-controller #order-checkout fieldset form .billing-info, .orders-controller #order-checkout fieldset form .customer-info {
+    width: 95%;
+    overflow: hidden;
+  }
+  /* line 488, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+  .orders-controller #order-checkout fieldset form .billing-info .field, .orders-controller #order-checkout fieldset form .customer-info .field {
+    width: 96%;
+  }
+  /* line 493, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+  .orders-controller #order-checkout fieldset form select {
+    width: 99%;
+  }
+  /* line 497, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+  .orders-controller #order-checkout fieldset form input {
+    width: 100%;
+  }
+  /* line 501, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+  .orders-controller #order-checkout fieldset form #shipping-form {
+    width: 100%;
+    float: none;
+  }
+  /* line 505, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+  .orders-controller #order-checkout fieldset form #shipping-form .checkout-header {
+    width: 100%;
+  }
+  /* line 512, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+  .orders-controller #order-checkout fieldset form .customer-info .field {
+    float: none;
+  }
+  /* line 518, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/orders.css.scss */
+  .orders-controller #order-checkout fieldset #stripe_error {
+    width: 90%;
+    margin: 0px 5px;
+  }
+}
+
+/* line 1, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/users.css.scss */
+.users-controller {
+  font-family: "Roboto", sans-serif;
+  color: #707070;
+}
+/* line 6, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/users.css.scss */
+.users-controller .purchase-history {
+  text-align: center;
+}
+/* line 10, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/users.css.scss */
+.users-controller table#users {
+  width: 100%;
+}
+/* line 13, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/users.css.scss */
+.users-controller table#users th {
+  text-align: left;
+}
+/* line 18, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/users.css.scss */
+.users-controller .user-orders {
+  list-style: none;
+  width: 670px;
+  margin: auto;
+  padding-left: 0px;
+}
+/* line 24, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/users.css.scss */
+.users-controller .user-orders li.order-summary {
+  color: #707070;
+  margin: 20px 10px;
+  padding: 20px 25px;
+  font-size: 1em;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  border-radius: 3px;
+  background-color: #fff;
+}
+/* line 34, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/users.css.scss */
+.users-controller .user-orders li.order-summary table {
+  border-collapse: collapse;
+  width: 600px;
+}
+/* line 38, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/users.css.scss */
+.users-controller .user-orders li.order-summary table th {
+  font-weight: 300;
+}
+/* line 42, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/users.css.scss */
+.users-controller .user-orders li.order-summary table .price {
+  text-align: right;
+  padding-right: 10px;
+}
+/* line 47, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/users.css.scss */
+.users-controller .user-orders li.order-summary table .total-price {
+  border-top: 1px solid #808080;
+}
+/* line 51, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/users.css.scss */
+.users-controller .user-orders li.order-summary table td.download-link {
+  width: 300px;
+}
+/* line 54, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/users.css.scss */
+.users-controller .user-orders li.order-summary table td.download-link table {
+  width: 300px;
+}
+/* line 57, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/users.css.scss */
+.users-controller .user-orders li.order-summary table td.download-link table .video-name {
+  float: left;
+  padding-left: 7px;
+}
+/* line 64, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/users.css.scss */
+.users-controller .user-orders li.order-summary table a.download-btn {
+  float: right;
+  color: #707070;
+  height: 17px;
+  width: 50px;
+  display: block;
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-align: center;
+  background-color: white;
+  padding: 1px 7px;
+  font-size: 0.7em;
+  border: 2px solid #707070;
+}
+/* line 65, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.users-controller .user-orders li.order-summary table a.download-btn:hover {
+  background-color: #f2f2f2;
+}
+
+/* This is a compiled file, you should be editing the file in the templates directory */
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pace-theme-minimal.css.scss */
+.pace .pace-progress {
+  background: #29d;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  height: 2px;
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+}
+
+/* line 17, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pace-theme-minimal.css.scss */
+.pace-inactive {
+  display: none;
+}
+
+/* line 5, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/coupons.css.scss */
+.coupons-controller {
+  font-family: "Roboto", sans-serif;
+  color: #707070;
+}
+/* line 9, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/coupons.css.scss */
+.coupons-controller #new-coupon {
+  margin: 2em;
+}
+/* line 13, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/coupons.css.scss */
+.coupons-controller #coupons-list {
+  margin: auto;
+  width: 1080px;
+}
+/* line 17, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/coupons.css.scss */
+.coupons-controller #coupons-list table {
+  width: 100%;
+}
+/* line 20, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/coupons.css.scss */
+.coupons-controller #coupons-list table .center-text {
+  text-align: center;
+}
+
+/**
+ * BxSlider v4.0 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2012
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+/** RESET AND LAYOUT
+===================================*/
+/* line 18, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper {
+  position: relative;
+  margin: 0 auto 60px;
+  padding: 0;
+  *zoom: 1;
+}
+
+/* line 25, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper img {
+  max-width: 100%;
+  display: block;
+}
+
+/** THEME
+===================================*/
+/* line 38, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+
+/* LOADER */
+/* line 46, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-loading {
+  min-height: 50px;
+  background: url(/assets/bx_loader.gif) center center no-repeat white;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
+/* PAGER */
+/* line 59, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-pager {
+  text-align: center;
+  font-size: .85em;
+  font-family: Arial;
+  font-weight: bold;
+  color: #666;
+  padding-top: 20px;
+}
+
+/* line 69, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+
+/* line 75, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #666;
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  outline: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 89, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+/* line 95, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-prev {
+  left: 10px;
+  background: url(/assets/controls.png) no-repeat 0 -32px;
+}
+
+/* line 100, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-next {
+  right: 10px;
+  background: url(/assets/controls.png) no-repeat -43px -32px;
+}
+
+/* line 105, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-prev:hover {
+  background-position: 0 0;
+}
+
+/* line 109, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-next:hover {
+  background-position: -43px 0;
+}
+
+/* line 113, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-controls-direction a {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  outline: 0;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+
+/* line 124, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-controls-direction a.disabled {
+  display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+/* line 130, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-controls-auto {
+  text-align: center;
+}
+
+/* line 134, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-controls-auto .bx-start {
+  display: block;
+  text-indent: -9999px;
+  width: 10px;
+  height: 11px;
+  outline: 0;
+  background: url(/assets/controls.png) -86px -11px no-repeat;
+  margin: 0 3px;
+}
+
+/* line 145, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+  background-position: -86px 0;
+}
+
+/* line 149, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-controls-auto .bx-stop {
+  display: block;
+  text-indent: -9999px;
+  width: 9px;
+  height: 11px;
+  outline: 0;
+  background: url(/assets/controls.png) -86px -44px no-repeat;
+  margin: 0 3px;
+}
+
+/* line 160, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+  background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+/* line 166, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+  text-align: left;
+  width: 80%;
+}
+
+/* line 171, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+  right: 0;
+  width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+/* line 178, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666666 \9;
+  background: rgba(80, 80, 80, 0.75);
+  width: 100%;
+}
+
+/* line 187, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-caption span {
+  color: #fff;
+  font-family: Arial;
+  display: block;
+  font-size: .85em;
+  padding: 10px;
+}
+
+/* line 4, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/videos.css.scss */
+.videos-controller {
+  font-family: "Roboto", sans-serif;
+  color: #707070;
+}
+/* line 8, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/videos.css.scss */
+.videos-controller #videos-index {
+  padding: 1em;
+}
+/* line 13, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/videos.css.scss */
+.videos-controller table .list_line_odd {
+  background: #EEE;
+}
+/* line 17, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/videos.css.scss */
+.videos-controller table td {
+  padding: 5px;
+}
+/* line 21, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/videos.css.scss */
+.videos-controller table tr:hover {
+  background-color: #F7F7F7;
+}
+
+/* line 5, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller {
+  font-family: "Roboto", sans-serif;
+  color: #707070;
+}
+/* line 9, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #container {
+  padding: 0px !important;
+}
+/* line 14, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #container #home-page h3 {
+  font-weight: 400;
+  margin: 0px 0px 0px 25px;
+}
+/* line 20, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #container #home-page .bx-wrapper {
+  height: 570px;
+  margin: 0 auto 35px;
+}
+/* line 24, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #container #home-page .bx-wrapper img {
+  max-width: 95%;
+  margin: auto;
+}
+/* line 30, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #container #home-page .bxslider {
+  margin: 0px;
+  padding: 0px;
+}
+/* line 35, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #container #home-page .video-thumbs {
+  margin: auto;
+  display: flex;
+  width: 1070px;
+}
+/* line 40, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #container #home-page .video-thumbs .preview {
+  width: 220px;
+  height: 265px;
+  text-align: center;
+  background-color: #FFF;
+  margin: 10px;
+  padding: 1em;
+  border-bottom: 1px solid #DDD;
+  min-height: 100px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  float: left;
+}
+/* line 43, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.pages-controller #container #home-page .video-thumbs .preview a {
+  transition: color 0.5s ease;
+  color: #767676;
+  font-size: 1em;
+  font-weight: 300;
+}
+/* line 48, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.pages-controller #container #home-page .video-thumbs .preview a:hover {
+  color: #21A045;
+}
+/* line 48, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #about-page {
+  margin-top: 35px;
+}
+/* line 51, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #about-page p {
+  font-weight: 200;
+  font-size: 1em;
+  padding: 10px 0px;
+}
+/* line 57, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #about-page .teacher {
+  margin-bottom: 20px;
+  background-color: #FFF;
+  overflow: auto;
+}
+/* line 62, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #about-page .teacher img {
+  width: 250px;
+  float: left;
+  margin: 20px 35px 10px 20px;
+  border: 1px solid #E9E9E9;
+}
+/* line 69, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #about-page .teacher p {
+  padding: 0px 35px;
+}
+/* line 73, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #about-page .teacher .contact-teacher {
+  clear: both;
+  width: 250px;
+  height: 70px;
+  padding: 0 20px;
+  text-align: center;
+  font-weight: 400;
+}
+/* line 81, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #about-page .teacher .contact-teacher .contact-info {
+  color: white;
+  height: 20px;
+  width: 238px;
+  display: block;
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-align: center;
+  background-color: #44b476;
+  margin-top: 5px;
+  display: inline-block;
+  padding: 5px 7px 5px;
+  font-size: 0.9em;
+}
+/* line 65, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.pages-controller #about-page .teacher .contact-teacher .contact-info:hover {
+  background-color: #3da16a;
+}
+/* line 88, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #about-page .teacher .contact-teacher .contact-info:hover {
+  background-color: #3a9a65;
+}
+/* line 98, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #spine-therapy p {
+  font-weight: 200;
+  font-size: 1em;
+  padding: 0 0;
+}
+/* line 102, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #spine-therapy > img {
+  height: 540px;
+}
+/* line 106, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #spine-therapy .story {
+  padding: 30px;
+  margin-bottom: 20px;
+  background-color: #FFF;
+}
+/* line 111, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #spine-therapy .story h3 {
+  margin: 0px;
+}
+/* line 115, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #spine-therapy .story img {
+  float: left;
+  margin: 0px 30px 15px 0px;
+  border: 1px solid #E9E9E9;
+}
+/* line 121, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #spine-therapy .story p {
+  font-size: 1em;
+  font-weight: 300;
+}
+/* line 130, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #real-stories p {
+  font-weight: 200;
+  font-size: 1em;
+  padding: 0px 15px;
+}
+/* line 134, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #real-stories .video-thumbs {
+  overflow: auto;
+  padding-left: 5px;
+}
+/* line 138, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #real-stories .video-thumbs .preview {
+  width: 220px;
+  height: 415px;
+  text-align: center;
+  background-color: #FFF;
+  margin: 10px;
+  padding: 1em;
+  border-bottom: 1px solid #DDD;
+  min-height: 100px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  float: left;
+}
+/* line 43, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.pages-controller #real-stories .video-thumbs .preview a {
+  transition: color 0.5s ease;
+  color: #767676;
+  font-size: 1em;
+  font-weight: 300;
+}
+/* line 48, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.pages-controller #real-stories .video-thumbs .preview a:hover {
+  color: #21A045;
+}
+/* line 141, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #real-stories .video-thumbs .preview h4 {
+  margin: 10px 0px;
+  text-align: left;
+}
+/* line 146, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+.pages-controller #real-stories .video-thumbs .preview p {
+  padding: 0;
+  margin: 8px 0px;
+  text-align: left;
+}
+@media only screen and (max-width: 568px) {
+  /* line 158, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+  .pages-controller #about-page p {
+    padding: 10px 15px;
+  }
+  /* line 162, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+  .pages-controller #about-page #about-image {
+    width: 100%;
+  }
+  /* line 167, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+  .pages-controller #about-page .teacher img.teacher-img {
+    width: 180px;
+    margin: 15px 15px 10px 15px;
+  }
+  /* line 172, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+  .pages-controller #about-page .teacher p {
+    padding: 0px 15px;
+  }
+  /* line 180, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+  .pages-controller #real-stories p {
+    padding: 10px 15px;
+  }
+  /* line 184, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+  .pages-controller #real-stories .video-thumbs {
+    width: 100%;
+  }
+  /* line 187, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+  .pages-controller #real-stories .video-thumbs .preview {
+    margin: auto;
+    float: none;
+  }
+  /* line 194, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+  .pages-controller #spine-therapy {
+    margin-top: 10px;
+  }
+  /* line 196, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+  .pages-controller #spine-therapy .story {
+    padding: 15px;
+  }
+  /* line 199, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+  .pages-controller #spine-therapy .story img {
+    margin: 0px 15px 11px 0px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  /* line 210, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+  .pages-controller #spine-therapy .story {
+    padding: 15px;
+  }
+  /* line 213, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/pages.css.scss */
+  .pages-controller #spine-therapy .story img {
+    float: none;
+  }
+}
+
+/* qTip2 v2.2.0 css3 | qtip2.com | Licensed MIT, GPL | Sun Dec 15 2013 20:05:26 */
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip {
+  position: absolute;
+  left: -28000px;
+  top: -28000px;
+  display: none;
+  max-width: 280px;
+  min-width: 50px;
+  font-size: 10.5px;
+  line-height: 12px;
+  direction: ltr;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-content {
+  position: relative;
+  padding: 5px 9px;
+  overflow: hidden;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-titlebar {
+  position: relative;
+  padding: 5px 35px 5px 10px;
+  overflow: hidden;
+  border-width: 0 0 1px;
+  font-weight: 700;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-titlebar + .qtip-content {
+  border-top-width: 0 !important;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-close {
+  position: absolute;
+  right: -9px;
+  top: -9px;
+  cursor: pointer;
+  outline: medium none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-titlebar .qtip-close {
+  right: 4px;
+  top: 50%;
+  margin-top: -9px;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+* html .qtip-titlebar .qtip-close {
+  top: 16px;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-titlebar .ui-icon, .qtip-icon .ui-icon {
+  display: block;
+  text-indent: -1000em;
+  direction: ltr;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-icon, .qtip-icon .ui-icon {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-icon .ui-icon {
+  width: 18px;
+  height: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-indent: 0;
+  font: 400 bold 10px/13px Tahoma,sans-serif;
+  color: inherit;
+  background: transparent none no-repeat -100em -100em;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-default {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #F1D031;
+  background-color: #FFFFA3;
+  color: #555;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-default .qtip-titlebar {
+  background-color: #FFEF93;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-default .qtip-icon {
+  border-color: #CCC;
+  background: #F1F1F1;
+  color: #777;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-default .qtip-titlebar .qtip-close {
+  border-color: #AAA;
+  color: #111;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-shadow {
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-rounded, .qtip-tipsy, .qtip-bootstrap {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-rounded .qtip-titlebar {
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-youtube {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 3px #333;
+  -moz-box-shadow: 0 0 3px #333;
+  box-shadow: 0 0 3px #333;
+  color: #fff;
+  border-width: 0;
+  background: #4A4A4A;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4a4a4a), color-stop(100%, black));
+  background-image: -webkit-linear-gradient(top, #4a4a4a 0, black 100%);
+  background-image: -moz-linear-gradient(top, #4a4a4a 0, black 100%);
+  background-image: -ms-linear-gradient(top, #4a4a4a 0, black 100%);
+  background-image: -o-linear-gradient(top, #4a4a4a 0, black 100%);
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-youtube .qtip-titlebar {
+  background-color: #4A4A4A;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-youtube .qtip-content {
+  padding: .75em;
+  font: 12px arial,sans-serif;
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#4a4a4a, EndColorStr=#000000);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#4a4a4a, EndColorStr=#000000);";
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-youtube .qtip-icon {
+  border-color: #222;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-youtube .qtip-titlebar .ui-state-hover {
+  border-color: #303030;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-jtools {
+  background: #232323;
+  background: rgba(0, 0, 0, 0.7);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#717171), to(#232323));
+  background-image: -moz-linear-gradient(top, #717171, #232323);
+  background-image: -webkit-linear-gradient(top, #717171, #232323);
+  background-image: -ms-linear-gradient(top, #717171, #232323);
+  background-image: -o-linear-gradient(top, #717171, #232323);
+  border: 2px solid #ddd;
+  border: 2px solid #f1f1f1;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 12px #333;
+  -moz-box-shadow: 0 0 12px #333;
+  box-shadow: 0 0 12px #333;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-jtools .qtip-titlebar {
+  background-color: transparent;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#717171, endColorstr=#4A4A4A);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#717171, endColorstr=#4A4A4A)";
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-jtools .qtip-content {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4A4A4A, endColorstr=#232323);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4A4A4A, endColorstr=#232323)";
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-jtools .qtip-titlebar, .qtip-jtools .qtip-content {
+  background: transparent;
+  color: #fff;
+  border: 0 dashed transparent;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-jtools .qtip-icon {
+  border-color: #555;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-jtools .qtip-titlebar .ui-state-hover {
+  border-color: #333;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-cluetip {
+  -webkit-box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+  background-color: #D9D9C2;
+  color: #111;
+  border: 0 dashed transparent;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-cluetip .qtip-titlebar {
+  background-color: #87876A;
+  color: #fff;
+  border: 0 dashed transparent;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-cluetip .qtip-icon {
+  border-color: #808064;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-cluetip .qtip-titlebar .ui-state-hover {
+  border-color: #696952;
+  color: #696952;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-tipsy {
+  background: #000;
+  background: rgba(0, 0, 0, 0.87);
+  color: #fff;
+  border: 0 solid transparent;
+  font-size: 11px;
+  font-family: 'Lucida Grande',sans-serif;
+  font-weight: 700;
+  line-height: 16px;
+  text-shadow: 0 1px #000;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-tipsy .qtip-titlebar {
+  padding: 6px 35px 0 10px;
+  background-color: transparent;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-tipsy .qtip-content {
+  padding: 6px 10px;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-tipsy .qtip-icon {
+  border-color: #222;
+  text-shadow: none;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-tipsy .qtip-titlebar .ui-state-hover {
+  border-color: #303030;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-tipped {
+  border: 3px solid #959FA9;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #F9F9F9;
+  color: #454545;
+  font-weight: 400;
+  font-family: serif;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-tipped .qtip-titlebar {
+  border-bottom-width: 0;
+  color: #fff;
+  background: #3A79B8;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3a79b8), to(#2e629d));
+  background-image: -webkit-linear-gradient(top, #3a79b8, #2e629d);
+  background-image: -moz-linear-gradient(top, #3a79b8, #2e629d);
+  background-image: -ms-linear-gradient(top, #3a79b8, #2e629d);
+  background-image: -o-linear-gradient(top, #3a79b8, #2e629d);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#3A79B8, endColorstr=#2E629D);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#3A79B8, endColorstr=#2E629D)";
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-tipped .qtip-icon {
+  border: 2px solid #285589;
+  background: #285589;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-tipped .qtip-icon .ui-icon {
+  background-color: #FBFBFB;
+  color: #555;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-bootstrap {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  padding: 1px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-bootstrap .qtip-titlebar {
+  padding: 8px 14px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ebebeb;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-bootstrap .qtip-titlebar .qtip-close {
+  right: 11px;
+  top: 45%;
+  border-style: none;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-bootstrap .qtip-content {
+  padding: 9px 14px;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-bootstrap .qtip-icon {
+  background: transparent;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-bootstrap .qtip-icon .ui-icon {
+  width: auto;
+  height: auto;
+  float: right;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .2;
+  filter: alpha(opacity=20);
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip-bootstrap .qtip-icon .ui-icon:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: .4;
+  filter: alpha(opacity=40);
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip:not(.ie9haxors) div.qtip-content, .qtip:not(.ie9haxors) div.qtip-titlebar {
+  filter: none;
+  -ms-filter: none;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip .qtip-tip {
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+x:-o-prefocus, .qtip .qtip-tip {
+  visibility: hidden;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip .qtip-tip, .qtip .qtip-tip .qtip-vml, .qtip .qtip-tip canvas {
+  position: absolute;
+  color: #123456;
+  background: transparent;
+  border: 0 dashed transparent;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip .qtip-tip canvas {
+  top: 0;
+  left: 0;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+.qtip .qtip-tip .qtip-vml {
+  behavior: url(#default#VML);
+  display: inline-block;
+  visibility: visible;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+#qtip-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+#qtip-overlay.blurs {
+  cursor: pointer;
+}
+
+/* line 3, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/qtip_min.css.scss */
+#qtip-overlay div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .7;
+  filter: alpha(opacity=70);
+  -ms-filter: "alpha(Opacity=70)";
+}
+
+/* line 2, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/contacts.css.scss */
+.contacts-controller #contact-form {
+  margin: 0 auto 80px;
+  width: 750px;
+}
+/* line 6, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/contacts.css.scss */
+.contacts-controller #contact-form h3 {
+  color: #707070;
+}
+/* line 10, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/contacts.css.scss */
+.contacts-controller #contact-form #contact-info {
+  color: #707070;
+  margin-bottom: 15px;
+}
+/* line 14, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/contacts.css.scss */
+.contacts-controller #contact-form #contact-info h4 {
+  margin-bottom: 5px;
+}
+/* line 20, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/contacts.css.scss */
+.contacts-controller #contact-form form {
+  margin-top: 25px;
+}
+/* line 24, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/contacts.css.scss */
+.contacts-controller #contact-form form .error {
+  font-size: 0.9em;
+  color: #ec8c72;
+  font-weight: 300;
+}
+/* line 30, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/contacts.css.scss */
+.contacts-controller #contact-form form .contact_name {
+  float: left;
+}
+/* line 34, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/contacts.css.scss */
+.contacts-controller #contact-form form .contact_email {
+  float: right;
+}
+/* line 38, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/contacts.css.scss */
+.contacts-controller #contact-form form .contact_message {
+  clear: both;
+}
+/* line 42, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/contacts.css.scss */
+.contacts-controller #contact-form form .contact_name, .contacts-controller #contact-form form .contact_email {
+  height: 80px;
+  width: 46%;
+  display: inline-block;
+}
+/* line 47, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/contacts.css.scss */
+.contacts-controller #contact-form form .contact_name input, .contacts-controller #contact-form form .contact_email input {
+  width: 100%;
+  outline: none;
+  height: 35px;
+  font-size: 1.2em;
+  color: #808080;
+  border: none;
+}
+/* line 57, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/contacts.css.scss */
+.contacts-controller #contact-form form #contact_message {
+  width: 100%;
+  outline: none;
+  font-size: 1em;
+  color: #808080;
+  border: none;
+}
+/* line 65, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/contacts.css.scss */
+.contacts-controller #contact-form form label {
+  font-weight: 100;
+  display: block;
+}
+/* line 70, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/contacts.css.scss */
+.contacts-controller #contact-form form .message-btn {
+  color: white;
+  height: 35px;
+  width: 120px;
+  display: block;
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-align: center;
+  background-color: #44b476;
+  float: right;
+  margin: 10px -5px 10px 0px;
+  border: none;
+}
+/* line 65, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/global_variables.css.scss */
+.contacts-controller #contact-form form .message-btn:hover {
+  background-color: #3da16a;
+}
+/* line 79, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/contacts.css.scss */
+.contacts-controller #after-message {
+  text-align: center;
+  color: #707070;
+  margin: 50px;
+}
+@media only screen and (max-width: 568px) {
+  /* line 86, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/contacts.css.scss */
+  .contacts-controller #contact-form {
+    width: 94%;
+  }
+  /* line 90, /Users/Andris/Dropbox/SIDE_PROJECTS/toly2/toly2_store/app/assets/stylesheets/contacts.css.scss */
+  .contacts-controller #contact-form form .contact_name, .contacts-controller #contact-form form .contact_email {
+    margin-top: 5px;
+    height: 70px;
+    width: 100%;
+  }
+}
