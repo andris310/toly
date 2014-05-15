@@ -7,6 +7,6 @@
     <td class='item-name'><%= line_item.product.title %></td>
     <td class='item-price'><%= number_to_currency(line_item.item_total_price) %></td>
     <% if !@_mail_was_called %>
-      <td class='remove-item'><%= link_to ('&times;').html_safe, line_item, method: :delete, remote: true %> </td>
+      <td class='remove-item'><%= link_to 'x', line_item, method: :delete, remote: true %></td>
     <% end %>
   </tr>
