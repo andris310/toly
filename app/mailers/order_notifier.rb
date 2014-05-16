@@ -3,7 +3,9 @@ class OrderNotifier < ActionMailer::Base
 
   def received(order)
     @order = order
-    @url = user_url(order.user_id)
+    if order.user_id
+      @url = user_url(order.user_id)
+    end
 
     mail to: order.email, subject: 'TOLY Store Order Confirmation'
   end
