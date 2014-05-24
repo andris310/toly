@@ -12,6 +12,7 @@
             <th></th>
           </thead>
           <tbody>
+            <% binding.pry %>
             <% @order.products.each do |p| %>
             <tr class='product'>
               <td></td>
@@ -38,5 +39,17 @@
     <% if @order.has_downloadable? %>
       <div id='download-info'>All downloadable products can be accessed in your <%= link_to 'Users Account', "/users/#{current_user.id.to_s}" %> page for later download.</div>
     <% end %>
+  <% end %>
+  <% if Rails.env.staging? %>
+    <script>
+      ga('require', 'ecommerce', 'ecommerce.js');
+      ga('ecommerce:addTransaction', {
+        'id': '<%= @order.id %>',                  // Transaction ID. Required.
+        'affiliation': 'TOLY Store',               // Affiliation or store name.
+        'revenue': '<%= @order.total_price %>'    // Grand Total.
+      });
+
+      ga('ecommerce:send');
+    </script>
   <% end %>
 </div>
