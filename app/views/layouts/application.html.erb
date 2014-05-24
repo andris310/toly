@@ -81,7 +81,7 @@
       </div>
 
     </div>
-    <% if Rails.env.staging? %>
+    <% if Rails.env.production? %>
       <script>
         ga('create', "<%= ENV['GA_UA'] %>", "<%= ENV['GA_URL'] %>");
         ga('send', 'pageview');
