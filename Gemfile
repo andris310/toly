@@ -49,7 +49,7 @@ gem 'kaminari'
 gem 'carmen-rails', '~> 1.0.0'
 
 gem 'carrierwave'
-gem 'rmagick'
+gem 'rmagick', '2.13.2'
 gem 'fog'
 gem 'aws-sdk'
 gem 'bxslider-rails'
